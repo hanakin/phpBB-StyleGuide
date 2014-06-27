@@ -4,29 +4,19 @@
     A more respectful starting point after applying Normalize
 /*--------------------------------------------------------------------------*/
 
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-*:before,
-*:after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
+.box-sizing(border-box);
 
 /* Define your base font-size here; most elements will inherit this. _NO__DOTCOMMA__AFTER__*/
 html {
-    font-size: 1em; /* Assuming 16px... */
-    line-height: 1.5; /* 24px (This is now our magic number; all subsequent margin-bottoms and line-heights want to be a multiple of this number in order to maintain vertical rhythm.) _NO__DOTCOMMA__AFTER__*/
+    font-size: @base-font-size;
+    line-height: @base-line-height; /* 24px (This is now our magic number; all subsequent margin-bottoms and line-heights want to be a multiple of this number in order to maintain vertical rhythm.) _NO__DOTCOMMA__AFTER__*/
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #333333;
-    background-color: #ffffff;
+    font-family: @base-font;
+    color: @base-body-color;
+    background-color: @base-body-bg-color;
 }
 
 input,
@@ -45,18 +35,18 @@ hr {
     margin-top: 20px;
     margin-bottom: 20px;
     border: 0;
-    border-top: 1px solid #e5e5e5;
+    border-top: 1px solid @@base-hr-color;
 }
 
 a {
-    color: #428bca;
+    color: @primary;
     text-decoration: none;
 }
 
 a:hover,
 a:focus,
 a:active {
-    color: #2a6496;
+    color: @primary-hover;
     text-decoration: underline;
 }
 
