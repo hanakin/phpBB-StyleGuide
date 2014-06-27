@@ -54,7 +54,32 @@
 @warning:                                   #fcf8e3;
 @danger:                                    #f2dede;
 
+
 //--------------------------------------------------------------------------//
 //  $FONTS
 //--------------------------------------------------------------------------//
+
+// Font Family
+@base-font:                                 "Helvetica Neue", Helvetica, Arial, sans-serif;
+@button-font:                               "Open Sans", "Droid Sans", Verdana, Arial, Helvetica, sans-serif;
+@code-font:                                 Monaco, "Andale Mono","Courier New", Courier, mono;
+
+// Modular Scale
+@giga:                                      80;
+@mega:                                      60;
+@kilo:                                      48;
+@alpha:                                     32;
+@beta:                                      24;
+@gamma:                                     20;
+@delta:                                     18;
+@epsilon:                                   16;
+@zeta:                                      14;
+@milli:                                     12;
+@micro:                                     10;
+
+// Base Font Size
+@base-font-size:                            unit( @epsilon, px);
+@base-line-height:                          1.5;
+@base-line-height-computed:                 floor((@base-font-size * @baseline-height)); //24px
+
 
