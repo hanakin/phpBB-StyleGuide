@@ -100,3 +100,38 @@
 @base-offset-horizontal:               180px;
 
 
+//--------------------------------------------------------------------------//
+//  $GRID SETTINGS
+//--------------------------------------------------------------------------//
+
+@grid-columns:                              12;
+// Padding between columns. Gets divided in half for the left and right.
+@grid-gutter-width:                         30px;
+
+// Container sizes
+@tiny:                                      100%;
+@small:                                     720px;  // + bleed = 750px
+@medium:                                    936px;  // + bleed = 966px
+@large:                                     1152px; // + bleed = 1182px
+
+// Screen sizes (equals container size + bleed)
+@container-sm:                              ((@small + @grid-gutter-width));
+@container-md:                              ((@medium + @grid-gutter-width));
+@container-lg:                              ((@large + @grid-gutter-width));
+
+// Breakpoints
+@screen-xs:                                 480px;  // phone
+@screen-sm:                                 786px;  // tablet
+@screen-md:                                 990px;  // desktop small
+@screen-lg:                                 1200px; // desktop large
+
+// Max Values
+@screen-xs-max:                             (@screen-sm-min - 1);
+@screen-sm-max:                             (@screen-md-min - 1);
+@screen-md-max:                             (@screen-lg-min - 1);
+
+// Point at which un-collapsing begins.
+@grid-float-breakpoint:                     @screen-sm;
+// Point at which collapsing begins.
+@grid-float-breakpoint-max:                 (@grid-float-breakpoint - 1);
+
