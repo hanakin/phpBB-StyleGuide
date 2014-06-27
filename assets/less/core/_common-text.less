@@ -1,0 +1,159 @@
+/*--------------------------------------------------------------------------*\
+    $TYPE
+/*--------------------------------------------------------------------------*\
+    Setup the default typefaces and baseline grid
+/*--------------------------------------------------------------------------*/
+
+/* Common margin-bottom for vertical rhythm. */
+h1,h2,h3,h4,h5,h6,
+p,
+table,
+pre,
+hr { .rem-size('margin-bottom', @base-line-height-computed); }
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+    font-family: @base-font;
+    font-weight: 700;
+    color: @base-heading-color;
+
+    small{
+        font-weight: normal;
+        line-height: 1;
+        color: @base-heading-small-color;
+        font-size: 65%;
+        display: block;
+    }
+}
+
+/* These handle massive type, for less frequently occurring bits of text (e.g. in mastheads and banners). */
+.giga{ .font-size(@giga); }
+.mega{ .font-size(@mega); }
+.kilo{ .font-size(@kilo); }
+
+/* Define headings and their associated classes here. */
+h1, .alpha { .font-size(@alpha); }
+h1, .beta { .font-size(@beta); }
+h1, .gamma { .font-size(@gamma); }
+h1, .delta { .font-size(@delta); }
+h1, .epsilon { .font-size(@epsilon); }
+h1, .zeta { .font-size(@zeta); }
+
+/* Smaller-than-body-copy sizes here. */
+small, .milli { .font-size(@milli); }
+.micro { .font-size(@micro); }
+
+
+// Emphasis & misc
+// -------------------------
+
+cite { font-style: normal; } // Undo browser default styling
+mark, .mark {
+    background-color: @state-warning-bg;
+    padding: .2em;
+}
+
+// Contextual colors
+.success { .text-variant(@success); }
+.info { .text-variant(@info); }
+.warning { .text-variant(@warning); }
+.danger { .text-variant(@danger); }
+
+// Contextual backgrounds
+.success-bg { .bg-variant(@success); }
+.info-bg { .bg-variant(@info); }
+.warning-bg { .bg-variant(@warning); }
+.danger-bg { .bg-variant(@danger); }
+
+// Lists
+// -------------------------
+
+// Unordered and Ordered lists
+ul,
+ol {
+    margin-top: 0;
+    .rem-size('margin-bottom', (@base-line-height-computed / 2));
+    ul,
+    ol { margin-bottom: 0; }
+}
+
+// Description Lists
+dl {
+    margin-top: 0; // Remove browser default
+    .rem-size('margin-bottom', @base-line-height-computed);
+}
+
+dt,
+dd { line-height: @base-line-height; }
+dt { font-weight: bold; }
+dd { margin-left: 0; } // Undo browser default
+
+// List options
+
+// Unstyled keeps list items block level, just removes default browser
+// padding and list-style
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+// Inline turns list items into inline-block
+.list-inline {
+    .list-unstyled();
+    margin-left: -5px;
+
+    > li {
+        display: inline-block;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    dd { &:extend(.clearfix all); } // Clear the floated `dt` if empty `dd` is present
+    @media (min-width: @grid-float-breakpoint) {
+        dt {
+            float: left;
+            width: (@base-horizontal-offset - 20);
+            clear: left;
+            text-align: right;
+            .text-overflow();
+        }
+        dd { margin-left: @base-horizontal-offset; }
+    }
+}
+
+// Misc
+// -------------------------
+// Abbreviations and acronyms
+abbr[title],
+// Add data-* attribute to help out our tooltip plugin, per https://github.com/twbs/bootstrap/issues/5257
+abbr[data-original-title] {
+    cursor: help;
+    border-bottom: 1px dotted @ui;
+}
+
+// Blockquotes
+blockquote {
+    padding: unit((@line-height-computed / 2), px) unit(@line-height-computed, px);
+    margin: 0 0 @line-height-computed;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    .rem-size('margin-bottom', @base-line-height-computed);
+    font-size: @ui-alt;
+    border-left: 5px solid @ui;
+
+    p,
+    ul,
+    ol { &:last-child { margin-bottom: 0; } }
+}
+
+// Quotes
+blockquote:before,
+blockquote:after { content: ""; }
+
+// Addresses
+address {
+    .rem-size('margin-bottom', @base-line-height-computed);
+    font-style: normal;
+    line-height: @base-line-height;
+}
