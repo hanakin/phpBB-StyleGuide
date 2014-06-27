@@ -1,0 +1,6 @@
+// Font with Rem Size Fallback
+
+.font-size(@font-size, @base: @base-fontsize, @line-height: @base-line-height-computed) {
+    .rem-size('font-size', @font-size);
+    line-height: (ceil(@font-size / @base-line)*(@base-line / @font-size));
+}
