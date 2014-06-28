@@ -483,6 +483,9 @@ ul {
  * This prevents an unwanted focus outline from appearing around elements that
  * might still respond to pointer events.
  */
+[tabindex='-1']:focus {
+    outline: none !important;
+}
 /*--------------------------------------------------------------------------*\
     $TYPE
 /*--------------------------------------------------------------------------*\
@@ -629,25 +632,25 @@ a.danger:hover {
 .success-bg {
     background-color: #DFF0D8;
 }
-.success-bga:hover {
+a.success-bg:hover {
     background-color: #C1E2B3;
 }
 .info-bg {
     background-color: #D9EDF7;
 }
-.info-bga:hover {
+a.info-bg:hover {
     background-color: #AFD9EE;
 }
 .warning-bg {
     background-color: #FCF8E3;
 }
-.warning-bga:hover {
+a.warning-bg:hover {
     background-color: #F7ECB5;
 }
 .danger-bg {
     background-color: #F2DEDE;
 }
-.danger-bga:hover {
+a.danger-bg:hover {
     background-color: #E4B9B9;
 }
 ul,
