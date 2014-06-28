@@ -17,82 +17,106 @@ var notify      = require("gulp-notify"),
     pngcrush    = require('imagemin-pngcrush');
 
 // Dir Variables
-var assetsDir = '.assets/',
+var assetsDir = 'assets/',
     lessDir   = assetsDir + 'less/',
     cssDir    = assetsDir + 'css/',
-    cssminDir = assetsDir + cssDir +'min/',
+    cssminDir = './' + cssDir +'min/',
     imgDir    = assetsDir + 'imgs/',
     anyDir    = '**/';
 
-gulp.task('build', function () {
-
+gulp.task('style', function () {
     // { Convert Less }
     // build main style.css
-    gulp.src(lessDir + 'style.less')
-    // Convert Less
-    .pipe(less())
-    .pipe(gulp.dest(cssDir)).pipe(notify("Style.less Complete!"));
-    // build main global.css
-    gulp.src(lessDir + 'global.less')
-    .pipe(less())
-    .pipe(gulp.dest(cssDir)).pipe(notify("Global.less Complete!"));
-    // build main core.css
-    gulp.src(lessDir + 'core.less')
-    .pipe(less())
-    .pipe(gulp.dest(cssDir)).pipe(notify("Core.less Complete!"));
-    // build main theme.css
-    gulp.src(lessDir + 'theme.less')
-    .pipe(less())
-    .pipe(gulp.dest(cssDir)).pipe(notify("Theme.less Complete!"));
+    return gulp.src(lessDir + 'style.less')
+        // Convert Less
+        .pipe(less())
+        .pipe(gulp.dest(cssDir)).pipe(notify("Style.less Complete!"));
+});
 
-    // { CleanUp CSS Output }
-    gulp.src(cssDir + '*.css')
-        // Ensure we have all the prefixes
-        .pipe(prefix("last 15 version", "> 1%", "ie 8", { cascade: true }))
-        // Reformat pretty
+gulp.task('core', function () {
+    // { Convert Less }
+    // build main style.css
+    return gulp.src(lessDir + 'core.less')
+        // Convert Less
+        .pipe(less())
+        .pipe(gulp.dest(cssDir)).pipe(notify("core.less Complete!"));
+});
+
+gulp.task('theme', function () {
+    // { Convert Less }
+    // build main style.css
+    return gulp.src(lessDir + 'theme.less')
+        // Convert Less
+        .pipe(less())
+        .pipe(gulp.dest(cssDir)).pipe(notify("theme.less Complete!"));
+});
+
+gulp.task('prefix', function () {
+    // { Convert Less }
+    // build main style.css
+    return gulp.src(cssDir + '*.css')
+        // Convert Less
+        .pipe(prefix("last 15 version", "> 1%", "Explorer 8", { cascade: true }))
+        .pipe(gulp.dest(cssDir)).pipe(notify("Prefixed!"));
+});
+
+gulp.task('sort', function () {
+    // { Convert Less }
+    // build main style.css
+    return gulp.src(cssDir + '*.css')
+        // Convert Less
         .pipe(cssbeautify({
-            indent: '    ',
+            indent: '  ',
             autosemicolon: true
         }))
-        // convert hard tabs to spaces as well
-        .pipe(soften(4))
-        // Sort selectors and provide a little more cleanup
+        .pipe(gulp.dest(cssDir)).pipe(notify("Reformated!"));
+});
+
+gulp.task('space', function () {
+    // { Convert Less }
+    // build main style.css
+    return gulp.src(cssDir + '*.css')
+        // Convert Less
         .pipe(csscomb())
-        // run linting
-        .pipe(recess()).pipe(notify("CSS Linted!"))
-        .pipe(gulp.dest(cssDir)).pipe(notify("CSS Reformated!"));
+        .pipe(gulp.dest(cssDir)).pipe(notify("Reformated!"));
+});
 
-    // { Minify CSS Output }
-    gulp.src(cssDir + '*.css')
-    .pipe(minifyCSS({
-        keepBreaks: false,
-        processImport: true,
-        noAdvanced: false,
-        compatibility: ie8
-    }))
-    .pipe(gulp.dest(cssminDir)).pipe(notify("CSS Minified!"));
-
-    // { image optimizer }
-    gulp.src(imgDir + '*')
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            use: [pngcrush()]
+gulp.task('lint', function () {
+    // { Convert Less }
+    // build main style.css
+    return gulp.src(cssDir + '*.css')
+        // Convert Less
+        .pipe(recess({
+            strictPropertyOrder: false
         }))
-        .pipe(gulp.dest(imgDir));
+        .pipe(gulp.dest(cssDir)).pipe(notify("Analyzed!"));
 });
 
-// The default task (called when you run `gulp`)
-gulp.task('default', function() {
-    gulp.run('build');
-
-    // Watch files and run tasks if they change
-    gulp.watch(assetsDir + anyDir + '*', function() {
-        var date = new Date(), hour = date.getHours(), minutes = date.getMinutes(), seconds = date.getSeconds(),
-            buildTime = hour + ':' + minutes + ':' + seconds;
-
-        gulp.run('build');
-
-        console.log('------------- END -------------', buildTime);
-    });
+gulp.task('minify', function () {
+    return gulp.src(cssDir + '*.css')
+        .pipe(minifyCSS({
+            keepBreaks: false,
+            processImport: true,
+            noAdvanced: false
+        }))
+        .pipe(gulp.dest(cssminDir)).pipe(notify("CSS Minified!"));
 });
+
+// gulp.task('crush', function () {
+//     // { image optimizer }
+//     return gulp.src(imgDir + '*.png')
+//         .pipe(imagemin({
+//             progressive: true,
+//             svgoPlugins: [{removeViewBox: false}],
+//             use: [{pngcrush}]
+//         }))
+//         .pipe(gulp.dest(imgDir));
+// });
+
+gulp.task('watch', function() {
+    gulp.watch(lessDir + '**/*.*', ['style', 'core', 'theme']);
+    gulp.watch(cssDir + '*.css', ['sort', 'space', 'minify']);
+    //gulp.watch(imgDir + '*.*', ['crush']);
+});
+
+gulp.task('default', ['style', 'core', 'theme', 'watch']);
