@@ -46,7 +46,7 @@ gulp.task('build', function () {
         .pipe(less()).pipe(notify(files[i] + " Rendered!"))
         .pipe(csscomb()).pipe(notify(files[i] + " Sorted!"))
         .pipe(cssbeautify({
-            indent: '  ',
+            indent: '    ',
             autosemicolon: true
         })).pipe(notify(files[i] + " Spaced!"))
         .pipe(gulp.dest(cssDir))
