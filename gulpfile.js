@@ -33,11 +33,6 @@ var onError = function (err) {
     gutil.log(gutil.colors.red(err));
 };
 
-var onWarning = function (err) {
-    gutil.log(gutil.colors.green(err));
-};
-
-
 // Tasks
 
 gulp.task('style', function () {
@@ -47,8 +42,7 @@ gulp.task('style', function () {
         }))
         // Convert Less
         .pipe(less())
-        .pipe(gulp.dest(cssDir)).pipe(notify("Style.less Complete!"))
-        .on('error', onWarning);
+        .pipe(gulp.dest(cssDir)).pipe(notify("style.less Rendered!"));
 });
 
 gulp.task('core', function () {
@@ -58,8 +52,7 @@ gulp.task('core', function () {
         }))
         // Convert Less
         .pipe(less())
-        .pipe(gulp.dest(cssDir)).pipe(notify("core.less Complete!"))
-        .on('error', onWarning);
+        .pipe(gulp.dest(cssDir)).pipe(notify("core.less Rendered!"));
 });
 
 gulp.task('theme', function () {
@@ -69,8 +62,7 @@ gulp.task('theme', function () {
         }))
         // Convert Less
         .pipe(less())
-        .pipe(gulp.dest(cssDir)).pipe(notify("theme.less Complete!"))
-        .on('error', onWarning);
+        .pipe(gulp.dest(cssDir)).pipe(notify("theme.less Rendered!"));
 });
 
 gulp.task('prefix', function () {
@@ -79,8 +71,7 @@ gulp.task('prefix', function () {
             errorHandler: onError
         }))
         .pipe(prefix("last 15 version", "> 1%", "Explorer 8", { cascade: true }))
-        .pipe(gulp.dest(cssDir)).pipe(notify("Prefixed!"))
-        .on('error', onWarning);
+        .pipe(gulp.dest(cssDir)).pipe(notify("CSS Prefixed!"));
 });
 
 gulp.task('sort', function () {
@@ -92,8 +83,8 @@ gulp.task('sort', function () {
             indent: '  ',
             autosemicolon: true
         }))
-        .pipe(gulp.dest(cssDir)).pipe(notify("Reformated!"))
         .on('error', onWarning);
+        .pipe(gulp.dest(cssDir)).pipe(notify("CSS Sorted!"));
 });
 
 gulp.task('space', function () {
@@ -102,8 +93,8 @@ gulp.task('space', function () {
             errorHandler: onError
         }))
         .pipe(csscomb())
-        .pipe(gulp.dest(cssDir)).pipe(notify("Reformated!"))
         .on('error', onWarning);
+        .pipe(gulp.dest(cssDir)).pipe(notify("CSS Spaced!"));
 });
 
 gulp.task('lint', function () {
@@ -114,8 +105,7 @@ gulp.task('lint', function () {
         .pipe(recess({
             strictPropertyOrder: false
         }))
-        .pipe(gulp.dest(cssDir)).pipe(notify("Analyzed!"))
-        .on('error', onWarning);
+        .pipe(gulp.dest(cssDir)).pipe(notify("CSS Analyzed!"));
 });
 
 gulp.task('minify', function () {
@@ -128,8 +118,7 @@ gulp.task('minify', function () {
             processImport: true,
             noAdvanced: false
         }))
-        .pipe(gulp.dest(cssminDir)).pipe(notify("CSS Minified!"))
-        .on('error', onWarning);
+        .pipe(gulp.dest(cssminDir)).pipe(notify("CSS Minified!"));
 });
 
 gulp.task('crush', function () {
@@ -143,7 +132,7 @@ gulp.task('crush', function () {
             svgoPlugins: [{removeViewBox: false}],
             use: [pngcrush()]
         }))
-        .pipe(gulp.dest(imgDir));
+        .pipe(gulp.dest(imgDir)).pipe(notify("Images Crushed!"));
 });
 
 gulp.task('watch', function() {
