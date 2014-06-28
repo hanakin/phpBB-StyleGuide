@@ -49,7 +49,7 @@ small, .milli { .font-size(@milli); }
 
 cite { font-style: normal; } // Undo browser default styling
 mark, .mark {
-    background-color: @state-warning-bg;
+    background-color: @warning;
     .rem-size(padding, .3);
 }
 
@@ -108,7 +108,8 @@ dd { margin-left: 0; } // Undo browser default
         padding-right: 5px;
     }
 
-    dd { &:extend(.clearfix all); } // Clear the floated `dt` if empty `dd` is present
+    // Clear the floated `dt` if empty `dd` is present
+    dd { &:extend(.clearfix all); }
     @media (min-width: @grid-float-breakpoint) {
         dt {
             float: left;
@@ -133,8 +134,7 @@ abbr[data-original-title] {
 
 // Blockquotes
 blockquote {
-    padding: unit((@line-height-computed / 2), px) unit(@line-height-computed, px);
-    margin: 0 0 @line-height-computed;
+    padding: unit((@base-line-height-computed / 2), px) unit(@base-line-height-computed, px);
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
