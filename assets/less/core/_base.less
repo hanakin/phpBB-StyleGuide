@@ -9,7 +9,8 @@
 /* Define your base font-size here; most elements will inherit this. _NO__DOTCOMMA__AFTER__*/
 html {
     font-size: @base-font-size;
-    line-height: @base-line-height; /* 24px (This is now our magic number; all subsequent margin-bottoms and line-heights want to be a multiple of this number in order to maintain vertical rhythm.) _NO__DOTCOMMA__AFTER__*/
+    /* 24px (This is now our magic number; all subsequent margin-bottoms and line-heights want to be a multiple of this number in order to maintain vertical rhythm.) _NO__DOTCOMMA__AFTER__*/
+    line-height: @base-line-height;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
@@ -35,7 +36,7 @@ hr {
     margin-top: 20px;
     margin-bottom: 20px;
     border: 0;
-    border-top: 1px solid @@base-hr-color;
+    border-top: 1px solid @base-hr-color;
 }
 
 a {
