@@ -25,12 +25,12 @@ var assetsDir = 'assets/',
     cssminDir = './' + cssDir +'min/',
     imgDir    = assetsDir + 'imgs/',
     anyDir    = '**/';
+
 var files   = [
                 'style.less',
                 'core.less',
                 'theme.less'
               ]
-
 
 // Command line option:
 var onError = function (err) {
@@ -39,88 +39,27 @@ var onError = function (err) {
 
 // Tasks
 
-gulp.task('style', function () {
-    return gulp.src(lessDir + 'style.less')
+gulp.task('build', function () {
+    for (var i = 0; i < files.length; i++) {
+        return gulp.src(lessDir + files[i])
         .pipe(plumber({
             errorHandler: onError
         }))
         // Convert Less
-        .pipe(less())
-        .pipe(gulp.dest(cssDir)).pipe(notify("style.less Rendered!"));
-});
-
-gulp.task('core', function () {
-    return gulp.src(lessDir + 'core.less')
-        .pipe(plumber({
-            errorHandler: onError
-        }))
-        // Convert Less
-        .pipe(less())
-        .pipe(gulp.dest(cssDir)).pipe(notify("core.less Rendered!"));
-});
-
-gulp.task('theme', function () {
-    return gulp.src(lessDir + 'theme.less')
-        .pipe(plumber({
-            errorHandler: onError
-        }))
-        // Convert Less
-        .pipe(less())
-        .pipe(gulp.dest(cssDir)).pipe(notify("theme.less Rendered!"));
-});
-
-gulp.task('prefix', function () {
-    return gulp.src(cssDir + '*.css')
-        .pipe(plumber({
-            errorHandler: onError
-        }))
-        .pipe(prefix("last 15 version", "> 1%", "Explorer 8", { cascade: true }))
-        .pipe(gulp.dest(cssDir)).pipe(notify("CSS Prefixed!"));
-});
-
-gulp.task('sort', function () {
-    return gulp.src(cssDir + '*.css')
-        .pipe(plumber({
-            errorHandler: onError
-        }))
-        .pipe(csscomb())
-        .pipe(gulp.dest(cssDir)).pipe(notify("CSS Sorted!"));
-});
-
-gulp.task('space', function () {
-    return gulp.src(cssDir + '*.css')
-        .pipe(plumber({
-            errorHandler: onError
-        }))
+        .pipe(less()).pipe(notify(files[i] + " Rendered!"))
+        .pipe(csscomb()).pipe(notify(files[i] + " Sorted!"))
         .pipe(cssbeautify({
             indent: '  ',
             autosemicolon: true
-        }))
-        .pipe(gulp.dest(cssDir)).pipe(notify("CSS Spaced!"));
-});
-
-gulp.task('lint', function () {
-    return gulp.src(cssDir + '*.css')
-        .pipe(plumber({
-            errorHandler: onError
-        }))
-        .pipe(recess({
-            strictPropertyOrder: false
-        }))
-        .pipe(gulp.dest(cssDir)).pipe(notify("CSS Analyzed!"));
-});
-
-gulp.task('minify', function () {
-    return gulp.src(cssDir + '*.css')
-        .pipe(plumber({
-            errorHandler: onError
-        }))
+        })).pipe(notify(files[i] + " Spaced!"))
+        .pipe(gulp.dest(cssDir))
         .pipe(minifyCSS({
             keepBreaks: false,
             processImport: true,
             noAdvanced: false
         }))
-        .pipe(gulp.dest(cssminDir)).pipe(notify("CSS Minified!"));
+        .pipe(gulp.dest(cssminDir)).pipe(notify(files[i] + " Minified!"));
+    }
 });
 
 gulp.task('crush', function () {
@@ -138,11 +77,8 @@ gulp.task('crush', function () {
 });
 
 gulp.task('watch', function() {
-    gulp.watch(lessDir + '**/*.*', ['style', 'core', 'theme']);
-    gulp.watch(cssDir + 'style.css', ['space', 'sort', 'minify']);
-    gulp.watch(cssDir + 'core.css', ['space', 'sort', 'minify']);
-    gulp.watch(cssDir + 'theme.css', ['space', 'sort', 'minify']);
-    gulp.watch(imgDir + '*.*', ['crush', 'space', 'sort', 'minify']);
+    gulp.watch(lessDir + '**/*.*', ['build']);
+    gulp.watch(imgDir + '*.*', ['crush']);
 });
 
-gulp.task('default', ['style', 'core', 'theme', 'crush', 'watch']);
+gulp.task('default', ['crush', 'build', 'watch']);
