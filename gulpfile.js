@@ -25,7 +25,11 @@ var assetsDir = 'assets/',
     cssminDir = './' + cssDir +'min/',
     imgDir    = assetsDir + 'imgs/',
     anyDir    = '**/';
-
+var files   = [
+                'style.less',
+                'core.less',
+                'theme.less'
+              ]
 
 
 // Command line option:
