@@ -79,11 +79,7 @@ gulp.task('sort', function () {
         .pipe(plumber({
             errorHandler: onError
         }))
-        .pipe(cssbeautify({
-            indent: '  ',
-            autosemicolon: true
-        }))
-        .on('error', onWarning);
+        .pipe(csscomb())
         .pipe(gulp.dest(cssDir)).pipe(notify("CSS Sorted!"));
 });
 
@@ -92,8 +88,10 @@ gulp.task('space', function () {
         .pipe(plumber({
             errorHandler: onError
         }))
-        .pipe(csscomb())
-        .on('error', onWarning);
+        .pipe(cssbeautify({
+            indent: '  ',
+            autosemicolon: true
+        }))
         .pipe(gulp.dest(cssDir)).pipe(notify("CSS Spaced!"));
 });
 
