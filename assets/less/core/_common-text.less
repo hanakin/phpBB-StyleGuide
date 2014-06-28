@@ -9,7 +9,7 @@ h1,h2,h3,h4,h5,h6,
 p,
 table,
 pre,
-hr { .rem-size('margin-bottom', @base-line-height-computed); }
+hr { .rem-size(margin-bottom, @base-line-height-computed); }
 
 // Headings
 h1, h2, h3, h4, h5, h6 {
@@ -50,7 +50,7 @@ small, .milli { .font-size(@milli); }
 cite { font-style: normal; } // Undo browser default styling
 mark, .mark {
     background-color: @state-warning-bg;
-    padding: .2em;
+    .rem-size(padding, .3);
 }
 
 // Contextual colors
@@ -72,7 +72,7 @@ mark, .mark {
 ul,
 ol {
     margin-top: 0;
-    .rem-size('margin-bottom', (@base-line-height-computed / 2));
+    .rem-size(margin-bottom, (@base-line-height-computed / 2));
     ul,
     ol { margin-bottom: 0; }
 }
@@ -80,7 +80,7 @@ ol {
 // Description Lists
 dl {
     margin-top: 0; // Remove browser default
-    .rem-size('margin-bottom', @base-line-height-computed);
+    .rem-size(margin-bottom, @base-line-height-computed);
 }
 
 dt,
@@ -138,7 +138,7 @@ blockquote {
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
-    .rem-size('margin-bottom', @base-line-height-computed);
+    .rem-size(margin-bottom, @base-line-height-computed);
     font-size: @ui-alt;
     border-left: 5px solid @ui;
 
@@ -153,7 +153,7 @@ blockquote:after { content: ""; }
 
 // Addresses
 address {
-    .rem-size('margin-bottom', @base-line-height-computed);
+    .rem-size(margin-bottom, @base-line-height-computed);
     font-style: normal;
     line-height: @base-line-height;
 }
