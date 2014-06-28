@@ -388,6 +388,13 @@ td, th {
 /*--------------------------------------------------------------------------*\
     A more respectful starting point after applying Normalize
 /*--------------------------------------------------------------------------*/
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
 /* Define your base font-size here; most elements will inherit this. _NO__DOTCOMMA__AFTER__*/
 html {
     font-size: 16px;
