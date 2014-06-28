@@ -135,8 +135,10 @@ gulp.task('crush', function () {
 
 gulp.task('watch', function() {
     gulp.watch(lessDir + '**/*.*', ['style', 'core', 'theme']);
-    gulp.watch(cssDir + '*.css', ['sort', 'space', 'minify']);
-    //gulp.watch(imgDir + '*.*', ['crush']);
+    gulp.watch(cssDir + 'style.css', ['space', 'sort', 'minify']);
+    gulp.watch(cssDir + 'core.css', ['space', 'sort', 'minify']);
+    gulp.watch(cssDir + 'theme.css', ['space', 'sort', 'minify']);
+    gulp.watch(imgDir + '*.*', ['crush', 'space', 'sort', 'minify']);
 });
 
-gulp.task('default', ['style', 'core', 'theme', 'watch']);
+gulp.task('default', ['style', 'core', 'theme', 'crush', 'watch']);
