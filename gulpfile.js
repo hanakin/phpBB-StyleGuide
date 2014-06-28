@@ -9,10 +9,6 @@ var notify      = require("gulp-notify"),
     gutil       = require('gulp-util'),
     plumber     = require('gulp-plumber'),
     less        = require('gulp-less'),
-    recess      = require('gulp-recess'),
-    prefix      = require('gulp-autoprefixer'),
-    soften      = require('gulp-soften'),
-    cssbeautify = require('gulp-cssbeautify'),
     minifyCSS   = require('gulp-minify-css'),
     csscomb     = require('gulp-csscomb'),
     imagemin    = require('gulp-imagemin'),
@@ -42,13 +38,8 @@ gulp.task('build', function () {
         .pipe(plumber({
             errorHandler: onError
         }))
-        // Convert Less
         .pipe(less()).pipe(notify(files[i] + " Rendered!"))
         .pipe(csscomb()).pipe(notify(files[i] + " Sorted!"))
-        .pipe(cssbeautify({
-            indent: '    ',
-            autosemicolon: true
-        })).pipe(notify(files[i] + " Spaced!"))
         .pipe(gulp.dest(cssDir))
         .pipe(minifyCSS({
             keepBreaks: false,
