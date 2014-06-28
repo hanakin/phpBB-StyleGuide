@@ -26,11 +26,8 @@ var assetsDir = 'assets/',
     imgDir    = assetsDir + 'imgs/',
     anyDir    = '**/';
 
-var files   = [
-                'style.less',
-                'core.less',
-                'theme.less'
-              ]
+var files   = ['style.less', 'core.less', 'theme.less']
+var stream  = [];
 
 // Command line option:
 var onError = function (err) {
@@ -41,7 +38,7 @@ var onError = function (err) {
 
 gulp.task('build', function () {
     for (var i = 0; i < files.length; i++) {
-        return gulp.src(lessDir + files[i])
+        stream[i] = gulp.src(lessDir + files[i])
         .pipe(plumber({
             errorHandler: onError
         }))
@@ -60,6 +57,8 @@ gulp.task('build', function () {
         }))
         .pipe(gulp.dest(cssminDir)).pipe(notify(files[i] + " Minified!"));
     }
+
+    return stream;
 });
 
 gulp.task('crush', function () {
