@@ -26,14 +26,14 @@
 
 // Primary Colors
 @primary:                                   #005587;
-@primary-alt:                               #253746;
-@primary-accent:                            #4c5d77;
+@primary-alt:                               #194f90;
+@primary-accent:                            mix(white, @primary-alt, 10%);
 @primary-hover:                             #c41d4a;
 
 // Secondary Colors
 @secondary:                                 #009bdf;
 @secondary-alt:                             #e1ebf2;
-@secondary-accent:                          mix(white, @secondary-alt, 10);
+@secondary-accent:                          mix(white, @secondary-alt, 10%);
 @secondary-hover:                           #f6f4d0;
 
 // UI Colors
@@ -91,8 +91,8 @@
 @base-body-color:                           @gray-20;
 @base-body-bg-color:                        @white;
 
-@base-heading-color:                        @primary-alt;
-@base-heading-small-color:                  @primary-accent;
+@base-heading-color:                        @primary-accent;
+@base-heading-small-color:                  @ui-alt;
 
 @base-hr-color:                             @gray-90;
 
