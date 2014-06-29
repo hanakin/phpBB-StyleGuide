@@ -527,7 +527,7 @@ h6 {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 700;
 
-    color: #253746;
+    color: #30619B;
 }
 h1 small,
 h2 small,
@@ -539,7 +539,7 @@ h6 small {
     font-weight: normal;
     line-height: 1;
 
-    color: #4C5D77;
+    color: #B3B3B3;
 
     display: block;
 }
@@ -1751,3 +1751,47 @@ address {
 /*--------------------------------------------------------------------------*\
     Used to consolidate all theme files
 /*--------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------*\
+    $ELEMENTS
+/*--------------------------------------------------------------------------*/
+.logo {
+    background: url('../imgs/prosilver-logo.png') no-repeat;
+
+    display: inline-block;
+    width: 147px;
+    height: 51px;
+}
+/*--------------------------------------------------------------------------*\
+    $COMPONENTS
+/*--------------------------------------------------------------------------*/
+.header-nav {
+    text-align: right;
+}
+.header-nav-item {
+    line-height: 3.5;
+
+    color: #73C8ED;
+
+    display: inline-block;
+    padding-left: 16px;
+    padding-left: 1rem;
+    padding-right: 16px;
+    padding-right: 1rem;
+}
+.header-nav-item:hover {
+    text-decoration: none;
+
+    color: #FFF;
+}
+/*--------------------------------------------------------------------------*\
+    $BLOCKS
+/*--------------------------------------------------------------------------*/
+.header {
+    background-color: #009BDF;
+    border-bottom: 2px solid #DEDEDE;
+
+    padding-top: 12px;
+    padding-top: .75rem;
+    padding-bottom: 12px;
+    padding-bottom: .75rem;
+}
