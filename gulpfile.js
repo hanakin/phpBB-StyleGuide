@@ -71,4 +71,4 @@ gulp.task('watch', function() {
     gulp.watch(imgDir + '*.*', ['crush']);
 });
 
-gulp.task('default', ['crush', 'build', 'watch']);
+gulp.task('default', ['build', 'watch']);
