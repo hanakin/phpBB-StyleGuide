@@ -9,8 +9,8 @@
 .logo {
     background: url('../imgs/prosilver-logo.png') no-repeat;
     display: inline-block;
-    width: 147px;
-    height: 51px;
+    width: 144px;
+    height: 50px;
 }
 /*--------------------------------------------------------------------------*\
     $COMPONENTS
@@ -25,7 +25,7 @@
 }
 
 .navbar-nav-link {
-    line-height: 3.5;
+    line-height: 3.15;
     color: #73C8ED;
     display: inline-block;
     padding-left: 16px;
