@@ -527,7 +527,7 @@ h6 {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 700;
 
-    color: #30619B;
+    color: #537BAC;
 }
 h1 small,
 h2 small,
@@ -566,31 +566,31 @@ h1,
     font-size: 2rem;
     line-height: 1.5px;
 }
-h1,
+h2,
 .beta {
     font-size: 24px;
     font-size: 1.5rem;
     line-height: 1px;
 }
-h1,
+h3,
 .gamma {
     font-size: 20px;
     font-size: 1.25rem;
     line-height: 1.2px;
 }
-h1,
+h4,
 .delta {
     font-size: 18px;
     font-size: 1.125rem;
     line-height: 1.33333333px;
 }
-h1,
+h5,
 .epsilon {
     font-size: 16px;
     font-size: 1rem;
     line-height: 1.5px;
 }
-h1,
+h6,
 .zeta {
     font-size: 14px;
     font-size: .875rem;
@@ -1461,6 +1461,12 @@ address {
 /*--------------------------------------------------------------------------*\
     Contains useful layout related functions
 /*--------------------------------------------------------------------------*/
+.wrap {
+    padding-top: 24px;
+    padding-top: 1.5rem;
+    padding-bottom: 24px;
+    padding-bottom: 1.5rem;
+}
 .clearfix:before,
 .clearfix:after,
 .list-inline dd:before,

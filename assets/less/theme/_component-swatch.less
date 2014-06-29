@@ -1,0 +1,49 @@
+//--------------------------------------------------------------------------//
+//  $COMPONENT-SWATCH
+//--------------------------------------------------------------------------//
+//  swatch component
+//--------------------------------------------------------------------------//
+
+.swatch {
+    display: block;
+    border-radius: 50%;
+    border: 1px solid @ui;
+    width: 30px;
+    height: 30px;
+    .rem-size(margin, (@base-line-height-computed / 2));
+}
+
+.swatch-label { text-align: center; }
+
+.swatch-black   { .bg-variant(@black); }
+.swatch-gray-10 { .bg-variant(@gray-10); }
+.swatch-gray-20 { .bg-variant(@gray-20); }
+.swatch-gray-30 { .bg-variant(@gray-30); }
+.swatch-gray-40 { .bg-variant(@gray-40); }
+.swatch-gray-50 { .bg-variant(@gray-50); }
+.swatch-gray-60 { .bg-variant(@gray-60); }
+.swatch-gray-70 { .bg-variant(@gray-70); }
+.swatch-gray-80 { .bg-variant(@gray-80); }
+.swatch-gray-90 { .bg-variant(@gray-90); }
+.swatch-gray-95 { .bg-variant(@gray-95); }
+.swatch-white   { .bg-variant(@white); }
+
+.swatch-primary        { .bg-variant(@primary); }
+.swatch-primary-alt    { .bg-variant(@primary-alt); }
+.swatch-primary-accent { .bg-variant(@primary-accent); }
+.swatch-primary-hover  { .bg-variant(@primary-hover); }
+
+.swatch-secondary        { .bg-variant(@secondary); }
+.swatch-secondary-alt    { .bg-variant(@secondary-alt); }
+.swatch-secondary-accent { .bg-variant(@secondary-accent); }
+.swatch-secondary-hover  { .bg-variant(@secondary-hover); }
+
+.swatch-ui        { .bg-variant(@ui); }
+.swatch-ui-alt    { .bg-variant(@ui-alt); }
+.swatch-ui-accent { .bg-variant(@ui-accent); }
+.swatch-ui-hover  { .bg-variant(@ui-hover); }
+
+.swatch-info    { .bg-variant(@info); }
+.swatch-danger  { .bg-variant(@danger); }
+.swatch-warning { .bg-variant(@warning); }
+.swatch-success { .bg-variant(@success); }
