@@ -4,11 +4,15 @@
 //  Styles for the navbar
 //--------------------------------------------------------------------------//
 
-.navbar-heading { margin-bottom: 0; }
+.navbar-heading {
+    margin-bottom: 0;
+    line-height: 0;
+}
+
 .navbar-nav, .navbar-nav-mobile { text-align: right; }
 .navbar-nav-link {
     display: inline-block;
-    line-height: 3.15;
+    .line-height(50);
     .rem-size(padding-left, 16);
     .rem-size(padding-right, 16);
     color: mix(white, @secondary, 45%);
