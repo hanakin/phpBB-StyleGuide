@@ -20,9 +20,6 @@ this project will follow strict standards for all the code that is used referenc
 As well as several gulp plugins to help maintain this all
 
 - gulp-less
-- gulp-autoprefixer
 - gulp-imagemin
 - gulp-notify
-- gulp-recess
-- gulp-soften
 - gulp-csscomb
