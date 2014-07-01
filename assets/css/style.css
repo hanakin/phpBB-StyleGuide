@@ -6,12 +6,10 @@
  *    user zoom.
  */
 html {
-    font-family: sans-serif;
- /* 1 */
-    -ms-text-size-adjust: 100%;
- /* 2 */
-    -webkit-text-size-adjust: 100%;
- /* 2 */;
+    font-family: sans-serif; /* 1 */
+
+        -ms-text-size-adjust: 100%; /* 2 */
+    -webkit-text-size-adjust: 100%; /* 2 */
 }
 
 /**
@@ -51,10 +49,9 @@ audio,
 canvas,
 progress,
 video {
-    vertical-align: baseline;
- /* 2 */
-    display: inline-block;
- /* 1 */;
+    vertical-align: baseline; /* 2 */
+
+    display: inline-block; /* 1 */
 }
 
 /**
@@ -119,6 +116,7 @@ dfn {
  */
 h1 {
     font-size: 2em;
+
     margin: .67em 0;
 }
 
@@ -144,13 +142,13 @@ sub, sup {
     font-size: 75%;
     line-height: 0;
     vertical-align: baseline;
+
     position: relative;
 }
 
 sup {
     top: -.5em;
 }
-
 sub {
     bottom: -.25em;
 }
@@ -185,7 +183,7 @@ figure {
  */
 hr {
     -moz-box-sizing: content-box;
-    box-sizing: content-box;
+         box-sizing: content-box;
     height: 0;
 }
 
@@ -224,12 +222,11 @@ input,
 optgroup,
 select,
 textarea {
-    font: inherit;
- /* 2 */
-    color: inherit;
- /* 1 */
-    margin: 0;
- /* 3 */;
+    font: inherit; /* 2 */
+
+    color: inherit; /* 1 */
+
+    margin: 0; /* 3 */
 }
 
 /**
@@ -260,10 +257,9 @@ button,
 html input[type='button'], /* 1 */
 input[type='reset'],
 input[type='submit'] {
-    cursor: pointer;
- /* 3 */
-    -webkit-appearance: button;
- /* 2 */;
+    cursor: pointer; /* 3 */
+
+    -webkit-appearance: button; /* 2 */
 }
 
 /**
@@ -278,6 +274,7 @@ button[disabled], html input[disabled] {
  */
 button::-moz-focus-inner, input::-moz-focus-inner {
     border: 0;
+
     padding: 0;
 }
 
@@ -297,10 +294,8 @@ input {
  * 2. Remove excess padding in IE 8/9/10.
  */
 input[type='checkbox'], input[type='radio'] {
-    box-sizing: border-box;
- /* 1 */
-    padding: 0;
- /* 2 */;
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
 }
 
 /**
@@ -349,10 +344,9 @@ fieldset {
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
 legend {
-    border: 0;
- /* 1 */
-    padding: 0;
- /* 2 */;
+    border: 0; /* 1 */
+
+    padding: 0; /* 2 */
 }
 
 /**
@@ -2008,4 +2002,46 @@ a.swatch-success:hover {
     padding-top: .75rem;
     padding-bottom: 12px;
     padding-bottom: .75rem;
+}
+.banner {
+    background-color: #F2F2F2;
+
+    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
+}
+.banner-title {
+    margin-bottom: 0;
+}
+.giga.banner-title {
+    line-height: 5;
+}
+.mega.banner-title {
+    line-height: 3.75;
+}
+.kilo.banner-title {
+    line-height: 3;
+}
+.alpha.banner-title {
+    line-height: 2;
+}
+.beta.banner-title {
+    line-height: 1.5;
+}
+.gamma.banner-title {
+    line-height: 1.25;
+}
+.delta.banner-title {
+    line-height: 1.125;
+}
+.epsilon.banner-title {
+    line-height: 1;
+}
+.zeta.banner-title {
+    line-height: .875;
+}
+.milli.banner-title {
+    line-height: .75;
+}
+.micro.banner-title {
+    line-height: .625;
 }
