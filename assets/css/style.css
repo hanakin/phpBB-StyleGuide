@@ -399,7 +399,7 @@ td, th {
 html {
     font-size: 16px;
   /* 24px (This is now our magic number; all subsequent margin-bottoms and line-heights want to be a multiple of this number in order to maintain vertical rhythm.) _NO__DOTCOMMA__AFTER__*/
-    line-height: 1.5;
+    line-height: 1.9;
 
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -433,14 +433,14 @@ hr {
 a {
     text-decoration: none;
 
-    color: #005587;
+    color: #005485;
 }
 a:hover,
 a:focus,
 a:active {
     text-decoration: underline;
 
-    color: #C41D4A;
+    color: #C31D49;
 }
 blockquote,
 dl,
@@ -509,8 +509,8 @@ p,
 table,
 pre,
 hr {
-    margin-bottom: 24px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
 }
 h1,
 h2,
@@ -521,7 +521,7 @@ h6 {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 700;
 
-    color: #537BAC;
+    color: #5990AF;
 }
 h1 small,
 h2 small,
@@ -541,66 +541,66 @@ h6 small {
 .giga {
     font-size: 80px;
     font-size: 5rem;
-    line-height: 1.2;
+    line-height: 1.125;
 }
 .mega {
     font-size: 60px;
     font-size: 3.75rem;
-    line-height: 1.2;
+    line-height: 1;
 }
 .kilo {
     font-size: 48px;
     font-size: 3rem;
-    line-height: 1;
+    line-height: 1.25;
 }
 /* Define headings and their associated classes here. */
 h1,
 .alpha {
     font-size: 32px;
     font-size: 2rem;
-    line-height: 1.5;
+    line-height: 1.875;
 }
 h2,
 .beta {
     font-size: 24px;
     font-size: 1.5rem;
-    line-height: 1;
+    line-height: 1.25;
 }
 h3,
 .gamma {
     font-size: 20px;
     font-size: 1.25rem;
-    line-height: 1.2;
+    line-height: 1.5;
 }
 h4,
 .delta {
     font-size: 18px;
     font-size: 1.125rem;
-    line-height: 1.33333333;
+    line-height: 1.66666667;
 }
 h5,
 .epsilon {
     font-size: 16px;
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.875;
 }
 h6,
 .zeta {
     font-size: 14px;
     font-size: .875rem;
-    line-height: 1.71428571;
+    line-height: 2.14285714;
 }
 /* Smaller-than-body-copy sizes here. */
 small,
 .milli {
     font-size: 12px;
     font-size: .75rem;
-    line-height: 2;
+    line-height: 2.5;
 }
 .micro {
     font-size: 10px;
     font-size: .625rem;
-    line-height: 2.4;
+    line-height: 3;
 }
 cite {
     font-style: normal;
@@ -663,8 +663,8 @@ a.danger-bg:hover {
 ul,
 ol {
     margin-top: 0;
-    margin-bottom: 12px;
-    margin-bottom: .75rem;
+    margin-bottom: 15px;
+    margin-bottom: .9375rem;
 }
 ul ul,
 ol ul,
@@ -674,12 +674,12 @@ ol ol {
 }
 dl {
     margin-top: 0;
-    margin-bottom: 24px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
 }
 dt,
 dd {
-    line-height: 1.5;
+    line-height: 1.9;
 }
 dt {
     font-weight: bold;
@@ -687,21 +687,23 @@ dt {
 dd {
     margin-left: 0;
 }
-.list-unstyled {
-    list-style: none;
-    padding-left: 0;
+.list {
+    list-style: initial;
+    padding-left: 15px;
+    padding-left: .9375rem;
 }
 .list-inline {
-    list-style: none;
     margin-left: -5px;
-    padding-left: 0;
+    padding: 0;
+
+    list-styl: none;
 }
 .list-inline > li {
     display: inline-block;
     padding-left: 5px;
     padding-right: 5px;
 }
-@media (min-width: 786px) {
+@media (min-width: 780px) {
     .list-inline dt {
         text-align: right;
         text-overflow: ellipsis;
@@ -727,11 +729,11 @@ blockquote {
     border-left: 5px solid #DEDEDE;
 
     margin-top: 0;
-    margin-bottom: 24px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
     margin-left: 0;
     margin-right: 0;
-    padding: 12px 24px;
+    padding: 15px 30px;
 }
 blockquote p:last-child,
 blockquote ul:last-child,
@@ -744,10 +746,10 @@ blockquote:after {
 }
 address {
     font-style: normal;
-    line-height: 1.5;
+    line-height: 1.9;
 
-    margin-bottom: 24px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
 }
 /*--------------------------------------------------------------------------*\
     $GRID
@@ -760,17 +762,17 @@ address {
     padding-left: 15px;
     padding-right: 15px;
 }
-@media (min-width: 786px) {
+@media (min-width: 780px) {
     .container {
         width: 750px;
     }
 }
-@media (min-width: 990px) {
+@media (min-width: 996px) {
     .container {
         width: 966px;
     }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1212px) {
     .container {
         width: 1182px;
     }
@@ -947,7 +949,7 @@ address {
 .col-xs-offset-0 {
     margin-left: 0;
 }
-@media (min-width: 786px) {
+@media (min-width: 780px) {
     .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
         float: left;
     }
@@ -1105,7 +1107,7 @@ address {
         margin-left: 0;
     }
 }
-@media (min-width: 990px) {
+@media (min-width: 996px) {
     .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
         float: left;
     }
@@ -1263,7 +1265,7 @@ address {
         margin-left: 0;
     }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1212px) {
     .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
         float: left;
     }
@@ -1456,10 +1458,10 @@ address {
     Contains useful layout related functions
 /*--------------------------------------------------------------------------*/
 .wrap {
-    padding-top: 24px;
-    padding-top: 1.5rem;
-    padding-bottom: 24px;
-    padding-bottom: 1.5rem;
+    padding-top: 30px;
+    padding-top: 1.875rem;
+    padding-bottom: 30px;
+    padding-bottom: 1.875rem;
 }
 .clearfix:before,
 .clearfix:after,
@@ -1539,15 +1541,16 @@ address {
 @-ms-viewport {
     width: device-width;
 }
-.visible-xs,
+.visible-tn,
 .visible-sm,
 .visible-md,
-.visible-lg {
+.visible-lg,
+.visible-wd {
     display: none !important;
 }
-.visible-xs-block,
-.visible-xs-inline,
-.visible-xs-inline-block,
+.visible-tn-block,
+.visible-tn-inline,
+.visible-tn-inline-block,
 .visible-sm-block,
 .visible-sm-inline,
 .visible-sm-inline-block,
@@ -1556,40 +1559,43 @@ address {
 .visible-md-inline-block,
 .visible-lg-block,
 .visible-lg-inline,
-.visible-lg-inline-block {
+.visible-lg-inline-block,
+.visible-wd-block,
+.visible-wd-inline,
+.visible-wd-inline-block {
     display: none !important;
 }
-@media (max-width: 785px) {
-    .visible-xs {
+@media (max-width: 479px) {
+    .visible-tn {
         display: block !important;
     }
-    table.visible-xs {
+    table.visible-tn {
         display: table;
     }
-    tr.visible-xs {
+    tr.visible-tn {
         display: table-row !important;
     }
-    th.visible-xs,
-  td.visible-xs {
+    th.visible-tn,
+  td.visible-tn {
         display: table-cell !important;
     }
 }
-@media (max-width: 785px) {
-    .visible-xs-block {
+@media (max-width: 479px) {
+    .visible-tn-block {
         display: block !important;
     }
 }
-@media (max-width: 785px) {
-    .visible-xs-inline {
+@media (max-width: 479px) {
+    .visible-tn-inline {
         display: inline !important;
     }
 }
-@media (max-width: 785px) {
-    .visible-xs-inline-block {
+@media (max-width: 479px) {
+    .visible-tn-inline-block {
         display: inline-block !important;
     }
 }
-@media (min-width: 786px) and (max-width: 989px) {
+@media (min-width: 780px) and (max-width: 995px) {
     .visible-sm {
         display: block !important;
     }
@@ -1604,22 +1610,22 @@ address {
         display: table-cell !important;
     }
 }
-@media (min-width: 786px) and (max-width: 989px) {
+@media (min-width: 780px) and (max-width: 995px) {
     .visible-sm-block {
         display: block !important;
     }
 }
-@media (min-width: 786px) and (max-width: 989px) {
+@media (min-width: 780px) and (max-width: 995px) {
     .visible-sm-inline {
         display: inline !important;
     }
 }
-@media (min-width: 786px) and (max-width: 989px) {
+@media (min-width: 780px) and (max-width: 995px) {
     .visible-sm-inline-block {
         display: inline-block !important;
     }
 }
-@media (min-width: 990px) and (max-width: 1199px) {
+@media (min-width: 996px) and (max-width: 1211px) {
     .visible-md {
         display: block !important;
     }
@@ -1634,22 +1640,22 @@ address {
         display: table-cell !important;
     }
 }
-@media (min-width: 990px) and (max-width: 1199px) {
+@media (min-width: 996px) and (max-width: 1211px) {
     .visible-md-block {
         display: block !important;
     }
 }
-@media (min-width: 990px) and (max-width: 1199px) {
+@media (min-width: 996px) and (max-width: 1211px) {
     .visible-md-inline {
         display: inline !important;
     }
 }
-@media (min-width: 990px) and (max-width: 1199px) {
+@media (min-width: 996px) and (max-width: 1211px) {
     .visible-md-inline-block {
         display: inline-block !important;
     }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1212px) {
     .visible-lg {
         display: block !important;
     }
@@ -1664,38 +1670,73 @@ address {
         display: table-cell !important;
     }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1212px) {
     .visible-lg-block {
         display: block !important;
     }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1212px) {
     .visible-lg-inline {
         display: inline !important;
     }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1212px) {
     .visible-lg-inline-block {
         display: inline-block !important;
     }
 }
-@media (max-width: 785px) {
-    .hidden-xs {
+@media (min-width: 1428px) {
+    .visible-wd {
+        display: block !important;
+    }
+    table.visible-wd {
+        display: table;
+    }
+    tr.visible-wd {
+        display: table-row !important;
+    }
+    th.visible-wd,
+  td.visible-wd {
+        display: table-cell !important;
+    }
+}
+@media (min-width: 1428px) {
+    .visible-wd-block {
+        display: block !important;
+    }
+}
+@media (min-width: 1428px) {
+    .visible-wd-inline {
+        display: inline !important;
+    }
+}
+@media (min-width: 1428px) {
+    .visible-wd-inline-block {
+        display: inline-block !important;
+    }
+}
+@media (max-width: 479px) {
+    .hidden-tn {
         display: none !important;
     }
 }
-@media (min-width: 786px) and (max-width: 989px) {
+@media (min-width: 780px) and (max-width: 995px) {
     .hidden-sm {
         display: none !important;
     }
 }
-@media (min-width: 990px) and (max-width: 1199px) {
+@media (min-width: 996px) and (max-width: 1211px) {
     .hidden-md {
         display: none !important;
     }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1212px) and (max-width: 1427px) {
     .hidden-lg {
+        display: none !important;
+    }
+}
+@media (min-width: 1428px) {
+    .hidden-wd {
         display: none !important;
     }
 }
@@ -1761,6 +1802,15 @@ address {
     width: 144px;
     height: 50px;
 }
+.lead {
+    margin-bottom: 10px;
+    margin-bottom: .625rem;
+}
+.copy {
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 1.66666667;
+}
 /*--------------------------------------------------------------------------*\
     $COMPONENTS
 /*--------------------------------------------------------------------------*/
@@ -1776,7 +1826,7 @@ address {
 .navbar-nav-link {
     line-height: 3.125;
 
-    color: #73C8ED;
+    color: #73C1EE;
 
     display: inline-block;
     padding-left: 16px;
@@ -1794,10 +1844,10 @@ address {
 
     color: #B3B3B3;
 
-    margin-top: 24px;
-    margin-top: 1.5rem;
+    margin-top: 30px;
+    margin-top: 1.875rem;
 }
-@media (max-width: 785px) {
+@media (max-width: 479px) {
     .color-title {
         text-align: left;
     }
@@ -1817,8 +1867,8 @@ address {
     display: block;
     width: 30px;
     height: 30px;
-    margin: 12px;
-    margin: .75rem;
+    margin: 15px;
+    margin: .9375rem;
 }
 .swatch-label {
     text-align: center;
@@ -1896,52 +1946,52 @@ a.swatch-white:hover {
     background-color: #E6E6E6;
 }
 .swatch-primary {
-    background-color: #005587;
+    background-color: #005485;
 }
 a.swatch-primary:hover {
-    background-color: #003554;
+    background-color: #003452;
 }
 .swatch-primary-alt {
-    background-color: #194F90;
+    background-color: #5990AF;
 }
 a.swatch-primary-alt:hover {
-    background-color: #113765;
+    background-color: #457590;
 }
 .swatch-primary-accent {
-    background-color: #537BAC;
+    background-color: #003452;
 }
 a.swatch-primary-accent:hover {
-    background-color: #426289;
+    background-color: #00131F;
 }
 .swatch-primary-hover {
-    background-color: #C41D4A;
+    background-color: #C31D49;
 }
 a.swatch-primary-hover:hover {
-    background-color: #981639;
+    background-color: #971739;
 }
 .swatch-secondary {
-    background-color: #009BDF;
+    background-color: #008EE0;
 }
 a.swatch-secondary:hover {
-    background-color: #0078AC;
+    background-color: #006EAD;
 }
 .swatch-secondary-alt {
-    background-color: #E1EBF2;
+    background-color: #DBE8F0;
 }
 a.swatch-secondary-alt:hover {
-    background-color: #BDD3E3;
+    background-color: #B8D1E0;
 }
 .swatch-secondary-accent {
-    background-color: #E9F0F5;
+    background-color: #EDF4F7;
 }
 a.swatch-secondary-accent:hover {
-    background-color: #C5D8E6;
+    background-color: #C9DDE8;
 }
 .swatch-secondary-hover {
-    background-color: #F6F4D0;
+    background-color: #F7F5D4;
 }
 a.swatch-secondary-hover:hover {
-    background-color: #EEEAA5;
+    background-color: #EFEBA9;
 }
 .swatch-ui {
     background-color: #DEDEDE;
@@ -1956,16 +2006,16 @@ a.swatch-ui-alt:hover {
     background-color: #999;
 }
 .swatch-ui-accent {
-    background-color: #F7ECEF;
+    background-color: #F7EDF0;
 }
 a.swatch-ui-accent:hover {
-    background-color: #E8C8D1;
+    background-color: #E8C9D2;
 }
 .swatch-ui-hover {
-    background-color: #009BDF;
+    background-color: #008EE0;
 }
 a.swatch-ui-hover:hover {
-    background-color: #0078AC;
+    background-color: #006EAD;
 }
 .swatch-info {
     background-color: #D9EDF7;
@@ -1991,23 +2041,26 @@ a.swatch-warning:hover {
 a.swatch-success:hover {
     background-color: #C1E2B3;
 }
+h1 {
+    color: #666;
+}
 /*--------------------------------------------------------------------------*\
     $BLOCKS
 /*--------------------------------------------------------------------------*/
 .header {
-    background-color: #009BDF;
+    background-color: #008EE0;
     border-bottom: 2px solid #DEDEDE;
 
-    padding-top: 12px;
-    padding-top: .75rem;
-    padding-bottom: 12px;
-    padding-bottom: .75rem;
+    padding-top: 15px;
+    padding-top: .9375rem;
+    padding-bottom: 15px;
+    padding-bottom: .9375rem;
 }
 .banner {
     background-color: #F2F2F2;
 
-    margin-bottom: 24px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
 }
 .banner-title {
     margin-bottom: 0;

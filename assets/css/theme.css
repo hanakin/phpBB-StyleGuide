@@ -13,6 +13,15 @@
     width: 144px;
     height: 50px;
 }
+.lead {
+    margin-bottom: 10px;
+    margin-bottom: .625rem;
+}
+.copy {
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 1.66666667;
+}
 /*--------------------------------------------------------------------------*\
     $COMPONENTS
 /*--------------------------------------------------------------------------*/
@@ -28,7 +37,7 @@
 .navbar-nav-link {
     line-height: 3.125;
 
-    color: #73C8ED;
+    color: #73C1EE;
 
     display: inline-block;
     padding-left: 16px;
@@ -46,10 +55,10 @@
 
     color: #B3B3B3;
 
-    margin-top: 24px;
-    margin-top: 1.5rem;
+    margin-top: 30px;
+    margin-top: 1.875rem;
 }
-@media (max-width: 785px) {
+@media (max-width: 479px) {
     .color-title {
         text-align: left;
     }
@@ -69,8 +78,8 @@
     display: block;
     width: 30px;
     height: 30px;
-    margin: 12px;
-    margin: .75rem;
+    margin: 15px;
+    margin: .9375rem;
 }
 .swatch-label {
     text-align: center;
@@ -148,52 +157,52 @@ a.swatch-white:hover {
     background-color: #E6E6E6;
 }
 .swatch-primary {
-    background-color: #005587;
+    background-color: #005485;
 }
 a.swatch-primary:hover {
-    background-color: #003554;
+    background-color: #003452;
 }
 .swatch-primary-alt {
-    background-color: #194F90;
+    background-color: #5990AF;
 }
 a.swatch-primary-alt:hover {
-    background-color: #113765;
+    background-color: #457590;
 }
 .swatch-primary-accent {
-    background-color: #537BAC;
+    background-color: #003452;
 }
 a.swatch-primary-accent:hover {
-    background-color: #426289;
+    background-color: #00131F;
 }
 .swatch-primary-hover {
-    background-color: #C41D4A;
+    background-color: #C31D49;
 }
 a.swatch-primary-hover:hover {
-    background-color: #981639;
+    background-color: #971739;
 }
 .swatch-secondary {
-    background-color: #009BDF;
+    background-color: #008EE0;
 }
 a.swatch-secondary:hover {
-    background-color: #0078AC;
+    background-color: #006EAD;
 }
 .swatch-secondary-alt {
-    background-color: #E1EBF2;
+    background-color: #DBE8F0;
 }
 a.swatch-secondary-alt:hover {
-    background-color: #BDD3E3;
+    background-color: #B8D1E0;
 }
 .swatch-secondary-accent {
-    background-color: #E9F0F5;
+    background-color: #EDF4F7;
 }
 a.swatch-secondary-accent:hover {
-    background-color: #C5D8E6;
+    background-color: #C9DDE8;
 }
 .swatch-secondary-hover {
-    background-color: #F6F4D0;
+    background-color: #F7F5D4;
 }
 a.swatch-secondary-hover:hover {
-    background-color: #EEEAA5;
+    background-color: #EFEBA9;
 }
 .swatch-ui {
     background-color: #DEDEDE;
@@ -208,16 +217,16 @@ a.swatch-ui-alt:hover {
     background-color: #999;
 }
 .swatch-ui-accent {
-    background-color: #F7ECEF;
+    background-color: #F7EDF0;
 }
 a.swatch-ui-accent:hover {
-    background-color: #E8C8D1;
+    background-color: #E8C9D2;
 }
 .swatch-ui-hover {
-    background-color: #009BDF;
+    background-color: #008EE0;
 }
 a.swatch-ui-hover:hover {
-    background-color: #0078AC;
+    background-color: #006EAD;
 }
 .swatch-info {
     background-color: #D9EDF7;
@@ -243,23 +252,26 @@ a.swatch-warning:hover {
 a.swatch-success:hover {
     background-color: #C1E2B3;
 }
+h1 {
+    color: #666;
+}
 /*--------------------------------------------------------------------------*\
     $BLOCKS
 /*--------------------------------------------------------------------------*/
 .header {
-    background-color: #009BDF;
+    background-color: #008EE0;
     border-bottom: 2px solid #DEDEDE;
 
-    padding-top: 12px;
-    padding-top: .75rem;
-    padding-bottom: 12px;
-    padding-bottom: .75rem;
+    padding-top: 15px;
+    padding-top: .9375rem;
+    padding-bottom: 15px;
+    padding-bottom: .9375rem;
 }
 .banner {
     background-color: #F2F2F2;
 
-    margin-bottom: 24px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
 }
 .banner-title {
     margin-bottom: 0;

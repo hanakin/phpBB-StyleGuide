@@ -25,21 +25,21 @@
 @gray-95:                                   lighten(#000, 95%); // #f2f2f2
 
 // Primary Colors
-@primary:                                   #005587;
-@primary-alt:                               #194f90;
-@primary-accent:                            mix(white, @primary-alt, 25%);
-@primary-hover:                             #c41d4a;
+@primary:                                   hsl(202,100%,26%);
+@primary-alt:                               mix(white, @primary, 35%);
+@primary-accent:                            darken(@primary, 10%);
+@primary-hover:                             desaturate(spin(@secondary, 142), 26%);
 
 // Secondary Colors
-@secondary:                                 #009bdf;
-@secondary-alt:                             #e1ebf2;
-@secondary-accent:                          mix(white, @secondary-alt, 25%);
-@secondary-hover:                           #f6f4d0;
+@secondary:                                 lighten(@primary, 18%);
+@secondary-alt:                             lighten(desaturate(@primary, 60%), 64%);
+@secondary-accent:                          lighten(@secondary-alt, 5%);
+@secondary-hover:                           saturate(spin(@secondary-alt, -145), 28%);
 
 // UI Colors
 @ui:                                        @gray-87;
 @ui-alt:                                    @gray-70;
-@ui-accent:                                 #f7ecef;
+@ui-accent:                                 spin(@secondary-accent, 142);
 @ui-hover:                                  @secondary;
 
 // Status Colors - Dark
@@ -91,7 +91,7 @@
 @base-body-color:                           @gray-20;
 @base-body-bg-color:                        @white;
 
-@base-heading-color:                        @primary-accent;
+@base-heading-color:                        @primary-alt;
 @base-heading-small-color:                  @ui-alt;
 
 @base-hr-color:                             @gray-90;
