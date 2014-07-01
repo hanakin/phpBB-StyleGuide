@@ -24,29 +24,34 @@
 @-ms-viewport { width: device-width; }
 
 // Visibility utilities
-.visible-xs,
+.visible-tn,
 .visible-sm,
 .visible-md,
-.visible-lg { .responsive-invisibility(); }
+.visible-lg,
+.visible-wd { .responsive-invisibility(); }
 
-.visible-xs-block, .visible-xs-inline, .visible-xs-inline-block,
+.visible-tn-block, .visible-tn-inline, .visible-tn-inline-block,
 .visible-sm-block, .visible-sm-inline, .visible-sm-inline-block,
 .visible-md-block, .visible-md-inline, .visible-md-inline-block,
-.visible-lg-block, .visible-lg-inline, .visible-lg-inline-block {
+.visible-lg-block, .visible-lg-inline, .visible-lg-inline-block,
+.visible-wd-block, .visible-wd-inline, .visible-wd-inline-block {
     display: none !important;
 }
 
-.visible-xs {
-    @media (max-width: @screen-xs-max) { .responsive-visibility(); }
+.visible-tn {
+    @media (max-width: @screen-tn-max) { .responsive-visibility(); }
 }
-.visible-xs-block {
-    @media (max-width: @screen-xs-max) { display: block !important; }
+
+.visible-tn-block {
+    @media (max-width: @screen-tn-max) { display: block !important; }
 }
-.visible-xs-inline {
-    @media (max-width: @screen-xs-max) { display: inline !important; }
+
+.visible-tn-inline {
+    @media (max-width: @screen-tn-max) { display: inline !important; }
 }
-.visible-xs-inline-block {
-    @media (max-width: @screen-xs-max) { display: inline-block !important; }
+
+.visible-tn-inline-block {
+    @media (max-width: @screen-tn-max) { display: inline-block !important; }
 }
 
 .visible-sm {
@@ -54,16 +59,19 @@
         .responsive-visibility();
     }
 }
+
 .visible-sm-block {
     @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
         display: block !important;
     }
 }
+
 .visible-sm-inline {
     @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
         display: inline !important;
     }
 }
+
 .visible-sm-inline-block {
     @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
         display: inline-block !important;
@@ -75,16 +83,19 @@
         .responsive-visibility();
     }
 }
+
 .visible-md-block {
     @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
         display: block !important;
     }
 }
+
 .visible-md-inline {
     @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
         display: inline !important;
     }
 }
+
 .visible-md-inline-block {
     @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
         display: inline-block !important;
@@ -94,31 +105,59 @@
 .visible-lg {
     @media (min-width: @screen-lg-min) { .responsive-visibility(); }
 }
+
 .visible-lg-block {
     @media (min-width: @screen-lg-min) { display: block !important;}
 }
+
 .visible-lg-inline {
     @media (min-width: @screen-lg-min) { display: inline !important; }
 }
+
 .visible-lg-inline-block {
     @media (min-width: @screen-lg-min) { display: inline-block !important; }
 }
 
-.hidden-xs {
-    @media (max-width: @screen-xs-max) { .responsive-invisibility(); }
+.visible-wd {
+    @media (min-width: @screen-wd-min) { .responsive-visibility(); }
 }
+
+.visible-wd-block {
+    @media (min-width: @screen-wd-min) { display: block !important;}
+}
+
+.visible-wd-inline {
+    @media (min-width: @screen-wd-min) { display: inline !important; }
+}
+
+.visible-wd-inline-block {
+    @media (min-width: @screen-wd-min) { display: inline-block !important; }
+}
+
+.hidden-tn {
+    @media (max-width: @screen-tn-max) { .responsive-invisibility(); }
+}
+
 .hidden-sm {
     @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
         .responsive-invisibility();
     }
 }
+
 .hidden-md {
     @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
         .responsive-invisibility();
     }
 }
+
 .hidden-lg {
-    @media (min-width: @screen-lg-min) { .responsive-invisibility(); }
+    @media (min-width: @screen-lg-min) and (max-width: @screen-lg-max) {
+        .responsive-invisibility();
+    }
+}
+
+.hidden-wd {
+    @media (min-width: @screen-wd-min) { .responsive-invisibility(); }
 }
 
 //**
