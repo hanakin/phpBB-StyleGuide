@@ -92,14 +92,16 @@ dd { margin-left: 0; } // Undo browser default
 
 // Unstyled keeps list items block level, just removes default browser
 // padding and list-style
-.list-unstyled {
-    padding-left: 0;
-    list-style: none;
+
+.list {
+    .rem-size(padding-left, (@base-line-height-computed / 2));
+    list-style: initial;
 }
 
 // Inline turns list items into inline-block
 .list-inline {
-    .list-unstyled();
+    padding: 0;
+    list-styl: none;
     margin-left: -5px;
 
     > li {
