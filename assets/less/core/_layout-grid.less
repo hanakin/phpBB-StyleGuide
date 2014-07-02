@@ -14,6 +14,7 @@
     @media (min-width: @screen-sm-min) { width: @container-sm; }
     @media (min-width: @screen-md-min) { width: @container-md; }
     @media (min-width: @screen-lg-min) { width: @container-lg; }
+    @media (min-width: @screen-wd-min) { width: @container-wd; }
 }
 
 //**
@@ -67,3 +68,10 @@
 // Columns, offsets, pushes, and pulls for the large desktop device range.
 //**
 @media (min-width: @screen-lg-min) { .make-grid(lg); }
+
+//**
+// Wide grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+//**
+@media (min-width: @screen-wd-min) { .make-grid(wd); }
