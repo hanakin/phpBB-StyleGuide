@@ -95,7 +95,8 @@ dd { margin-left: 0; } // Undo browser default
 
 .list {
     .rem-size(padding-left, (@base-line-height-computed / 2));
-    list-style: initial;
+    ul& { list-style: disc; }
+    ol& { list-style: decimal; }
 }
 
 // Inline turns list items into inline-block

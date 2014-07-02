@@ -688,9 +688,14 @@ dd {
     margin-left: 0;
 }
 .list {
-    list-style: initial;
     padding-left: 15px;
     padding-left: .9375rem;
+}
+ul.list {
+    list-style: disc;
+}
+ol.list {
+    list-style: decimal;
 }
 .list-inline {
     margin-left: -5px;
