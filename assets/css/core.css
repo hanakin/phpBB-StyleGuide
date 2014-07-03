@@ -687,15 +687,15 @@ dt {
 dd {
     margin-left: 0;
 }
-.list {
+ul.list {
+    list-style: disc;
     padding-left: 15px;
     padding-left: .9375rem;
 }
-ul.list {
-    list-style: disc;
-}
 ol.list {
     list-style: decimal;
+    padding-left: 18px;
+    padding-left: 1.125rem;
 }
 .list-inline {
     margin-left: -5px;

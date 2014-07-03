@@ -687,15 +687,15 @@ dt {
 dd {
     margin-left: 0;
 }
-.list {
+ul.list {
+    list-style: disc;
     padding-left: 15px;
     padding-left: .9375rem;
 }
-ul.list {
-    list-style: disc;
-}
 ol.list {
     list-style: decimal;
+    padding-left: 18px;
+    padding-left: 1.125rem;
 }
 .list-inline {
     margin-left: -5px;
@@ -2020,26 +2020,43 @@ address {
         text-align: left;
     }
 }
-.color-list {
-    padding: 0;
-}
 .color-list li {
     cursor: pointer;
 
     padding: 0;
 }
 .swatch {
-    border: 1px solid #DEDEDE;
-    border-radius: 50%;
+    border-radius: 6px;
 
-    display: block;
-    width: 30px;
-    height: 30px;
+    width: 80px;
+    height: 80px;
     margin: 15px;
     margin: .9375rem;
+    margin: 15px 6px;
 }
 .swatch-label {
+    font-size: 12px;
+    font-size: .75rem;
+    font-weight: 500;
+    line-height: 1;
     text-align: center;
+    text-transform: uppercase;
+
+    background-color: #FFF;
+    border: 1px solid #DEDEDE;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    color: #003452;
+
+    position: relative;
+    top: 60px;
+    margin: 0;
+    padding: 6px 12px;
+}
+.swatch-hexcode {
+    color: #5990AF;
+
+    display: block;
 }
 .swatch-black {
     background-color: #000;
