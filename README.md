@@ -1,8 +1,11 @@
-proSilver-StyleGuide
+PHPBB-StyleGuide
 ====================
 
 Inorder to provide a more modern approach to https://www.phpbb.com/customise/db/style/prosilver_gdk_commercial_fonts/
 as well as provide a useful resource to facilitate and speed up the devlopment process for porSilver.
+
+### The Disscussion related to this project
+https://area51.phpbb.com/phpBB/viewtopic.php?f=81&t=45855
 
 ### What this offers us
 
