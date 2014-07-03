@@ -94,9 +94,14 @@ dd { margin-left: 0; } // Undo browser default
 // padding and list-style
 
 .list {
-    .rem-size(padding-left, (@base-line-height-computed / 2));
-    ul& { list-style: disc; }
-    ol& { list-style: decimal; }
+    ul& {
+        .rem-size(padding-left, (@base-line-height-computed / 2));
+        list-style: disc;
+    }
+    ol& {
+        .rem-size(padding-left, ((@base-line-height-computed / 2) + 3));
+        list-style: decimal;
+    }
 }
 
 // Inline turns list items into inline-block
