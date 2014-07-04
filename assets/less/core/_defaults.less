@@ -15,32 +15,37 @@
 @gray-10:                                   lighten(#000, 10%); // #1a1a1a
 @gray-20:                                   lighten(#000, 20%); // #333333
 @gray-30:                                   lighten(#000, 30%); // #4d4d4d
-@gray-40:                                   lighten(#000, 40%); // #666
-@gray-50:                                   lighten(#000, 50%); // #808
-@gray-60:                                   lighten(#000, 60%); // #999
-@gray-70:                                   lighten(#000, 70%); // #b3b
-@gray-80:                                   lighten(#000, 80%); // #ccc
+@gray-40:                                   lighten(#000, 40%); // #666666
+@gray-50:                                   lighten(#000, 50%); // #808080
+@gray-60:                                   lighten(#000, 60%); // #999999
+@gray-70:                                   lighten(#000, 70%); // #b3b3b3
+@gray-80:                                   lighten(#000, 80%); // #cccccc
 @gray-87:                                   lighten(#000, 87%); // #dedede
 @gray-90:                                   lighten(#000, 90%); // #e5e5e5
 @gray-95:                                   lighten(#000, 95%); // #f2f2f2
 
 // Primary Colors
 @primary:                                   hsl(207,80%,30%);;  // #0F538A
-@primary-alt:                               desaturate(@secondary, 40%); // #5E91BA
-@primary-accent:                            darken(@primary, 5%); // #0D4573
-@primary-hover:                             darken(spin(@secondary, 138), 10%); // #CF1745
+@primary-alt:                               lighten(@primary, @lighten); // #47A1EB
+@primary-accent:                            darken(@primary, @darken); // #0D4573
+@primary-hover:                             darken(spin(@primary-alt, 138), @darken); // #E8305E
 
 // Secondary Colors
-@secondary:                                 lighten(@primary, 25%); // #3095E8
-@secondary-alt:                             lighten(desaturate(@secondary, 40%), 40%); // #EDF3F7
-@secondary-accent:                          darken(@secondary-alt, 5%); // #DBE7F0
-@secondary-hover:                           saturate(spin(@secondary-alt, -150), 30%); // #FBFAE9
+@secondary:                                 desaturate(@primary-alt, @saturation); // #709DC2
+@secondary-alt:                             lighten(@secondary, @lighten); // #DBE7F0
+@secondary-accent:                          darken(@secondary-alt, @darken); // #C9DAE8
+@secondary-hover:                           saturate(spin(@secondary-alt, -150), @saturation); // #FAF8D1
 
 // UI Colors
 @ui:                                        @gray-87; // #dedede
 @ui-alt:                                    @gray-70; // #b3b3b3
-@ui-accent:                                 spin(@secondary-alt, 138); // #F7EDF0
-@ui-hover:                                  @secondary; // #3095E8
+@ui-accent:                                 spin(@secondary-alt, 138); // #F0DBE0
+@ui-hover:                                  @primary-alt; // #47A1EB
+
+// Color Tools
+@lighten:                                   30%;
+@darken:                                    5%;
+@saturation:                                40%;
 
 // Status Colors - Dark
 @success-dark:                              #3c763d;
@@ -91,7 +96,7 @@
 @base-body-color:                           @gray-20;
 @base-body-bg-color:                        @white;
 
-@base-heading-color:                        @primary-alt;
+@base-heading-color:                        @secondary;
 @base-heading-small-color:                  @ui-alt;
 
 @base-hr-color:                             @gray-90;
