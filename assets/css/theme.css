@@ -37,7 +37,7 @@
 .navbar-nav-link {
     line-height: 3.125;
 
-    color: #73C1EE;
+    color: #8DC5F2;
 
     display: inline-block;
     padding-left: 16px;
@@ -89,7 +89,7 @@
     border: 1px solid #DEDEDE;
     border-bottom-right-radius: 6px;
     border-bottom-left-radius: 6px;
-    color: #003452;
+    color: #0D4573;
 
     position: relative;
     top: 60px;
@@ -97,7 +97,7 @@
     padding: 6px 12px;
 }
 .swatch-hexcode {
-    color: #5990AF;
+    color: #5E91BA;
 
     display: block;
 }
@@ -174,52 +174,52 @@ a.swatch-white:hover {
     background-color: #E6E6E6;
 }
 .swatch-primary {
-    background-color: #005485;
+    background-color: #0F538A;
 }
 a.swatch-primary:hover {
-    background-color: #003452;
+    background-color: #0A375C;
 }
 .swatch-primary-alt {
-    background-color: #5990AF;
+    background-color: #5E91BA;
 }
 a.swatch-primary-alt:hover {
-    background-color: #457590;
+    background-color: #4577A1;
 }
 .swatch-primary-accent {
-    background-color: #003452;
+    background-color: #0D4573;
 }
 a.swatch-primary-accent:hover {
-    background-color: #00131F;
+    background-color: #082945;
 }
 .swatch-primary-hover {
-    background-color: #C31D49;
+    background-color: #CF1745;
 }
 a.swatch-primary-hover:hover {
-    background-color: #971739;
+    background-color: #A11236;
 }
 .swatch-secondary {
-    background-color: #008EE0;
+    background-color: #3095E8;
 }
 a.swatch-secondary:hover {
-    background-color: #006EAD;
+    background-color: #177CCF;
 }
 .swatch-secondary-alt {
-    background-color: #DBE8F0;
+    background-color: #EDF3F7;
 }
 a.swatch-secondary-alt:hover {
-    background-color: #B8D1E0;
+    background-color: #C9DAE8;
 }
 .swatch-secondary-accent {
-    background-color: #EDF4F7;
+    background-color: #DBE7F0;
 }
 a.swatch-secondary-accent:hover {
-    background-color: #C9DDE8;
+    background-color: #B8CEE0;
 }
 .swatch-secondary-hover {
-    background-color: #F7F5D4;
+    background-color: #FBFAE9;
 }
 a.swatch-secondary-hover:hover {
-    background-color: #EFEBA9;
+    background-color: #F4F1BE;
 }
 .swatch-ui {
     background-color: #DEDEDE;
@@ -237,13 +237,13 @@ a.swatch-ui-alt:hover {
     background-color: #F7EDF0;
 }
 a.swatch-ui-accent:hover {
-    background-color: #E8C9D2;
+    background-color: #E8C9D1;
 }
 .swatch-ui-hover {
-    background-color: #008EE0;
+    background-color: #3095E8;
 }
 a.swatch-ui-hover:hover {
-    background-color: #006EAD;
+    background-color: #177CCF;
 }
 .swatch-info {
     background-color: #D9EDF7;
@@ -276,7 +276,7 @@ h1 {
     $BLOCKS
 /*--------------------------------------------------------------------------*/
 .header {
-    background-color: #008EE0;
+    background-color: #3095E8;
     border-bottom: 2px solid #DEDEDE;
 
     padding-top: 15px;

@@ -20,27 +20,27 @@
 @gray-60:                                   lighten(#000, 60%); // #999
 @gray-70:                                   lighten(#000, 70%); // #b3b
 @gray-80:                                   lighten(#000, 80%); // #ccc
-@gray-87:                                   lighten(#000, 87%); // #ddd
+@gray-87:                                   lighten(#000, 87%); // #dedede
 @gray-90:                                   lighten(#000, 90%); // #e5e5e5
 @gray-95:                                   lighten(#000, 95%); // #f2f2f2
 
 // Primary Colors
-@primary:                                   hsl(202,100%,26%);
-@primary-alt:                               mix(white, @primary, 35%);
-@primary-accent:                            darken(@primary, 10%);
-@primary-hover:                             desaturate(spin(@secondary, 142), 26%);
+@primary:                                   hsl(207,80%,30%);;  // #0F538A
+@primary-alt:                               desaturate(@secondary, 40%); // #5E91BA
+@primary-accent:                            darken(@primary, 5%); // #0D4573
+@primary-hover:                             darken(spin(@secondary, 138), 10%); // #CF1745
 
 // Secondary Colors
-@secondary:                                 lighten(@primary, 18%);
-@secondary-alt:                             lighten(desaturate(@primary, 60%), 64%);
-@secondary-accent:                          lighten(@secondary-alt, 5%);
-@secondary-hover:                           saturate(spin(@secondary-alt, -145), 28%);
+@secondary:                                 lighten(@primary, 25%); // #3095E8
+@secondary-alt:                             lighten(desaturate(@secondary, 40%), 40%); // #EDF3F7
+@secondary-accent:                          darken(@secondary-alt, 5%); // #DBE7F0
+@secondary-hover:                           saturate(spin(@secondary-alt, -150), 30%); // #FBFAE9
 
 // UI Colors
-@ui:                                        @gray-87;
-@ui-alt:                                    @gray-70;
-@ui-accent:                                 spin(@secondary-accent, 142);
-@ui-hover:                                  @secondary;
+@ui:                                        @gray-87; // #dedede
+@ui-alt:                                    @gray-70; // #b3b3b3
+@ui-accent:                                 spin(@secondary-alt, 138); // #F7EDF0
+@ui-hover:                                  @secondary; // #3095E8
 
 // Status Colors - Dark
 @success-dark:                              #3c763d;

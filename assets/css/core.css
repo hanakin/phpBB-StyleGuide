@@ -433,14 +433,14 @@ hr {
 a {
     text-decoration: none;
 
-    color: #005485;
+    color: #0F538A;
 }
 a:hover,
 a:focus,
 a:active {
     text-decoration: underline;
 
-    color: #C31D49;
+    color: #CF1745;
 }
 blockquote,
 dl,
@@ -515,7 +515,7 @@ h6 {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 700;
 
-    color: #5990AF;
+    color: #5E91BA;
 }
 h1 small,
 h2 small,
