@@ -479,12 +479,6 @@ fieldset {
 iframe {
     border: 0;
 }
-ol,
-ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
 /**
  * Suppress the focus outline on links that cannot be accessed via keyboard.
  * This prevents an unwanted focus outline from appearing around elements that
@@ -612,54 +606,62 @@ mark,
     padding: .3px;
     padding: .01875rem;
 }
-.success {
-    color: #DFF0D8;
+abbr[title],
+abbr[data-original-title] {
+    border-bottom: 1px dotted #DEDEDE;
+    cursor: help;
 }
-a.success:hover {
-    color: #C1E2B3;
+blockquote {
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.5;
+
+    border-left: 5px solid #DEDEDE;
+
+    margin-top: 0;
+    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 15px 30px;
 }
-.info {
-    color: #D9EDF7;
+blockquote p:last-of-type,
+blockquote ul:last-of-type,
+blockquote ol:last-of-type {
+    margin-bottom: 0;
 }
-a.info:hover {
-    color: #AFD9EE;
+blockquote footer,
+blockquote small,
+blockquote .small {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.875;
+
+    color: #B3B3B3;
+
+    display: block;
 }
-.warning {
-    color: #FCF8E3;
+blockquote footer:before,
+blockquote small:before,
+blockquote .small:before {
+    content: '\2014 \00A0';
 }
-a.warning:hover {
-    color: #F7ECB5;
+blockquote:before,
+blockquote:after {
+    content: '';
 }
-.danger {
-    color: #F2DEDE;
+address {
+    font-style: normal;
+    line-height: 1.9;
+
+    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
 }
-a.danger:hover {
-    color: #E4B9B9;
-}
-.success-bg {
-    background-color: #DFF0D8;
-}
-a.success-bg:hover {
-    background-color: #C1E2B3;
-}
-.info-bg {
-    background-color: #D9EDF7;
-}
-a.info-bg:hover {
-    background-color: #AFD9EE;
-}
-.warning-bg {
-    background-color: #FCF8E3;
-}
-a.warning-bg:hover {
-    background-color: #F7ECB5;
-}
-.danger-bg {
-    background-color: #F2DEDE;
-}
-a.danger-bg:hover {
-    background-color: #E4B9B9;
-}
+/*--------------------------------------------------------------------------*\
+    $LISTS
+/*--------------------------------------------------------------------------*\
+    Setup the default lists and baseline grid
+/*--------------------------------------------------------------------------*/
 ul,
 ol {
     margin-top: 0;
@@ -687,15 +689,13 @@ dt {
 dd {
     margin-left: 0;
 }
-ul.list {
-    list-style: disc;
-    padding-left: 15px;
-    padding-left: .9375rem;
+.list-unstyled {
+    list-style: none;
+    padding-left: 0;
 }
-ol.list {
-    list-style: decimal;
-    padding-left: 18px;
-    padding-left: 1.125rem;
+.list-unstyled ul,
+.list-unstyled ol {
+    list-style: none;
 }
 .list-inline {
     margin-left: -5px;
@@ -722,39 +722,6 @@ ol.list {
     .list-inline dd {
         margin-left: 180px;
     }
-}
-abbr[title],
-abbr[data-original-title] {
-    border-bottom: 1px dotted #DEDEDE;
-    cursor: help;
-}
-blockquote {
-    font-size: #B3B3B3;
-
-    border-left: 5px solid #DEDEDE;
-
-    margin-top: 0;
-    margin-bottom: 30px;
-    margin-bottom: 1.875rem;
-    margin-left: 0;
-    margin-right: 0;
-    padding: 15px 30px;
-}
-blockquote p:last-child,
-blockquote ul:last-child,
-blockquote ol:last-child {
-    margin-bottom: 0;
-}
-blockquote:before,
-blockquote:after {
-    content: '';
-}
-address {
-    font-style: normal;
-    line-height: 1.9;
-
-    margin-bottom: 30px;
-    margin-bottom: 1.875rem;
 }
 /*--------------------------------------------------------------------------*\
     $GRID

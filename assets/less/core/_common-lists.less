@@ -1,0 +1,62 @@
+/*--------------------------------------------------------------------------*\
+    $LISTS
+/*--------------------------------------------------------------------------*\
+    Setup the default lists and baseline grid
+/*--------------------------------------------------------------------------*/
+
+// Unordered and Ordered lists
+ul,
+ol {
+    margin-top: 0;
+    .rem-size(margin-bottom, (@base-line-height-computed / 2));
+    ul,
+    ol { margin-bottom: 0; }
+}
+
+// Description Lists
+dl {
+    margin-top: 0; // Remove browser default
+    .rem-size(margin-bottom, @base-line-height-computed);
+}
+
+dt,
+dd { line-height: @base-line-height; }
+dt { font-weight: bold; }
+dd { margin-left: 0; } // Undo browser default
+
+// List options
+
+// Unstyled keeps list items block level, just removes default browser padding
+// and list-style
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+    ul,
+    ol { list-style: none; }
+}
+
+// Inline turns list items into inline-block
+.list-inline {
+    padding: 0;
+    list-styl: none;
+    margin-left: -5px;
+
+    > li {
+        display: inline-block;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    // Clear the floated `dt` if empty `dd` is present
+    dd { &:extend(.clearfix all); }
+    @media (min-width: @grid-float-breakpoint) {
+        dt {
+            float: left;
+            width: (@base-horizontal-offset - 20);
+            clear: left;
+            text-align: right;
+            .text-overflow();
+        }
+        dd { margin-left: @base-horizontal-offset; }
+    }
+}
