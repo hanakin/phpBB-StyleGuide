@@ -440,7 +440,7 @@ a:focus,
 a:active {
     text-decoration: underline;
 
-    color: #CF1745;
+    color: #E8305E;
 }
 blockquote,
 dl,
@@ -515,7 +515,7 @@ h6 {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 700;
 
-    color: #5E91BA;
+    color: #709DC2;
 }
 h1 small,
 h2 small,

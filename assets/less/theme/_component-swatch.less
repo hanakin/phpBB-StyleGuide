@@ -61,7 +61,20 @@
 .swatch-ui-accent { .bg-variant(@ui-accent); }
 .swatch-ui-hover  { .bg-variant(@ui-hover); }
 
-.swatch-info    { .bg-variant(@info); }
-.swatch-danger  { .bg-variant(@danger); }
-.swatch-warning { .bg-variant(@warning); }
-.swatch-success { .bg-variant(@success); }
+.swatch-info         { .bg-variant(@info); }
+.swatch-danger       { .bg-variant(@danger); }
+.swatch-warning      { .bg-variant(@warning); }
+.swatch-success      { .bg-variant(@success); }
+.swatch-info-dark    { .bg-variant(@info-dark); }
+.swatch-danger-dark  { .bg-variant(@danger-dark); }
+.swatch-warning-dark { .bg-variant(@warning-dark); }
+.swatch-success-dark { .bg-variant(@success-dark); }
+
+.swatch-grad-blue-dark    { #gradient .vertical-three-colors(darken(@primary-alt, 20%), @primary-alt, 90px, @primary-alt); }
+.swatch-grad-blue-dark-reverse    { #gradient .vertical-three-colors(@primary-alt, darken(@primary-alt, 20%), 90px, darken(@primary-alt, 20%)); }
+.swatch-grad-blue-light  { #gradient .vertical-three-colors(@secondary-accent, @secondary-alt, 15%, @secondary-alt); }
+.swatch-grad-blue-light-reverse  { #gradient .vertical-three-colors(@secondary-alt, @secondary-accent, 15%, @secondary-accent); }
+.swatch-grad-gray  { #gradient .vertical(@gray-90, @white); }
+.swatch-grad-gray-reverse  { #gradient .vertical(@white, @gray-90); }
+.swatch-grad-bluegray  { #gradient .vertical(mix(@black, @secondary-accent, 10%), @secondary-accent); }
+.swatch-grad-bluegray-reverse  { #gradient .vertical(@secondary-accent, mix(@black, @secondary-accent, 10%)); }
