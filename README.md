@@ -13,12 +13,21 @@ A clean workflow and framework that will be used to standardize all the changes 
 
 ### Contributions
 
-this project will follow strict standards for all the code that is used reference the Wiki for all the details, but they are base on industry standards like:
+this project will follow strict standards for all the code that is used reference the following for all the details
+
+* [CSS](https://github.com/hanakin/PHPBB-StyleGuide/tree/gh-pages/Coding%20Guidlines/CSS#sizing-uis)
+* JS - Coming Soon!
+* HTML - Coming Soon!
+* IMAGES - Coming Soon!
+
+These are all based on industry common practices:
 
 - https://github.com/csswizardry/CSS-Guidelines
 - https://github.com/necolas/idiomatic-css
 - https://github.com/stubbornella/oocss/wiki/Module
 - https://github.com/stubbornella/oocss
+- http://smacss.com/
+- https://github.com/styleguide/css
 
 As well as several gulp plugins to help maintain this all
 
