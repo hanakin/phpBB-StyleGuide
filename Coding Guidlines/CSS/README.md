@@ -295,16 +295,18 @@ like `color: red;` with classes like `.colour-picker {}` lacks consistency.
 
 Use a docBlock-esque commenting style limited to 80 characters in length:
 
+##### Rendered
     /**
-     * Style Block (Render)
+     * Header
      *
      * Description
      *
      * Source: https://
      */
 
+##### Rendered
     //**
-    // Style Block (Don't Render)
+    // Header
     //
     // Description
     //
