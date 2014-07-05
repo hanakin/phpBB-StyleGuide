@@ -4,14 +4,6 @@
 
 ## Translations
 
-* [Russian](https://github.com/matmuchrapna/CSS-Guidelines/blob/master/README%20Russian.md)
-* [Simplified Chinese](https://github.com/chadluo/CSS-Guidelines/blob/master/README.md)
-* [Traditional Chinese](https://github.com/doggy8088/CSS-Guidelines/blob/master/README.md)
-* [French](https://github.com/flexbox/CSS-Guidelines/blob/master/README.md)
-* [Japanese](https://github.com/kiwanami/CSS-Guidelines/blob/master/README.ja.md)
-* [Spanish](https://github.com/Wakkos/CSS-Guidelines/blob/master/README.md)
-* [German](https://github.com/rnarian/CSS-Guidelines/blob/master/README.md)
-
 ---
 
 In working on large, long running projects with dozens of developers, it is
@@ -41,10 +33,6 @@ writing and architecting CSS. Exciting, huh?
   * [JS hooks](#js-hooks)
   * [Internationalisation](#internationalisation)
 * [Comments](#comments)
-  * [Comments on steroids](#comments-on-steroids)
-    * [Quasi-qualified selectors](#quasi-qualified-selectors)
-    * [Tagging code](#tagging-code)
-    * [Object/extension pointers](#objectextension-pointers)
 * [Writing CSS](#writing-css)
 * [Building new components](#building-new-components)
 * [OOCSS](#oocss)
