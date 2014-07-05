@@ -531,7 +531,8 @@ h6 small {
 
     display: block;
 }
-/* These handle massive type, for less frequently occurring bits of text (e.g. in mastheads and banners). */
+/* These handle massive type, for less frequently occurring bits of text
+(e.g. in mastheads and banners). */
 .giga {
     font-size: 80px;
     font-size: 5rem;

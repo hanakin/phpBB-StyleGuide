@@ -26,7 +26,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/* These handle massive type, for less frequently occurring bits of text (e.g. in mastheads and banners). */
+/* These handle massive type, for less frequently occurring bits of text
+(e.g. in mastheads and banners). */
 .giga{ .font-size(@giga); }
 .mega{ .font-size(@mega); }
 .kilo{ .font-size(@kilo); }
@@ -45,16 +46,12 @@ small, .milli { .font-size(@milli); }
 
 
 // Emphasis & misc
-// -------------------------
-
 cite { font-style: normal; } // Undo browser default styling
 mark, .mark {
     background-color: @warning;
     .rem-size(padding, .3);
 }
 
-// Misc
-// -------------------------
 // Abbreviations and acronyms
 abbr[title],
 // Add data-* attribute to help out our tooltip plugin, per https://github.com/twbs/bootstrap/issues/5257
