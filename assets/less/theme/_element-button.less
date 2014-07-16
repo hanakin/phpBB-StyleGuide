@@ -1,0 +1,103 @@
+//--------------------------------------------------------------------------//
+//  $ELEMENT-BUTTON
+//--------------------------------------------------------------------------//
+//  Button class
+//--------------------------------------------------------------------------//
+
+//**
+// 1. Inherit font styles from ancestor.
+// 2. Normalize `line-height`. For `input`, it can't be changed from `normal`
+//    in Firefox 4+.
+// 3. Make sure `input` will wrap text across multiple lines.
+// 4. Reset unusual Firefox-on-Android default style;
+//    see https://github.com/necolas/normalize.css/issues/214
+// 5. Normalize `box-sizing` across all elements that this component could be
+//    applied to.
+// 6. Prevent button text from being selectable.
+// 7. Corrects inability to style clickable `input` types in iOS.
+//**
+
+.button {
+    // Text
+    font: inherit; // 1
+    font-weight: @base-button-font-weight;
+    .rem-size(font-size, @base-font-size);
+    .line-height((@base-font-size * 2) - unit(@base-padding-vertical * 2) - (@base-button-border-size * 2));
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    white-space: normal; // 3
+
+    // Decoration
+    background-image: none; // 4
+    background-color: @base-button-bg;
+    border-width: unit(@base-button-border-size, px);
+    border-style: solid;
+    border-color: @base-button-bg;
+    border-radius: @base-radius;
+    color: @base-button-color;
+    cursor: pointer;
+
+    // Layout
+    .box-sizing(border-box); // 5
+    display: inline-block;
+    padding: @base-padding-vertical @base-padding-horizontal;
+    margin: 0;
+    .user-select(none); // 6
+
+    // Other
+    -webkit-appearance: none; // 7
+
+    // Remove excess padding and border in Firefox 4+
+    &::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+
+    // Work around a Firefox/IE bug where the transparent `button` background
+    // results in a loss of the default `button` focus styles.
+    &:focus {
+        outline: 1px dotted;
+        outline: 5px auto -webkit-focus-ring-color;
+    }
+
+    &:hover,
+    &:focus,
+    &:active { text-decoration: none; }
+
+
+    &:hover, &:focus {
+        color: @base-button-color;
+        background-color: darken(@base-button-bg, 10%);
+        border-color: darken(@base-button-bg, 10%);
+    }
+
+    &:active,
+    &.active {
+        outline: 0;
+        background-image: none;
+        color: @base-button-color;
+        background-color: @base-button-bg;
+        border-color: @base-button-bg;
+        .box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+    }
+
+    &.disabled,
+    &[disabled],
+    &:disabled,
+    fieldset[disabled] &,
+    fieldset:disabled & {
+        cursor: not-allowed;
+        pointer-events: none; // Future-proof disabling of clicks
+        .opacity(.65);
+        .box-shadow(none);
+        &,
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+            background-color: @base-button-bg;
+            border-color: @base-button-bg;
+        }
+    }
+}
