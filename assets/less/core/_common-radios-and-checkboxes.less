@@ -1,0 +1,87 @@
+/*--------------------------------------------------------------------------*\
+    $COMMON-RADIOS & CHECKBOXES
+/*--------------------------------------------------------------------------*\
+    Setup the default radio and checkboxes - Based on Bootstrap
+/*--------------------------------------------------------------------------*/
+
+//**
+// Checkboxes and radios
+//
+// Indent the labels to position radios/checkboxes as hanging controls.
+//**
+.radio, .checkbox {
+    display: block;
+    // clear the floating input if there is no label text
+    min-height: @base-line-height-computed;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+
+    label {
+        // Text
+        font-weight: normal;
+
+        // Decoration
+        cursor: pointer;
+
+        // Layout
+        margin-bottom: 0;
+        padding-left: 20px;
+    }
+}
+
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+    margin-left: -20px;
+    margin-top: 4px \9;
+    position: absolute;
+}
+
+// Move up sibling radios or checkboxes for tighter spacing
+.radio + .radio, .checkbox + .checkbox { margin-top: -5px; }
+
+// Radios and checkboxes on same line
+.radio-inline, .checkbox-inline {
+    // Text
+    font-weight: normal;
+    vertical-align: middle;
+
+    // Decoration
+    cursor: pointer;
+
+    // Layout
+    display: inline-block;
+    margin-bottom: 0;
+    padding-left: 20px;
+}
+
+.radio-inline + .radio-inline, .checkbox-inline + .checkbox-inline {
+    margin-left: 10px; // space out consecutive inline controls
+    margin-top: 0;
+}
+
+//**
+// Apply same disabled cursor tweak as for inputs
+// Some special care is needed because <label>s don't inherit their parent's `cursor`.
+//
+// Note: Neither radios nor checkboxes can be readonly.
+//**
+input[type="radio"], input[type="checkbox"] {
+    &[disabled],
+    &.disabled,
+    fieldset[disabled] & { cursor: not-allowed; }
+}
+
+// These classes are used directly on <label>s
+.radio-inline, .checkbox-inline {
+    &.disabled, fieldset[disabled] & { cursor: not-allowed; }
+}
+
+// These classes are used on elements with <label> descendants
+.radio, .checkbox {
+    &.disabled, fieldset[disabled] & {
+        label { cursor: not-allowed; }
+    }
+}

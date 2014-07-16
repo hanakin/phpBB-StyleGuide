@@ -85,7 +85,7 @@
 
 // Base Font Size
 @base-font-size:                            @epsilon;
-@base-line-height:                          1.9;
+@base-line-height:                          1.5;
 @base-line-height-computed:                 floor((@base-font-size * @base-line-height)); //24px
 
 
@@ -104,12 +104,80 @@
 @base-hr-color:                             @gray-90;
 
 // Layout
+@base-radius-sm:                            3px;
+@base-radius:                               4px;
+@base-radius-lg:                            6px;
+
+@base-padding-vertical-tn:                  1px;
+@base-padding-horizontal-tn:                5px;
+
+@base-padding-vertical-sm:                  5px;
+@base-padding-horizontal-sm:                10px;
+
+@base-padding-vertical:                     6px;
+@base-padding-horizontal:                   12px;
+
+@base-padding-vertical-lg:                  10px;
+@base-padding-horizontal-lg:                16px;
+
 @base-horizontal-offset:                    180px;
 
 // Smallest fixed width container size
 @base-container-size:                       720px;
-// One Third Base Container Column Size - used to keep consistent scale for all fixed grids
+// One Third Base Container Column Size - used to keep consistent scale
+// for all fixed grids
 @base-grid-multiplier:                      ((@base-container-size / @grid-columns) / 3); // 20px
+
+
+
+//--------------------------------------------------------------------------//
+//  $FORM SETTINGS
+//--------------------------------------------------------------------------//
+
+// Legend
+@legend-font-size:                          @beta;
+
+@legend-color:                              inherit;
+
+@legend-margin-bottom:                      (@base-line-height-computed / 2);
+
+// Label
+@label-font-size:                           @base-font-size;
+@label-line-height:                         @alpha;
+
+// Output
+@output-font-size:                          @base-font-size;
+
+@output-color:                              @gray-50;
+
+@output-padding-top:                        (@base-padding-vertical + 1);
+
+// Controls (inputs, textarea, selects)
+@control-font-family:                       inherit;
+@control-font-size-sm:                      @zeta;
+@control-font-size:                         @base-font-size;
+@control-font-size-lg:                      @delta;
+
+@control-bg:                                #fafafa;
+@control-border-size:                       1;
+@control-border-color:                      @gray-80;
+@control-radius:                            @base-radius;
+@control-box-shadow:                        ~"inset 0 1px 1px rgba(0,0,0,.075)";
+@control-color:                             @gray-40;
+
+@control-bg-disabled:                       mix(@gray-60, white, 50%);
+@control-border-color-disabled:             mix(@gray-60, white, 30%);
+@control-color-disabled:                    mix(@gray-60, white, 10%);;
+
+@control-height-sm:                         (@control-font-size-sm * 2);
+@control-height:                            (@control-font-size * 2);
+@control-height-lg:                         (@control-font-size-lg * 2);
+
+// Control Group
+@control-group-bg:                          @gray-80;
+
+// Temporal
+@temporal-height:                           @base-line-height;
 
 
 
@@ -182,5 +250,16 @@
 //--------------------------------------------------------------------------//
 
 @component-offset-horizontal:               180px;
+
+
+//--------------------------------------------------------------------------//
+//  $ELEMENT SETTINGS
+//--------------------------------------------------------------------------//
+
+@base-button-color:                         @gray-30;
+@base-button-bg:                            @gray-80;
+@base-button-font-weight:                   500;
+@base-button-border-size:                   1;
+
 
 
