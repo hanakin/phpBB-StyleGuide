@@ -9,6 +9,7 @@ var notify      = require("gulp-notify"),
     gutil       = require('gulp-util'),
     plumber     = require('gulp-plumber'),
     less        = require('gulp-less'),
+    sourcemaps  = require('gulp-sourcemaps'),
     minifyCSS   = require('gulp-minify-css'),
     csscomb     = require('gulp-csscomb'),
     imagemin    = require('gulp-imagemin'),
@@ -38,7 +39,10 @@ gulp.task('build', function () {
         .pipe(plumber({
             errorHandler: onError
         }))
-        .pipe(less()).pipe(notify(files[i] + " Rendered!"))
+        .pipe(sourcemaps.init())
+        .pipe(less())
+        .pipe(notify(files[i] + " Rendered!"))
+        .pipe(sourcemaps.write()).pipe(notify(files[i] + " Mapped!"))
         .pipe(csscomb()).pipe(notify(files[i] + " Sorted!"))
         .pipe(gulp.dest(cssDir))
         .pipe(minifyCSS({
