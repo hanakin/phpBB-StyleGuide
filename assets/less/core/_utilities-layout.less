@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------------------*\
-    $UTILITIES LAYOUT
+    $UTILITIES-LAYOUT
 /*--------------------------------------------------------------------------*\
     Contains useful layout related functions
 /*--------------------------------------------------------------------------*/
@@ -40,14 +40,17 @@
 // Hide from browsers only
 // -------------------------
 .sr-only {
-    position: absolute;
-    width: 1px;
+    // Decoration
+    border: 0;
+
+    // Layout
+    clip: rect(0, 0, 0, 0);
     height: 1px;
     margin: -1px;
     padding: 0;
+    position: absolute;
     overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
+    width: 1px;
 }
 
 // For Affix plugin

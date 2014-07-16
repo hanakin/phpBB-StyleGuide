@@ -5,15 +5,21 @@
 //--------------------------------------------------------------------------//
 
 .color-title {
-    color: @ui-alt;
-    .rem-size(margin-top, @base-line-height-computed);
+    // Text
     text-align: right;
-    @media (max-width: @screen-tn-max) {
-        text-align: left;
-    }
+    @media (max-width: @screen-tn-max) { text-align: left; }
+
+    // Decoration
+    color: @primary-accent;
+
+    // Layout
+    .rem-size(margin-top, @base-line-height-computed);
 }
 
 .color-list li {
-    padding: 0;
+    // Decoration
     cursor: pointer;
+
+    // Layout
+    padding: 0;
 }

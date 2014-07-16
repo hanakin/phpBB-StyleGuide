@@ -4,4 +4,13 @@
 //  Lead class
 //--------------------------------------------------------------------------//
 
-.lead { .rem-size(margin-bottom, (@base-line-height-computed / 3)); }
+.lead {
+    .rem-size(margin-bottom, (@base-line-height-computed / 3));
+
+    small {
+        // Text
+        font-weight: 700;
+
+        // Decoration
+        color: @info-dark; }
+}

@@ -11,15 +11,17 @@
 /* Define your base font-size here; most elements will inherit this. _NO__DOTCOMMA__AFTER__*/
 html {
     font-size: unit(@base-font-size, px);
-    /* 24px (This is now our magic number; all subsequent margin-bottoms and line-heights want to be a multiple of this number in order to maintain vertical rhythm.) _NO__DOTCOMMA__AFTER__*/
     line-height: @base-line-height;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
+    // Text
     font-family: @base-font;
-    color: @base-body-color;
+
+    // Decoration
     background-color: @base-body-bg-color;
+    color: @base-body-color;
 }
 
 input,
@@ -35,22 +37,31 @@ figure { margin: 0 }
 img { vertical-align: middle }
 
 hr {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    // Decoration
     border: 0;
     border-top: 1px solid @base-hr-color;
+
+    // Layout
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 a {
-    color: @primary;
+    // Text
     text-decoration: none;
+
+    // Decoration
+    color: @primary;
 }
 
 a:hover,
 a:focus,
 a:active {
-    color: @primary-hover;
+    // Text
     text-decoration: underline;
+
+    // Decoration
+    color: @primary-hover;
 }
 
 blockquote,
@@ -66,8 +77,11 @@ figure,
 p,
 pre { margin: 0 }
 button {
+    // Decoration
     background: transparent;
     border: 0;
+
+    // Layout
     padding: 0;
 }
 
@@ -81,8 +95,11 @@ button:focus {
 }
 
 fieldset {
+    // Decoration
     border: 0;
     margin: 0;
+
+    // Layout
     padding: 0;
 }
 

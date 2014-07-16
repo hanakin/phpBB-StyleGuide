@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------------------*\
-    $TYPE
+    $COMMON-TYPE
 /*--------------------------------------------------------------------------*\
     Setup the default typefaces and baseline grid
 /*--------------------------------------------------------------------------*/
@@ -13,15 +13,23 @@ hr { .rem-size(margin-bottom, @base-line-height-computed); }
 
 // Headings
 h1, h2, h3, h4, h5, h6 {
+    // Text
     font-family: @base-font;
     font-weight: 700;
+
+    // Decoration
     color: @base-heading-color;
 
     small{
+        // Text
         font-weight: normal;
-        line-height: 1;
-        color: @base-heading-small-color;
         font-size: 65%;
+        line-height: 1;
+
+        // Decoration
+        color: @base-heading-small-color;
+
+        // Layout
         display: block;
     }
 }
@@ -48,7 +56,10 @@ small, .milli { .font-size(@milli); }
 // Emphasis & misc
 cite { font-style: normal; } // Undo browser default styling
 mark, .mark {
+    // Decoration
     background-color: @warning;
+
+    // Layout
     .rem-size(padding, .3);
 }
 
@@ -56,19 +67,22 @@ mark, .mark {
 abbr[title],
 // Add data-* attribute to help out our tooltip plugin, per https://github.com/twbs/bootstrap/issues/5257
 abbr[data-original-title] {
-    cursor: help;
     border-bottom: 1px dotted @ui;
+    cursor: help;
 }
 
 // Blockquotes
 blockquote {
-    padding: unit((@base-line-height-computed / 2), px) unit(@base-line-height-computed, px);
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0;
-    .rem-size(margin-bottom, @base-line-height-computed);
+    // Text
     .font-size(@gamma);
+
+    // Decoration
     border-left: 5px solid @ui;
+
+    // Layout
+    margin: 0;
+    .rem-size(margin-bottom, @base-line-height-computed);
+    padding: unit((@base-line-height-computed / 2), px) unit(@base-line-height-computed, px);
 
     p,
     ul,
@@ -79,9 +93,15 @@ blockquote {
     footer,
     small,
     .small {
-        display: block;
+        // Text
         .font-size(@base-font-size);
+
+        // Decoration
         color: @ui-alt;
+
+        // Layout
+        display: block;
+
         &:before { content: '\2014 \00A0'; }
     }
 }
@@ -92,7 +112,10 @@ blockquote:after { content: ""; }
 
 // Addresses
 address {
-    .rem-size(margin-bottom, @base-line-height-computed);
+    // Text
     font-style: normal;
     line-height: @base-line-height;
+
+    // Layout
+    .rem-size(margin-bottom, @base-line-height-computed);
 }

@@ -5,17 +5,26 @@
 //--------------------------------------------------------------------------//
 
 .navbar-heading {
-    margin-bottom: 0;
+    // Text
     line-height: 0;
+
+    // Layout
+    margin-bottom: 0;
 }
 
 .navbar-nav, .navbar-nav-mobile { text-align: right; }
 .navbar-nav-link {
-    display: inline-block;
+    // Text
     .line-height(50);
+
+    // Decoration
+    color: mix(white, @primary-alt, 45%);
+
+    // Layout
+    display: inline-block;
     .rem-size(padding-left, 16);
     .rem-size(padding-right, 16);
-    color: mix(white, @primary-alt, 45%);
+
     &:hover {
         color: @white;
         text-decoration: none;
