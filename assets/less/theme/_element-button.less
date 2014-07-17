@@ -20,22 +20,23 @@
 .button {
     // Text
     font: inherit; // 1
-    font-weight: @base-button-font-weight;
-    .rem-size(font-size, @base-font-size);
-    .line-height((@base-font-size * 2) - unit(@base-padding-vertical * 2) - (@base-button-border-size * 2));
+    font-weight: @button-font-weight;
+    .rem-size(font-size, @button-font-size);
+    .line-height((@button-font-size * 2) - unit(@base-padding-vertical * 2) - (@button-border-size * 2));
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
     white-space: normal; // 3
 
     // Decoration
-    background-image: none; // 4
-    background-color: @base-button-bg;
-    border-width: unit(@base-button-border-size, px);
+    background-color: @button-bg;
+    background-image: @button-bg-image; // 4
+    border-width: unit(@button-border-size, px);
     border-style: solid;
-    border-color: @base-button-bg;
-    border-radius: @base-radius;
-    color: @base-button-color;
+    border-color: @button-border-color;
+    border-radius: @button-radius;
+    .box-shadow(@button-box-shadow);
+    color: @button-color;
     cursor: pointer;
 
     // Layout
@@ -67,19 +68,20 @@
 
 
     &:hover, &:focus {
-        color: @base-button-color;
-        background-color: darken(@base-button-bg, 10%);
-        border-color: darken(@base-button-bg, 10%);
+        background-color: @button-bg-hover; // darken(@button-bg, 10%);
+        background-image: @button-bg-image-hover;
+        border-color: @button-border-color-hover; // darken(@base-button-bg, 10%);
+        color: @button-color-hover;
     }
 
     &:active,
     &.active {
         outline: 0;
         background-image: none;
-        color: @base-button-color;
-        background-color: @base-button-bg;
-        border-color: @base-button-bg;
-        .box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+        color: @button-color;
+        background-color: @button-bg;
+        border-color: @button-border-color;
+        .box-shadow(@button-box-shadow-active);
     }
 
     &.disabled,
@@ -96,8 +98,9 @@
         &:focus,
         &:active,
         &.active {
-            background-color: @base-button-bg;
-            border-color: @base-button-bg;
+            background-color: @button-bg;
+            background-image: @button-bg-image;
+            border-color: @button-border-color;
         }
     }
 }

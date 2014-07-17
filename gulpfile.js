@@ -42,8 +42,8 @@ gulp.task('build', function () {
         .pipe(sourcemaps.init())
         .pipe(less())
         .pipe(notify(files[i] + " Rendered!"))
-        .pipe(sourcemaps.write()).pipe(notify(files[i] + " Mapped!"))
         .pipe(csscomb()).pipe(notify(files[i] + " Sorted!"))
+        .pipe(sourcemaps.write('./')).pipe(notify(files[i] + " Mapped!"))
         .pipe(gulp.dest(cssDir))
         .pipe(minifyCSS({
             keepBreaks: false,

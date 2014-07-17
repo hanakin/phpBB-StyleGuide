@@ -256,10 +256,25 @@
 //  $ELEMENT SETTINGS
 //--------------------------------------------------------------------------//
 
-@base-button-color:                         @gray-30;
-@base-button-bg:                            @gray-80;
-@base-button-font-weight:                   500;
-@base-button-border-size:                   1;
+// Text
+@button-font-size:                          @base-font-size;
+@button-font-weight:                        500;
+
+// Decoration
+@button-bg:                                 @gray-80;
+@button-bg-image:                           none;
+@button-border-size:                        1;
+@button-border-color:                       @button-bg;
+@button-radius:                             @base-radius;
+@button-box-shadow:                         none;
+@button-color:                              @gray-30;
+
+// Decoration Hover
+@button-bg-hover:                           darken(@button-bg, 10%);
+@button-bg-image-hover:                     @button-bg-image;
+@button-border-color-hover:                 darken(@button-bg, 10%);
+@button-box-shadow-active:                  inset 0 3px 5px rgba(0,0,0,.125);
+@button-color-hover:                        @button-color;
 
 
 
