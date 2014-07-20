@@ -1,0 +1,214 @@
+/*--------------------------------------------------------------------------*\
+    $COMMON-TABLES
+/*--------------------------------------------------------------------------*\
+    Setup the default tables - Based on Bootstrap
+/*--------------------------------------------------------------------------*/
+
+table { background-color: @table-bg; }
+th { text-align: left; }
+
+// Baseline styles
+.table {
+    .rem-size(margin-bottom, @base-line-height-computed);
+    max-width: 100%;
+    width: 100%;
+
+    // Cells
+    > thead,
+    > tbody,
+    > tfoot {
+        > tr {
+            > th, > td {
+                // Text
+                line-height: @base-line-height;
+                vertical-align: top;
+
+                // Decoration
+                border-top-width: @table-border-size;
+                border-top-style: solid;
+                border-top-color: @table-border-color;
+                color: @table-color;
+
+                // Layout
+                padding: @table-padding;
+            }
+        }
+    }
+
+    // Bottom align for column headings
+    > thead > tr > th {
+        // Text
+        text-align: center;
+        vertical-align: bottom;
+
+        // Decoration
+        background-color: @table-head-bg;
+        border-bottom-width: @table-border-size;
+        border-bottom-style: solid;
+        border-bottom-color: @table-border-color;
+        color: @table-head-color;
+    }
+
+    // Remove top border from thead by default
+    > caption + thead,
+    > colgroup + thead,
+    > thead:first-child {
+        > tr:first-child {
+            > th, > td { border-top: 0; }
+        }
+    }
+
+    // Account for multiple tbody instances
+    > tbody + tbody {
+        border-top-width: (@table-border-size * 2);
+        border-top-style: solid;
+        border-top-color: @table-border-color;
+    }
+
+    // Nesting
+    .table { background-color: @base-body-bg-color; }
+}
+
+// Condensed table w/ half padding
+.table-condensed {
+    > thead,
+    > tbody,
+    > tfoot {
+        > tr {
+            > th, > td { padding: @table-padding-sm; }
+        }
+    }
+}
+
+// Bordered version
+//
+// Add borders all around the table and between all the columns.
+.table-bordered {
+    border-width: @table-border-size;
+    border-style: solid;
+    border-color: @table-border-color;
+
+    > thead,
+    > tbody,
+    > tfoot {
+        > tr {
+            > th, > td {
+                border-width: @table-border-size;
+                border-style: solid;
+                border-color: @table-border-color;
+            }
+        }
+    }
+
+    > thead > tr {
+        > th, > td { border-bottom-width: (@table-border-size * 2); }
+    }
+}
+
+// Zebra-striping
+//
+// Default zebra-stripe styles (alternating gray and transparent backgrounds)
+.table-striped {
+    > tbody > tr:nth-child(odd) {
+        > td, > th { background-color: @table-bg-alt; }
+    }
+}
+
+// Hover effect
+//
+// Placed here since it has to come after the potential zebra striping
+.table-hover {
+    > tbody > tr:hover {
+        > td, > th { background-color: @table-bg-hover; }
+    }
+}
+
+// Table cell sizing
+//
+// Reset default table behavior
+table col[class*="col-"],
+table td[class*="col-"],
+table th[class*="col-"]{
+    // Prevent border hiding in Firefox and IE9/10
+    //
+    // (see https://github.com/twbs/bootstrap/issues/11623)
+    display: table-column;
+    float: none;
+    position: static;
+}
+
+// Table backgrounds
+//
+// Exact selectors below required to override `.table-striped` and prevent
+// inheritance to nested tables.
+
+// Generate the contextual variants
+.table-row-variant(active; @table-bg-alt);
+.table-row-variant(success; @success);
+.table-row-variant(info; @info);
+.table-row-variant(warning; @warning);
+.table-row-variant(danger; @danger);
+
+
+// Responsive tables
+//
+// Wrap your tables in `.table-responsive` and we'll make them mobile friendly
+// by enabling horizontal scrolling. Only applies <768px. Everything above that
+// will display normally.
+
+.table-responsive {
+    @media screen and (max-width: @screen-xs-max) {
+        // Decoration
+        border-width: @table-border-size;
+        border-style: solid;
+        border-color: @table-border-color;
+
+        // Layout
+        .rem-size(margin-bottom, @base-line-height-computed);
+        overflow-y: hidden;
+        overflow-x: auto;
+        width: 100%;
+
+        // Other
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        -webkit-overflow-scrolling: touch;
+
+        // Tighten up spacing
+        > .table {
+            margin-bottom: 0;
+
+            // Ensure the content doesn't wrap
+            > thead,
+            > tbody,
+            > tfoot {
+                > tr {
+                    > th, > td { white-space: nowrap; }
+                }
+            }
+        }
+
+        // Special overrides for the bordered tables
+        > .table-bordered {
+            border: 0;
+
+            // Nuke the appropriate borders so that the parent can handle them
+            > thead,
+            > tbody,
+            > tfoot {
+                > tr {
+                    > th:first-child, > td:first-child { border-left: 0; }
+                    > th:last-child, > td:last-child { border-right: 0; }
+                }
+            }
+
+            // Only nuke the last row's bottom-border in `tbody` and `tfoot`
+            // since chances are there will be only one `tr` in a `thead` and
+            // that would remove the border altogether.
+            > tbody, > tfoot {
+                > tr:last-child {
+                    > th, > td { border-bottom: 0; }
+                }
+            }
+        }
+    }
+}

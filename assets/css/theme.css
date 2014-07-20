@@ -398,18 +398,6 @@ a.swatch-ui:hover {
 a.swatch-ui-alt:hover {
     background-color: #999;
 }
-.swatch-ui-accent {
-    background-color: #F0DBE0;
-}
-a.swatch-ui-accent:hover {
-    background-color: #E0B8C2;
-}
-.swatch-ui-hover {
-    background-color: #47A1EB;
-}
-a.swatch-ui-hover:hover {
-    background-color: #198AE6;
-}
 .swatch-info {
     background-color: #D9EDF7;
 }
