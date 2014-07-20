@@ -122,12 +122,6 @@
 
 @base-horizontal-offset:                    180px;
 
-// Smallest fixed width container size
-@base-container-size:                       720px;
-// One Third Base Container Column Size - used to keep consistent scale
-// for all fixed grids
-@base-grid-multiplier:                      ((@base-container-size / @grid-columns) / 3); // 20px
-
 
 
 //--------------------------------------------------------------------------//
@@ -190,6 +184,13 @@
 //  multiplying the base column sizes by 3 to get the actual column sizes and
 //  then by the number of columns
 
+// Smallest fixed width container size
+@base-container-size:                       720px;
+// One Third Base Container Column Size - used to keep consistent scale
+// for all fixed grids
+@base-grid-multiplier:                      ((@base-container-size / @grid-columns) / 3); // 20px
+
+
 @grid-columns:                              12;
 // Padding between columns. Gets divided in half for the left and right.
 @grid-gutter-width:                         30px;
@@ -198,46 +199,46 @@
 @col-third-sm:                              @base-grid-multiplier;
 @col-third-md:                              (@col-third-sm + 6);
 @col-third-lg:                              (@col-third-md + 6);
-@col-third-wd:                              (@col-third-lg + 6);
+@col-third-xl:                              (@col-third-lg + 6);
 
 // Column Sizes (column third * 3)
 @column-sm:                                 (@col-third-sm * 3); // 60px
 @column-md:                                 (@col-third-md * 3); // 78px
 @column-lg:                                 (@col-third-lg * 3); // 96px
-@column-wd:                                 (@col-third-wd * 3); // 114px
+@column-xl:                                 (@col-third-xl * 3); // 114px
 
 // Container sizes (equals column size * columns)
-@tiny:                                      100%;
+@x-small:                                   100%;
 @small:                                     @base-container-size;         // 720px
 @medium:                                    (@column-md * @grid-columns); // 936px
 @large:                                     (@column-lg * @grid-columns); // 1152px
-@wide:                                      (@column-wd * @grid-columns); // 1368px
+@x-large:                                   (@column-xl * @grid-columns); // 1368px
 
 // Screen sizes (equals container size + bleed)
 @container-sm:                              ((@small + @grid-gutter-width));  // 750px
 @container-md:                              ((@medium + @grid-gutter-width)); // 966px
 @container-lg:                              ((@large + @grid-gutter-width));  // 1182px
-@container-wd:                              ((@wide + @grid-gutter-width));   // 1398px
+@container-xl:                              ((@x-large + @grid-gutter-width));   // 1398px
 
 // Breakpoints
-@screen-tn:                                 480px;  // phone
+@screen-xs:                                 480px;  // phone
 @screen-sm:                                 unit((@container-sm + @base-line-height-computed), px); // 774px tablet
 @screen-md:                                 unit((@container-md + @base-line-height-computed), px); // 990px desktop small
 @screen-lg:                                 unit((@container-lg + @base-line-height-computed), px); // 1206px desktop large
-@screen-wd:                                 unit((@container-wd + @base-line-height-computed), px); // 1422px desktop wide
+@screen-xl:                                 unit((@container-xl + @base-line-height-computed), px); // 1422px desktop x-large
 
 // Min Values
-@screen-tn-min:                             @screen-tn;
+@screen-xs-min:                             @screen-xs;
 @screen-sm-min:                             @screen-sm;
 @screen-md-min:                             @screen-md;
 @screen-lg-min:                             @screen-lg;
-@screen-wd-min:                             @screen-wd;
+@screen-xl-min:                             @screen-xl;
 
 // Max Values
-@screen-tn-max:                             (@screen-tn-min - 1);
+@screen-xs-max:                             (@screen-xs-min - 1);
 @screen-sm-max:                             (@screen-md-min - 1);
 @screen-md-max:                             (@screen-lg-min - 1);
-@screen-lg-max:                             (@screen-wd-min - 1);
+@screen-lg-max:                             (@screen-xl-min - 1);
 
 // Point at which un-collapsing begins.
 @grid-float-breakpoint:                     @screen-sm;
