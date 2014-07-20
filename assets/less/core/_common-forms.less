@@ -156,9 +156,9 @@ output {
     width: 100%;
 
     // Other
-     .transition(~"border .25s linear, color .25s linear, background-color .25s linear");
+    .transition(~"border .25s linear, color .25s linear, background-color .25s linear");
     // Customize the `:focus` state to imitate native WebKit styles.
-    .form-control-focus();
+    .form-control-focus(@control-focus-color);
     // -webkit-appearance: none;
 
     // Disabled and read-only inputs

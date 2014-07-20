@@ -154,10 +154,11 @@
 
 @control-bg:                                #fafafa;
 @control-border-size:                       1;
-@control-border-color:                      @gray-80;
+@control-border-color:                      @gray-87;
 @control-radius:                            @base-radius;
-@control-box-shadow:                        ~"inset 0 1px 1px rgba(0,0,0,.075)";
+@control-box-shadow:                        none;
 @control-color:                             @gray-40;
+@control-focus-color:                       @primary-alt;
 
 @control-bg-disabled:                       mix(@gray-60, white, 50%);
 @control-border-color-disabled:             mix(@gray-60, white, 30%);
@@ -262,20 +263,23 @@
 @button-font-weight:                        500;
 
 // Decoration
-@button-bg:                                 @gray-80;
+@button-bg:                                 @gray-95;
 @button-bg-image:                           none;
 @button-border-size:                        1;
-@button-border-color:                       @button-bg;
+@button-border-color:                       @gray-87;
 @button-radius:                             @base-radius;
 @button-box-shadow:                         none;
-@button-color:                              @gray-30;
+@button-color:                              @gray-20;
+@button-gradient:                           true;
+@button-gradient-start:                     @gray-95;
+@button-gradient-end:                       @gray-90;
 
 // Decoration Hover
-@button-bg-hover:                           darken(@button-bg, 10%);
+@button-bg-hover:                           @button-border-color;
 @button-bg-image-hover:                     @button-bg-image;
-@button-border-color-hover:                 darken(@button-bg, 10%);
-@button-box-shadow-active:                  inset 0 3px 5px rgba(0,0,0,.125);
+@button-border-color-hover:                 @gray-80;
+@button-box-shadow-active:                  none;
 @button-color-hover:                        @button-color;
-
-
+@button-gradient-start-hover:               @button-gradient-end;
+@button-gradient-end-hover:                 @button-border-color;
 

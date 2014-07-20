@@ -803,10 +803,10 @@ output {
     background-image: none;
     border-width: 1px;
     border-style: solid;
-    border-color: #CCC;
+    border-color: #DEDEDE;
     border-radius: 4px;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-            box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-box-shadow: none;
+            box-shadow: none;
     color: #666;
 
     display: block;
@@ -878,7 +878,7 @@ input[type='month'].input-lg {
     border-radius: 3px;
 
     height: 28;
-    padding: 5px 10px;
+    padding: 3px 9px;
 }
 select.form-control-sm {
     line-height: .10714286;
@@ -897,7 +897,7 @@ select[multiple].form-control-sm {
     border-radius: 6px;
 
     height: 36;
-    padding: 10px 16px;
+    padding: 12px 18px;
 }
 select.form-control-lg {
     line-height: .08333333;
@@ -1656,160 +1656,160 @@ fieldset[disabled] .checkbox label {
     }
 }
 @media (min-width: 1422px) {
-    .col-wd-1, .col-wd-2, .col-wd-3, .col-wd-4, .col-wd-5, .col-wd-6, .col-wd-7, .col-wd-8, .col-wd-9, .col-wd-10, .col-wd-11, .col-wd-12 {
+    .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
         float: left;
     }
-    .col-wd-12 {
+    .col-xl-12 {
         width: 100%;
     }
-    .col-wd-11 {
+    .col-xl-11 {
         width: 91.66666667%;
     }
-    .col-wd-10 {
+    .col-xl-10 {
         width: 83.33333333%;
     }
-    .col-wd-9 {
+    .col-xl-9 {
         width: 75%;
     }
-    .col-wd-8 {
+    .col-xl-8 {
         width: 66.66666667%;
     }
-    .col-wd-7 {
+    .col-xl-7 {
         width: 58.33333333%;
     }
-    .col-wd-6 {
+    .col-xl-6 {
         width: 50%;
     }
-    .col-wd-5 {
+    .col-xl-5 {
         width: 41.66666667%;
     }
-    .col-wd-4 {
+    .col-xl-4 {
         width: 33.33333333%;
     }
-    .col-wd-3 {
+    .col-xl-3 {
         width: 25%;
     }
-    .col-wd-2 {
+    .col-xl-2 {
         width: 16.66666667%;
     }
-    .col-wd-1 {
+    .col-xl-1 {
         width: 8.33333333%;
     }
-    .col-wd-pull-12 {
+    .col-xl-pull-12 {
         right: 100%;
     }
-    .col-wd-pull-11 {
+    .col-xl-pull-11 {
         right: 91.66666667%;
     }
-    .col-wd-pull-10 {
+    .col-xl-pull-10 {
         right: 83.33333333%;
     }
-    .col-wd-pull-9 {
+    .col-xl-pull-9 {
         right: 75%;
     }
-    .col-wd-pull-8 {
+    .col-xl-pull-8 {
         right: 66.66666667%;
     }
-    .col-wd-pull-7 {
+    .col-xl-pull-7 {
         right: 58.33333333%;
     }
-    .col-wd-pull-6 {
+    .col-xl-pull-6 {
         right: 50%;
     }
-    .col-wd-pull-5 {
+    .col-xl-pull-5 {
         right: 41.66666667%;
     }
-    .col-wd-pull-4 {
+    .col-xl-pull-4 {
         right: 33.33333333%;
     }
-    .col-wd-pull-3 {
+    .col-xl-pull-3 {
         right: 25%;
     }
-    .col-wd-pull-2 {
+    .col-xl-pull-2 {
         right: 16.66666667%;
     }
-    .col-wd-pull-1 {
+    .col-xl-pull-1 {
         right: 8.33333333%;
     }
-    .col-wd-pull-0 {
+    .col-xl-pull-0 {
         right: auto;
     }
-    .col-wd-push-12 {
+    .col-xl-push-12 {
         left: 100%;
     }
-    .col-wd-push-11 {
+    .col-xl-push-11 {
         left: 91.66666667%;
     }
-    .col-wd-push-10 {
+    .col-xl-push-10 {
         left: 83.33333333%;
     }
-    .col-wd-push-9 {
+    .col-xl-push-9 {
         left: 75%;
     }
-    .col-wd-push-8 {
+    .col-xl-push-8 {
         left: 66.66666667%;
     }
-    .col-wd-push-7 {
+    .col-xl-push-7 {
         left: 58.33333333%;
     }
-    .col-wd-push-6 {
+    .col-xl-push-6 {
         left: 50%;
     }
-    .col-wd-push-5 {
+    .col-xl-push-5 {
         left: 41.66666667%;
     }
-    .col-wd-push-4 {
+    .col-xl-push-4 {
         left: 33.33333333%;
     }
-    .col-wd-push-3 {
+    .col-xl-push-3 {
         left: 25%;
     }
-    .col-wd-push-2 {
+    .col-xl-push-2 {
         left: 16.66666667%;
     }
-    .col-wd-push-1 {
+    .col-xl-push-1 {
         left: 8.33333333%;
     }
-    .col-wd-push-0 {
+    .col-xl-push-0 {
         left: auto;
     }
-    .col-wd-offset-12 {
+    .col-xl-offset-12 {
         margin-left: 100%;
     }
-    .col-wd-offset-11 {
+    .col-xl-offset-11 {
         margin-left: 91.66666667%;
     }
-    .col-wd-offset-10 {
+    .col-xl-offset-10 {
         margin-left: 83.33333333%;
     }
-    .col-wd-offset-9 {
+    .col-xl-offset-9 {
         margin-left: 75%;
     }
-    .col-wd-offset-8 {
+    .col-xl-offset-8 {
         margin-left: 66.66666667%;
     }
-    .col-wd-offset-7 {
+    .col-xl-offset-7 {
         margin-left: 58.33333333%;
     }
-    .col-wd-offset-6 {
+    .col-xl-offset-6 {
         margin-left: 50%;
     }
-    .col-wd-offset-5 {
+    .col-xl-offset-5 {
         margin-left: 41.66666667%;
     }
-    .col-wd-offset-4 {
+    .col-xl-offset-4 {
         margin-left: 33.33333333%;
     }
-    .col-wd-offset-3 {
+    .col-xl-offset-3 {
         margin-left: 25%;
     }
-    .col-wd-offset-2 {
+    .col-xl-offset-2 {
         margin-left: 16.66666667%;
     }
-    .col-wd-offset-1 {
+    .col-xl-offset-1 {
         margin-left: 8.33333333%;
     }
-    .col-wd-offset-0 {
+    .col-xl-offset-0 {
         margin-left: 0;
     }
 }
@@ -1934,16 +1934,16 @@ fieldset[disabled] .checkbox label {
 @-ms-viewport {
     width: device-width;
 }
-.visible-tn,
+.visible-xs,
 .visible-sm,
 .visible-md,
 .visible-lg,
-.visible-wd {
+.visible-xl {
     display: none !important;
 }
-.visible-tn-block,
-.visible-tn-inline,
-.visible-tn-inline-block,
+.visible-xs-block,
+.visible-xs-inline,
+.visible-xs-inline-block,
 .visible-sm-block,
 .visible-sm-inline,
 .visible-sm-inline-block,
@@ -1953,38 +1953,38 @@ fieldset[disabled] .checkbox label {
 .visible-lg-block,
 .visible-lg-inline,
 .visible-lg-inline-block,
-.visible-wd-block,
-.visible-wd-inline,
-.visible-wd-inline-block {
+.visible-xl-block,
+.visible-xl-inline,
+.visible-xl-inline-block {
     display: none !important;
 }
 @media (max-width: 479px) {
-    .visible-tn {
+    .visible-xs {
         display: block !important;
     }
-    table.visible-tn {
+    table.visible-xs {
         display: table;
     }
-    tr.visible-tn {
+    tr.visible-xs {
         display: table-row !important;
     }
-    th.visible-tn,
-  td.visible-tn {
+    th.visible-xs,
+  td.visible-xs {
         display: table-cell !important;
     }
 }
 @media (max-width: 479px) {
-    .visible-tn-block {
+    .visible-xs-block {
         display: block !important;
     }
 }
 @media (max-width: 479px) {
-    .visible-tn-inline {
+    .visible-xs-inline {
         display: inline !important;
     }
 }
 @media (max-width: 479px) {
-    .visible-tn-inline-block {
+    .visible-xs-inline-block {
         display: inline-block !important;
     }
 }
@@ -2079,37 +2079,37 @@ fieldset[disabled] .checkbox label {
     }
 }
 @media (min-width: 1422px) {
-    .visible-wd {
+    .visible-xl {
         display: block !important;
     }
-    table.visible-wd {
+    table.visible-xl {
         display: table;
     }
-    tr.visible-wd {
+    tr.visible-xl {
         display: table-row !important;
     }
-    th.visible-wd,
-  td.visible-wd {
+    th.visible-xl,
+  td.visible-xl {
         display: table-cell !important;
     }
 }
 @media (min-width: 1422px) {
-    .visible-wd-block {
+    .visible-xl-block {
         display: block !important;
     }
 }
 @media (min-width: 1422px) {
-    .visible-wd-inline {
+    .visible-xl-inline {
         display: inline !important;
     }
 }
 @media (min-width: 1422px) {
-    .visible-wd-inline-block {
+    .visible-xl-inline-block {
         display: inline-block !important;
     }
 }
 @media (max-width: 479px) {
-    .hidden-tn {
+    .hidden-xs {
         display: none !important;
     }
 }
@@ -2129,7 +2129,7 @@ fieldset[disabled] .checkbox label {
     }
 }
 @media (min-width: 1422px) {
-    .hidden-wd {
+    .hidden-xl {
         display: none !important;
     }
 }
@@ -2306,12 +2306,12 @@ p.form-note {
 }
 @media (min-width: 774px) {
     .form-horizontal .form-group-lg .control-label {
-        padding-top: 16px;
+        padding-top: 19px;
     }
 }
 @media (min-width: 774px) {
     .form-horizontal .form-group-sm .control-label {
-        padding-top: 6px;
+        padding-top: 4px;
     }
 }
 .form,
@@ -2333,7 +2333,7 @@ p.form-note {
 .form-control-group .form-control {
     float: left;
     position: relative;
-    z-index: 2;
+    z-index: 1;
     width: 100%;
     margin-bottom: 0;
 }
@@ -2347,7 +2347,7 @@ p.form-note {
     border-radius: 6px;
 
     height: 36;
-    padding: 10px 16px;
+    padding: 12px 18px;
 }
 select.form-control-group-lg > .form-control,
 select.form-control-group-lg > .form-control-group-addon,
@@ -2374,7 +2374,7 @@ select[multiple].form-control-group-lg > .form-control-group-button > .button {
     border-radius: 3px;
 
     height: 28;
-    padding: 5px 10px;
+    padding: 3px 9px;
 }
 select.form-control-group-sm > .form-control,
 select.form-control-group-sm > .form-control-group-addon,
@@ -2415,16 +2415,25 @@ select[multiple].form-control-group-sm > .form-control-group-button > .button {
     line-height: 1;
     text-align: center;
 
-    background-color: #CCC;
+    background-color: #DEDEDE;
     border-width: 1px;
     border-style: solid;
-    border-color: #CCC;
+    border-color: #DEDEDE;
     border-radius: 4px;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-            box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-box-shadow: none;
+            box-shadow: none;
     color: #666;
 
     padding: 6px 12px;
+
+    -webkit-transition: border .25s linear, color .25s linear, background-color .25s linear;
+         -o-transition: border .25s linear, color .25s linear, background-color .25s linear;
+            transition: border .25s linear, color .25s linear, background-color .25s linear;
+}
+.focus .form-control-group-addon {
+    background-color: #47A1EB;
+    border-color: #47A1EB;
+    color: #FFF;
 }
 .form-control-group-addon.form-control-sm {
     font-size: 14px;
@@ -2432,7 +2441,7 @@ select[multiple].form-control-group-sm > .form-control-group-button > .button {
 
     border-radius: 3px;
 
-    padding: 5px 10px;
+    padding: 3px 9px;
 }
 .form-control-group-addon.form-control-lg {
     font-size: 18px;
@@ -2440,7 +2449,7 @@ select[multiple].form-control-group-sm > .form-control-group-button > .button {
 
     border-radius: 6px;
 
-    padding: 10px 16px;
+    padding: 12px 18px;
 }
 .form-control-group-addon input[type='radio'],
 .form-control-group-addon input[type='checkbox'] {
@@ -2511,7 +2520,15 @@ select[multiple].form-control-group-sm > .form-control-group-button > .button {
 .form-control-group-button-lg > .button {
     line-height: 1.15;
 
+    background-color: #FAFAFA;
+    background-image: none;
+
     position: relative;
+    z-index: 2;
+
+    -webkit-transition: border .25s linear, color .25s linear, background-color .25s linear;
+         -o-transition: border .25s linear, color .25s linear, background-color .25s linear;
+            transition: border .25s linear, color .25s linear, background-color .25s linear;
 }
 .form-control-group-button > .button + .button,
 .form-control-group-button-sm > .button + .button,
@@ -2527,7 +2544,29 @@ select[multiple].form-control-group-sm > .form-control-group-button > .button {
 .form-control-group-button > .button:active,
 .form-control-group-button-sm > .button:active,
 .form-control-group-button-lg > .button:active {
-    z-index: 2;
+    background-color: #FAFAFA;
+    background-image: none;
+    border-color: #DEDEDE;
+    color: #47A1EB;
+}
+.focus .form-control-group-button > .button,
+.focus .form-control-group-button-sm > .button,
+.focus .form-control-group-button-lg > .button {
+    border-color: #47A1EB;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    outline: 0;
+}
+.focus .form-control-group-button > .button:hover,
+.focus .form-control-group-button-sm > .button:hover,
+.focus .form-control-group-button-lg > .button:hover,
+.focus .form-control-group-button > .button:focus,
+.focus .form-control-group-button-sm > .button:focus,
+.focus .form-control-group-button-lg > .button:focus,
+.focus .form-control-group-button > .button:active,
+.focus .form-control-group-button-sm > .button:active,
+.focus .form-control-group-button-lg > .button:active {
+    border-color: #47A1EB;
 }
 .form-control-group-button:first-child > .button,
 .form-control-group-button-sm:first-child > .button,

@@ -30,7 +30,7 @@
 
     // Decoration
     background-color: @button-bg;
-    background-image: @button-bg-image; // 4
+    background-image: none; // 4
     border-width: unit(@button-border-size, px);
     border-style: solid;
     border-color: @button-border-color;
@@ -69,7 +69,7 @@
 
     &:hover, &:focus {
         background-color: @button-bg-hover; // darken(@button-bg, 10%);
-        background-image: @button-bg-image-hover;
+        background-image: none;
         border-color: @button-border-color-hover; // darken(@base-button-bg, 10%);
         color: @button-color-hover;
     }
@@ -102,5 +102,15 @@
             background-image: @button-bg-image;
             border-color: @button-border-color;
         }
+    }
+}
+
+.button when (@button-gradient = true) {
+    #gradient .vertical(@button-gradient-start, @button-gradient-end); // 4
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+        #gradient .vertical(@button-gradient-start-hover, @button-gradient-end-hover); // 4
     }
 }
