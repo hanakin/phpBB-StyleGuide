@@ -8,7 +8,7 @@
 html {
     font-family: sans-serif; /* 1 */
 
-        -ms-text-size-adjust: 100%; /* 2 */
+    -ms-text-size-adjust: 100%; /* 2 */
     -webkit-text-size-adjust: 100%; /* 2 */
 }
 
@@ -183,7 +183,7 @@ figure {
  */
 hr {
     -moz-box-sizing: content-box;
-         box-sizing: content-box;
+    box-sizing: content-box;
     height: 0;
 }
 
@@ -314,8 +314,8 @@ input[type='number']::-webkit-inner-spin-button, input[type='number']::-webkit-o
  */
 input[type='search'] {
     -webkit-box-sizing: content-box; /* 2 */
-       -moz-box-sizing: content-box;
-            box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
 
     -webkit-appearance: textfield;   /* 1 */
 }
@@ -392,8 +392,8 @@ td, th {
 *:before,
 *:after {
     -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 /* Define your base font-size here; most elements will inherit this. _NO__DOTCOMMA__AFTER__*/
 html {
@@ -755,8 +755,8 @@ label {
 }
 input[type='search'] {
     -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 input[type='radio'],
 input[type='checkbox'] {
@@ -806,7 +806,7 @@ output {
     border-color: #DEDEDE;
     border-radius: 4px;
     -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
     color: #666;
 
     display: block;
@@ -815,13 +815,13 @@ output {
     padding: 6px 12px;
 
     -webkit-transition: border .25s linear, color .25s linear, background-color .25s linear;
-         -o-transition: border .25s linear, color .25s linear, background-color .25s linear;
-            transition: border .25s linear, color .25s linear, background-color .25s linear;
+    -o-transition: border .25s linear, color .25s linear, background-color .25s linear;
+    transition: border .25s linear, color .25s linear, background-color .25s linear;
 }
 .form-control:focus {
     border-color: #47A1EB;
     -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
     outline: 0;
 }
 .form-control[disabled],
@@ -1235,6 +1235,73 @@ table th[class*='col-'] {
   .table-responsive > .table-bordered > tfoot > tr:last-child > td {
         border-bottom: 0;
     }
+}
+/*--------------------------------------------------------------------------*\
+    $COMMON-CODE
+/*--------------------------------------------------------------------------*\
+    Setup the default code elements - Based on Bootstrap
+/*--------------------------------------------------------------------------*/
+code,
+kbd,
+pre,
+samp {
+    font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono;
+}
+code {
+    font-size: 90%;
+
+    background-color: #F2DEDE;
+    border-radius: 4px;
+    color: #A94442;
+
+    padding: 2px 4px;
+}
+kbd {
+    font-size: 90%;
+
+    background-color: #333;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .25);
+    color: #FFF;
+
+    padding: 2px 4px;
+}
+kbd kbd {
+    font-size: 100%;
+
+    box-shadow: none;
+
+    padding: 0;
+}
+pre {
+    font-size: 14px;
+    font-size: .875rem;
+    line-height: 1.71428571;
+    word-break: break-all;
+    word-wrap: break-word;
+
+    background-color: #F2F2F2;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #CCC;
+    border-radius: 4px;
+    color: #333;
+
+    display: block;
+    margin: 0;
+    margin-bottom: 12px;
+    margin-bottom: .75rem;
+    padding: 12px;
+}
+pre code {
+    font-size: inherit;
+    white-space: pre-wrap;
+
+    background-color: transparent;
+    border-radius: 0;
+    color: inherit;
+
+    padding: 0;
 }
 /*--------------------------------------------------------------------------*\
     $GRID
@@ -2182,7 +2249,7 @@ table th[class*='col-'] {
     position: fixed;
 
     -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
 }
 /*--------------------------------------------------------------------------*\
     $UTILITIES-RESPONSIVE
@@ -2679,14 +2746,14 @@ select[multiple].form-control-group-sm > .form-control-group-button > .button {
     border-color: #DEDEDE;
     border-radius: 4px;
     -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
     color: #666;
 
     padding: 6px 12px;
 
     -webkit-transition: border .25s linear, color .25s linear, background-color .25s linear;
-         -o-transition: border .25s linear, color .25s linear, background-color .25s linear;
-            transition: border .25s linear, color .25s linear, background-color .25s linear;
+    -o-transition: border .25s linear, color .25s linear, background-color .25s linear;
+    transition: border .25s linear, color .25s linear, background-color .25s linear;
 }
 .focus .form-control-group-addon {
     background-color: #47A1EB;
@@ -2785,8 +2852,8 @@ select[multiple].form-control-group-sm > .form-control-group-button > .button {
     z-index: 2;
 
     -webkit-transition: border .25s linear, color .25s linear, background-color .25s linear;
-         -o-transition: border .25s linear, color .25s linear, background-color .25s linear;
-            transition: border .25s linear, color .25s linear, background-color .25s linear;
+    -o-transition: border .25s linear, color .25s linear, background-color .25s linear;
+    transition: border .25s linear, color .25s linear, background-color .25s linear;
 }
 .form-control-group-button > .button + .button,
 .form-control-group-button-sm > .button + .button,
@@ -2812,7 +2879,7 @@ select[multiple].form-control-group-sm > .form-control-group-button > .button {
 .focus .form-control-group-button-lg > .button {
     border-color: #47A1EB;
     -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
     outline: 0;
 }
 .focus .form-control-group-button > .button:hover,
@@ -2916,18 +2983,18 @@ select[multiple].form-control-group-sm > .form-control-group-button > .button {
     border-color: #DEDEDE;
     border-radius: 4px;
     -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
     color: #333;
     cursor: pointer;
     -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 
     display: inline-block;
     -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     margin: 0;
     padding: 6px 12px;
 
@@ -2960,7 +3027,7 @@ select[multiple].form-control-group-sm > .form-control-group-button > .button {
     background-image: none;
     border-color: #DEDEDE;
     -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
     color: #333;
     outline: 0;
 }
@@ -2970,7 +3037,7 @@ select[multiple].form-control-group-sm > .form-control-group-button > .button {
 fieldset[disabled] .button,
 fieldset:disabled .button {
     -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
     opacity: .65;
     cursor: not-allowed;
 
@@ -3009,8 +3076,8 @@ fieldset:disabled .button.active {
 }
 .button {
     background-image: -webkit-linear-gradient(top, #F2F2F2 0%, #E6E6E6 100%);
-    background-image:      -o-linear-gradient(top, #F2F2F2 0%, #E6E6E6 100%);
-    background-image:         linear-gradient(to bottom, #F2F2F2 0%, #E6E6E6 100%);
+    background-image: -o-linear-gradient(top, #F2F2F2 0%, #E6E6E6 100%);
+    background-image: linear-gradient(to bottom, #F2F2F2 0%, #E6E6E6 100%);
     background-repeat: repeat-x;
 
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff2f2f2', endColorstr='#ffe6e6e6', GradientType=0);
@@ -3020,8 +3087,8 @@ fieldset:disabled .button.active {
 .button:active,
 .button.active {
     background-image: -webkit-linear-gradient(top, #E6E6E6 0%, #DEDEDE 100%);
-    background-image:      -o-linear-gradient(top, #E6E6E6 0%, #DEDEDE 100%);
-    background-image:         linear-gradient(to bottom, #E6E6E6 0%, #DEDEDE 100%);
+    background-image: -o-linear-gradient(top, #E6E6E6 0%, #DEDEDE 100%);
+    background-image: linear-gradient(to bottom, #E6E6E6 0%, #DEDEDE 100%);
     background-repeat: repeat-x;
 
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe6e6e6', endColorstr='#ffdedede', GradientType=0);
@@ -3054,13 +3121,23 @@ fieldset:disabled .button.active {
 
     color: #FFF;
 }
-.color-title {
+.color-title-margin {
     text-align: right;
 
     color: #0D4573;
 
     margin-top: 24px;
     margin-top: 1.5rem;
+}
+@media (max-width: 479px) {
+    .color-title-margin {
+        text-align: left;
+    }
+}
+.color-title {
+    text-align: right;
+
+    color: #0D4573;
 }
 @media (max-width: 479px) {
     .color-title {
@@ -3298,75 +3375,112 @@ a.swatch-success-dark:hover {
 }
 .swatch-header {
     background-image: -webkit-linear-gradient(#0076B1, #12A3EB 90px, #12A3EB);
-    background-image:      -o-linear-gradient(#0076B1, #12A3EB 90px, #12A3EB);
-    background-image:         linear-gradient(#0076B1, #12A3EB 90px, #12A3EB);
+    background-image: -o-linear-gradient(#0076B1, #12A3EB 90px, #12A3EB);
+    background-image: linear-gradient(#0076B1, #12A3EB 90px, #12A3EB);
     background-repeat: no-repeat;
 
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0076b1', endColorstr='#ff12a3eb', GradientType=0);
 }
 .swatch-grad-blue-dark {
     background-image: -webkit-linear-gradient(#146EB8, #47A1EB 90px, #47A1EB);
-    background-image:      -o-linear-gradient(#146EB8, #47A1EB 90px, #47A1EB);
-    background-image:         linear-gradient(#146EB8, #47A1EB 90px, #47A1EB);
+    background-image: -o-linear-gradient(#146EB8, #47A1EB 90px, #47A1EB);
+    background-image: linear-gradient(#146EB8, #47A1EB 90px, #47A1EB);
     background-repeat: no-repeat;
 
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff146eb8', endColorstr='#ff47a1eb', GradientType=0);
 }
 .swatch-grad-blue-dark-reverse {
     background-image: -webkit-linear-gradient(#47A1EB, #146EB8 90px, #146EB8);
-    background-image:      -o-linear-gradient(#47A1EB, #146EB8 90px, #146EB8);
-    background-image:         linear-gradient(#47A1EB, #146EB8 90px, #146EB8);
+    background-image: -o-linear-gradient(#47A1EB, #146EB8 90px, #146EB8);
+    background-image: linear-gradient(#47A1EB, #146EB8 90px, #146EB8);
     background-repeat: no-repeat;
 
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff47a1eb', endColorstr='#ff146eb8', GradientType=0);
 }
 .swatch-grad-blue-light {
     background-image: -webkit-linear-gradient(#C9DAE8, #DBE7F0 15%, #DBE7F0);
-    background-image:      -o-linear-gradient(#C9DAE8, #DBE7F0 15%, #DBE7F0);
-    background-image:         linear-gradient(#C9DAE8, #DBE7F0 15%, #DBE7F0);
+    background-image: -o-linear-gradient(#C9DAE8, #DBE7F0 15%, #DBE7F0);
+    background-image: linear-gradient(#C9DAE8, #DBE7F0 15%, #DBE7F0);
     background-repeat: no-repeat;
 
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc9dae8', endColorstr='#ffdbe7f0', GradientType=0);
 }
 .swatch-grad-blue-light-reverse {
     background-image: -webkit-linear-gradient(#DBE7F0, #C9DAE8 15%, #C9DAE8);
-    background-image:      -o-linear-gradient(#DBE7F0, #C9DAE8 15%, #C9DAE8);
-    background-image:         linear-gradient(#DBE7F0, #C9DAE8 15%, #C9DAE8);
+    background-image: -o-linear-gradient(#DBE7F0, #C9DAE8 15%, #C9DAE8);
+    background-image: linear-gradient(#DBE7F0, #C9DAE8 15%, #C9DAE8);
     background-repeat: no-repeat;
 
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffdbe7f0', endColorstr='#ffc9dae8', GradientType=0);
 }
 .swatch-grad-gray {
     background-image: -webkit-linear-gradient(top, #E6E6E6 0%, #FFF 100%);
-    background-image:      -o-linear-gradient(top, #E6E6E6 0%, #FFF 100%);
-    background-image:         linear-gradient(to bottom, #E6E6E6 0%, #FFF 100%);
+    background-image: -o-linear-gradient(top, #E6E6E6 0%, #FFF 100%);
+    background-image: linear-gradient(to bottom, #E6E6E6 0%, #FFF 100%);
     background-repeat: repeat-x;
 
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe6e6e6', endColorstr='#ffffffff', GradientType=0);
 }
 .swatch-grad-gray-reverse {
     background-image: -webkit-linear-gradient(top, #FFF 0%, #E6E6E6 100%);
-    background-image:      -o-linear-gradient(top, #FFF 0%, #E6E6E6 100%);
-    background-image:         linear-gradient(to bottom, #FFF 0%, #E6E6E6 100%);
+    background-image: -o-linear-gradient(top, #FFF 0%, #E6E6E6 100%);
+    background-image: linear-gradient(to bottom, #FFF 0%, #E6E6E6 100%);
     background-repeat: repeat-x;
 
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
 }
 .swatch-grad-bluegray {
     background-image: -webkit-linear-gradient(top, #B5C4D1 0%, #C9DAE8 100%);
-    background-image:      -o-linear-gradient(top, #B5C4D1 0%, #C9DAE8 100%);
-    background-image:         linear-gradient(to bottom, #B5C4D1 0%, #C9DAE8 100%);
+    background-image: -o-linear-gradient(top, #B5C4D1 0%, #C9DAE8 100%);
+    background-image: linear-gradient(to bottom, #B5C4D1 0%, #C9DAE8 100%);
     background-repeat: repeat-x;
 
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffb5c4d1', endColorstr='#ffc9dae8', GradientType=0);
 }
 .swatch-grad-bluegray-reverse {
     background-image: -webkit-linear-gradient(top, #C9DAE8 0%, #B5C4D1 100%);
-    background-image:      -o-linear-gradient(top, #C9DAE8 0%, #B5C4D1 100%);
-    background-image:         linear-gradient(to bottom, #C9DAE8 0%, #B5C4D1 100%);
+    background-image: -o-linear-gradient(top, #C9DAE8 0%, #B5C4D1 100%);
+    background-image: linear-gradient(to bottom, #C9DAE8 0%, #B5C4D1 100%);
     background-repeat: repeat-x;
 
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc9dae8', endColorstr='#ffb5c4d1', GradientType=0);
+}
+.icon-list {
+    cursor: pointer;
+
+    padding: 0;
+}
+.icon-list > li {
+    padding: 0;
+}
+.icon {
+    margin: 6px;
+    padding: 0;
+}
+.icon-wrap {
+    font-size: 60px;
+    font-size: 3.75rem;
+    text-align: center;
+
+    border-radius: 6px;
+    color: #FFF;
+
+    display: block;
+    width: 100px;
+    height: 100px;
+    padding: 6px;
+}
+.icon-label {
+    font-size: 12px;
+    font-size: .75rem;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #B3B3B3;
+
+    margin: 7px 0 0;
 }
 h1 {
     color: #666;
