@@ -4,7 +4,7 @@
 //  color component
 //--------------------------------------------------------------------------//
 
-.color-title {
+.color-title-margin {
     // Text
     text-align: right;
     @media (max-width: @screen-xs-max) { text-align: left; }
@@ -14,6 +14,15 @@
 
     // Layout
     .rem-size(margin-top, @base-line-height-computed);
+}
+
+.color-title {
+    // Text
+    text-align: right;
+    @media (max-width: @screen-xs-max) { text-align: left; }
+
+    // Decoration
+    color: @primary-accent;
 }
 
 .color-list li {
