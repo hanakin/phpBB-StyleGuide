@@ -6,7 +6,7 @@
 
 .swatch {
     // Decoration
-    border-radius: 6px;
+    border-radius: @base-radius-lg;
 
     // Layout
     height: 100px;
@@ -39,12 +39,12 @@
     // Decoration
     background-color: @white;
     border: 1px solid @ui;
-    .border-bottom-radius(6px);
+    .border-bottom-radius(@base-radius-lg);
     color: @primary-accent;
 
     // Layout
     margin: 0;
-    padding: 6px 12px;
+    padding: @base-padding-vertical @base-padding-horizontal;
     position: relative;
     top: 70px;
 }
