@@ -12,19 +12,20 @@ var notify      = require("gulp-notify"),
     sourcemaps  = require('gulp-sourcemaps'),
     minifyCSS   = require('gulp-minify-css'),
     csscomb     = require('gulp-csscomb'),
-    imagemin    = require('gulp-imagemin'),
-    pngcrush    = require('imagemin-pngcrush');
+    optipng     = require('gulp-optipng');
+
+var options     = ['-o2'];
 
 // Dir Variables
-var assetsDir = 'assets/',
-    lessDir   = assetsDir + 'less/',
-    cssDir    = assetsDir + 'css/',
-    cssminDir = './' + cssDir +'min/',
-    imgDir    = assetsDir + 'imgs/',
-    anyDir    = '**/';
+var assetsDir   = 'assets/',
+    lessDir     = assetsDir + 'less/',
+    cssDir      = assetsDir + 'css/',
+    cssminDir   = './' + cssDir +'min/',
+    imgDir      = assetsDir + 'imgs/',
+    anyDir      = '**/';
 
-var files   = ['style.less', 'core.less', 'theme.less']
-var stream  = [];
+var files       = ['style.less', 'core.less', 'theme.less']
+var stream      = [];
 
 // Command line option:
 var onError = function (err) {
@@ -42,7 +43,7 @@ gulp.task('build', function () {
         .pipe(sourcemaps.init())
         .pipe(less())
         .pipe(notify(files[i] + " Rendered!"))
-        .pipe(csscomb()).pipe(notify(files[i] + " Sorted!"))
+        .pipe(csscomb('csscomb')).pipe(notify(files[i] + " Sorted!"))
         .pipe(sourcemaps.write('./')).pipe(notify(files[i] + " Mapped!"))
         .pipe(gulp.dest(cssDir))
         .pipe(minifyCSS({
@@ -62,12 +63,9 @@ gulp.task('crush', function () {
         .pipe(plumber({
             errorHandler: onError
         }))
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            use: [pngcrush()]
-        }))
-        .pipe(gulp.dest(imgDir)).pipe(notify("Images Crushed!"));
+        .pipe(optipng(options))
+        .pipe(gulp.dest(imgDir))
+        .pipe(notify("Images Crushed!"));
 });
 
 gulp.task('watch', function() {
