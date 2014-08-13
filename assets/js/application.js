@@ -6,13 +6,23 @@
     });
 
     $(function() {
-        var navCurrent    = $('.features-nav').offset().top;
 
+        // Set active nav link state
+        $('.nav li a:first').click().addClass('active');
+        $('.nav a').on('click', function() {
+            $(this).parent().parent().find('a.active').removeClass('active');
+            $(this).addClass('active');
+
+        });
+
+        // Fix navigation on splash page when scrolled past
+        var navCurrent    = $('.features-nav').offset().top;
         var fixedNav = function(){
             var scrollTop = $(window).scrollTop();
 
             if ( scrollTop > navCurrent) {
                 $('.features-nav').addClass('features-nav-fixed');
+
             } else {
                 $('.features-nav').removeClass('features-nav-fixed');
             }
@@ -24,6 +34,8 @@
             fixedNav();
         });
     });
+
+
 
     // $(document).ready(function ( {
     //     var panels    = $('.feature-block'),

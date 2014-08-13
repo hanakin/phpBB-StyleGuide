@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all" />
 
     <!-- ICONS -->
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <!-- <link href="https://fontastic.s3.amazonaws.com/RXbnET5YNarDEPRMCf8SS7/icons.css" rel="stylesheet"> -->
 
     <!-- FONTS -->
@@ -22,18 +22,38 @@
 <body>
     <div class="features-container">
         <div class="features-header">
-            <p class="features-sub-title">7 years, 540 bugs, 2,159 changes, 2,815 merges, over 10,000 commits</p>
+            <div class="masthead">
+                <h2 class="masthead-title">phpBB 3.1 <span class="masthead-clear-outline">Ascreaus</span></h2>
+                <p class="masthead-sub-title">7 years, 540 bugs, 2,159 changes, 2,815 merges, over 10,000 commits</p>
+            </div>
+            <a class="showcase-prev" href="">Prev</a>
+            <div class="showcase">
+                <div class="showcase-wrap"></div>
+            </div>
+            <a class="showcase-next" href="">Next</a>
         </div>
-        <ul class="features-nav nav nav-pills">
-            <li><a href="#feature-admin">Administrators</a></li>
-            <li><a href="#feature-user">End Users</a></li>
-            <li><a href="#feature-dev">Developers</a></li>
-            <li><a href="#feature-des">Designers</a></li>
-            <li><a href="#feature-sec">Security</a></li>
-        </ul>
+        <nav class="features-nav">
+            <ul class="nav nav-pills">
+                <li><a href="#feature-admin">Administrators</a></li>
+                <li><a href="#feature-user">End Users</a></li>
+                <li><a href="#feature-dev">Developers</a></li>
+                <li><a href="#feature-des">Designers</a></li>
+                <li><a class="feature-nav-top" href=""></a></li>
+            </ul>
+        </nav>
         <div class="features">
             <div class="feature">
                 <div id="feature-admin" class="feature-block">
+                    <div class="feature-row">
+                        <div class="feature-full">
+                            <h2 class="media-title">Impressive Security</h2>
+                            <p class="media-copy">
+                                This is filler copy to impress lead into the security section
+                                <img class="media-image" src="assets/imgs/extension@2x.png" alt="PHPBB Extensions" width="300px" height="300px">
+
+                            </p>
+                        </div>
+                    </div>
                     <div class="feature-row">
                         <div class="feature-full">
                             <h2 class="media-title">
@@ -217,11 +237,6 @@
                             </h2>
                             <p class="media-copy">We've added the popular jQuery library to phpBB. We use it ourselves (mostly for the new AJAX functionality), and extension and style authors can use it too.</p>
                         </div>
-                    </div>
-                </div>
-                <div id="feature-sec" class="feature-block">
-                    <div class="feature-row">
-                        Security
                     </div>
                 </div>
             </div>

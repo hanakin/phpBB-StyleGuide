@@ -1,0 +1,70 @@
+//--------------------------------------------------------------------------//
+//  $COMPONENT-MASTHEAD
+//--------------------------------------------------------------------------//
+//  masthead component
+//--------------------------------------------------------------------------//
+
+.masthead {
+    padding: 80px 151px 0;
+}
+
+.masthead-title {
+    font-size: 72px;
+    font-family: "Helvetica Neue";
+    font-weight: 400;
+    line-height: 36px;
+    text-align: center;
+    text-shadow: 0.5px 0.866px 6px rgba(0, 0, 0, 0.5);
+    color: @white;
+    margin-bottom: 8px;
+}
+
+.masthead-sub-title {
+  font-size: 24px;
+  font-family: "Helvetica Neue";
+  color: #ffffff;
+  font-weight: 200;
+  line-height: 36px;
+  text-align: center;
+  text-shadow: 0.5px 0.866px 6px rgba(0, 0, 0, 0.5);
+}
+
+.masthead-clear-outline {
+    // Text
+    font: inherit; // 1
+    font-weight: @button-font-weight;
+    .rem-size(font-size, 36);
+    .line-height((@button-font-size * 2) - unit(@base-padding-vertical * 2) - (@button-border-size * 2));
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    white-space: normal; // 3
+    text-shadow: none;
+
+    // Decoration
+    background-color: @white;
+    background-image: none; // 4
+    border-width: 3px;
+    border-style: solid;
+    border-color: @white;
+    border-radius: @button-radius;
+    color: rgba(0,0,0,0.5);
+    .box-shadow(0.5px 0.866px 6px rgba(0, 0, 0, 0.5));
+
+    // Layout
+    .box-sizing(border-box); // 5
+    display: inline-block;
+    padding: @base-padding-vertical @base-padding-horizontal;
+    margin: 0;
+    position: relative;
+    top: -7px;
+
+    // Other
+    -webkit-appearance: none; // 7
+
+    // Remove excess padding and border in Firefox 4+
+    &::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+}
