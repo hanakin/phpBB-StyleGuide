@@ -43,7 +43,8 @@
 }
 
 .nav > li > a.features-nav-top {
-    display: inline-block;
+    display: none;
+    float: right;
     width: 36px;
     height: 36px;
     background-image: url('../imgs/arrow-top.png');
@@ -53,10 +54,12 @@
     padding: 0;
     border-radius: 0;
 
-    &:hover {
+    &:hover, &.active {
         background-color: transparent;
         background-position: 0 3px;
     }
+
+    &.features-nav-top-show { display: inline-block; }
 }
 
 .feature-block {

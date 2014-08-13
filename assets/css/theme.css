@@ -269,7 +269,7 @@ fieldset:disabled .button.active
 }
 .nav
 {
-    width: 540px;
+    width: 451px;
     margin: 0 auto;
     padding-left: 0;
 
@@ -323,6 +323,10 @@ fieldset:disabled .button.active
 {
     color: #e8305e;
     background-color: #f2f2f2;
+}
+.nav-top-show
+{
+    width: 493px;
 }
 .color-title-margin
 {
@@ -843,7 +847,8 @@ a.features-nav:hover
 }
 .nav > li > a.features-nav-top
 {
-    display: inline-block;
+    display: none;
+    float: right;
 
     width: 36px;
     height: 36px;
@@ -855,10 +860,15 @@ a.features-nav:hover
     background-position: 0 -31px;
     background-size: 36px 72px;
 }
-.nav > li > a.features-nav-top:hover
+.nav > li > a.features-nav-top:hover,
+.nav > li > a.features-nav-top.active
 {
     background-color: transparent;
     background-position: 0 3px;
+}
+.nav > li > a.features-nav-top.features-nav-top-show
+{
+    display: inline-block;
 }
 .feature-block
 {
