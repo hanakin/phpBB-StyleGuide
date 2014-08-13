@@ -4417,6 +4417,25 @@ a.features-nav:hover
 
     border-bottom: 2px solid #f2f2f2;
 }
+.nav > li > a.features-nav-top
+{
+    display: inline-block;
+
+    width: 36px;
+    height: 36px;
+    padding: 0;
+
+    border-radius: 0;
+    background-image: url('../imgs/arrow-top.png');
+    background-repeat: no-repeat;
+    background-position: 0 -31px;
+    background-size: 36px 72px;
+}
+.nav > li > a.features-nav-top:hover
+{
+    background-color: transparent;
+    background-position: 0 3px;
+}
 .feature-block
 {
     height: auto;
@@ -4627,7 +4646,7 @@ a.features-nav:hover
 .showcase-prev
 {
     top: 70px;
-    left: 55px;
+    left: 40px;
 
     float: left;
 

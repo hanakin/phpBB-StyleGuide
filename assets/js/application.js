@@ -12,7 +12,6 @@
         $('.nav a').on('click', function() {
             $(this).parent().parent().find('a.active').removeClass('active');
             $(this).addClass('active');
-
         });
 
         // Fix navigation on splash page when scrolled past
