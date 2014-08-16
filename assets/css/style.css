@@ -4581,8 +4581,9 @@ a.features-nav:hover
     margin: 0 0 24px;
 
     color: #fff;
-    color: #f5f5f5\9;
     text-shadow: .5px .866px 6px rgba(0, 0, 0, .5);
+
+  filter: progid:DXImageTransform.Microsoft.Shadow(direction=0, strength=1, color=808080) progid:DXImageTransform.Microsoft.Blur(pixelradius=6);
 }
 .masthead-sub-title
 {
@@ -4599,6 +4600,8 @@ a.features-nav:hover
 
     color: #fff;
     text-shadow: .5px .866px 6px rgba(0, 0, 0, .5);
+
+  filter: progid:DXImageTransform.Microsoft.Shadow(direction=0, strength=1, color=808080) progid:DXImageTransform.Microsoft.Blur(pixelradius=6);
 }
 .masthead-clear-outline
 {
@@ -4625,6 +4628,7 @@ a.features-nav:hover
     text-decoration: none;
 
     color: rgba(0, 0, 0, .5);
+    color: #666\9;
     border-width: 3px;
     border-style: solid;
     border-color: #fff;
