@@ -6,8 +6,8 @@
 
 .media-title {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-size: 35px;
-	line-height: 42px;
+	.rem-size(font-size, 35);
+	.rem-size(line-height, 42);
 	font-weight: 200;
 	text-align: center;
 	color: @gray-20;
@@ -21,8 +21,8 @@
 
 .media-copy {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-size: 14px;
-	line-height: 30px;
+	.rem-size(font-size, 14);
+	.rem-size(line-height, 30);
 	font-weight: 300;
 	text-align: center;
 	color: @gray-50;
@@ -50,23 +50,23 @@
 	.media-title { margin-bottom: 18px; }
 
     .media-copy {
-        font-size: 24px;
-        line-height: 44px;
+        .rem-size(font-size, 24);
+		.rem-size(line-height, 44);
     }
 }
 
 .media-md {
     width: 49%;
 
-    .media-title { font-size: 30px; }
-    .media-copy { font-size: 18px;}
+    .media-title { .rem-size(font-size, 30); }
+    .media-copy { .rem-size(font-size, 18);	.rem-size(line-height, 42); }
 }
 
 .media-sm {
-    width: 33%;
+    width: 32%;
 
     .media-title {
-        font-size: 22px;
-        line-height: 30px;
+    	.rem-size(font-size, 22);
+		.rem-size(line-height, 30);
     }
 }

@@ -8,7 +8,6 @@
     width: 900px;
     margin-right: auto;
     margin-left: auto;
-    padding: 0 15px;
 }
 
 .features-header {
@@ -24,8 +23,8 @@
 .features-nav-fixed {
     position: fixed;
     top: 0;
-    height: 56px;
-    width: 870px;
+    height: 30px;
+    width: 880px;
     z-index: 9999;
     border-bottom: 2px solid @gray-95;
 }
@@ -38,13 +37,14 @@
     background-image: url('../imgs/arrow-top.png');
     background-repeat: no-repeat;
     background-size: 36px 72px;
-    background-position: 0 -31px;
+    background-position: 0 -34px;
+    margin-top:-2px;
     padding: 0;
     border-radius: 0;
 
     &:hover, &.active {
         background-color: transparent;
-        background-position: 0 3px;
+        background-position: 0 0px;
     }
 
     &.features-nav-top-show { display: inline-block; }

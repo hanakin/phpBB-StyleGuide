@@ -204,8 +204,10 @@ fieldset:disabled .button.active
 {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 35px;
+    font-size: 2.1875rem;
     font-weight: 200;
     line-height: 42px;
+    line-height: 2.625rem;
 
     margin-bottom: 6px;
 
@@ -223,8 +225,10 @@ fieldset:disabled .button.active
 {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 14px;
+    font-size: .875rem;
     font-weight: 300;
     line-height: 30px;
+    line-height: 1.875rem;
 
     text-align: center;
 
@@ -262,7 +266,9 @@ fieldset:disabled .button.active
 .media-lg .media-copy
 {
     font-size: 24px;
+    font-size: 1.5rem;
     line-height: 44px;
+    line-height: 2.75rem;
 }
 .media-md
 {
@@ -271,19 +277,25 @@ fieldset:disabled .button.active
 .media-md .media-title
 {
     font-size: 30px;
+    font-size: 1.875rem;
 }
 .media-md .media-copy
 {
     font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 42px;
+    line-height: 2.625rem;
 }
 .media-sm
 {
-    width: 33%;
+    width: 32%;
 }
 .media-sm .media-title
 {
     font-size: 22px;
+    font-size: 1.375rem;
     line-height: 30px;
+    line-height: 1.875rem;
 }
 /*--------------------------------------------------------------------------*\
     $COMPONENTS
@@ -851,7 +863,6 @@ h1
     width: 900px;
     margin-right: auto;
     margin-left: auto;
-    padding: 0 15px;
 }
 .features-header
 {
@@ -875,8 +886,8 @@ a.features-nav:hover
     z-index: 9999;
     top: 0;
 
-    width: 870px;
-    height: 56px;
+    width: 880px;
+    height: 30px;
 
     border-bottom: 2px solid #f2f2f2;
 }
@@ -887,19 +898,20 @@ a.features-nav:hover
 
     width: 36px;
     height: 36px;
+    margin-top: -2px;
     padding: 0;
 
     border-radius: 0;
     background-image: url('../imgs/arrow-top.png');
     background-repeat: no-repeat;
-    background-position: 0 -31px;
+    background-position: 0 -34px;
     background-size: 36px 72px;
 }
 .nav > li > a.features-nav-top:hover,
 .nav > li > a.features-nav-top.active
 {
     background-color: transparent;
-    background-position: 0 3px;
+    background-position: 0 0;
 }
 .nav > li > a.features-nav-top.features-nav-top-show
 {
