@@ -4583,7 +4583,7 @@ a.features-nav:hover
     color: #fff;
     text-shadow: .5px .866px 6px rgba(0, 0, 0, .5);
 
-  filter: progid:DXImageTransform.Microsoft.Shadow(direction=0, strength=1, color=808080) progid:DXImageTransform.Microsoft.Blur(pixelradius=6);
+  filter: progid:DXImageTransform.Microsoft.Shadow(direction=0, strength=1, color=808080);
 }
 .masthead-sub-title
 {
@@ -4601,7 +4601,7 @@ a.features-nav:hover
     color: #fff;
     text-shadow: .5px .866px 6px rgba(0, 0, 0, .5);
 
-  filter: progid:DXImageTransform.Microsoft.Shadow(direction=0, strength=1, color=808080) progid:DXImageTransform.Microsoft.Blur(pixelradius=6);
+  filter: progid:DXImageTransform.Microsoft.Shadow(direction=0, strength=1, color=808080);
 }
 .masthead-clear-outline
 {
