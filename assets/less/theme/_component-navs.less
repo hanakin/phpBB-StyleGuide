@@ -8,25 +8,19 @@
 // --------------------------------------------------
 
 .nav {
-    margin: 0 auto;
-    width: 451px;
-    padding-left: 0; // Override default ul/ol
-    list-style: none;
-
+    .box-sizing(border-box);
     .clearfix();
-
-    > li {
+    > a {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        .rem-size(font-size, 16);
         position: relative;
-        display: block;
-        padding: 0 3px;
+        display: inline-block;
+        padding: @nav-link-padding;
+        margin: 0 3px;
+        .box-sizing(border-box);
 
-        > a {
-            position: relative;
-            display: block;
-            padding: @nav-link-padding;
-            &:hover,
-            &:focus { text-decoration: none; }
-        }
+        &:hover,
+        &:focus { text-decoration: none; }
     }
 }
 
@@ -35,20 +29,15 @@
 // Pills
 // -------------------------
 .nav-pills {
-     > li {
-        float: left;
-        > a {
-            border-radius: @nav-pills-border-radius;
-            padding: @nav-link-padding;
+    > a {
+        border-radius: @nav-pills-border-radius;
+        padding: @nav-link-padding;
 
-            &.active,
-            &:hover,
-            &:focus {
-                background-color: @nav-link-hover-bg;
-                color: @primary-hover;
-            }
+        &.active,
+        &:hover,
+        &:focus {
+            background-color: @nav-link-hover-bg;
+            color: @primary-hover;
         }
     }
 }
-
-.nav-top-show { width: 493px; }
