@@ -15,9 +15,10 @@
     .rem-size(line-height, 36);
     font-weight: 400;
     text-shadow: 0.5px 0.866px 6px rgba(0, 0, 0, 0.5);
+    filter: dropshadow(color=@gray-50, offx=.5, offy=.866);
+  zoom: 1\9;
     color: @white;
-    color: @gray-95\9;
-    margin-bottom: 0 0 24px;
+    margin: 0 0 24px;
     .box-sizing(border-box);
 }
 
@@ -28,6 +29,8 @@
   color: #ffffff;
   font-weight: 200;
   text-shadow: 0.5px 0.866px 6px rgba(0, 0, 0, 0.5);
+  filter: dropshadow(color=@gray-50, offx=.5, offy=.866);
+  zoom: 1\9;
   .box-sizing(border-box);
 }
 
@@ -51,8 +54,10 @@
     border-color: @white;
     border-radius: @button-radius;
     color: rgba(0,0,0,0.5);
-    color: @gray-50\9;
+    color: #7F000000;
     .box-shadow(0.5px 0.866px 6px rgba(0, 0, 0, 0.5));
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=6, MakeShadow=true, ShadowOpacity=0.50);
+    zoom: 1\9;
     .box-sizing(border-box);
 
     // Layout
