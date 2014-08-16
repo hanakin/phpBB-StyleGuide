@@ -889,12 +889,12 @@ a.features-nav:hover
     z-index: 9999;
     top: 0;
 
-    width: 880px;
+    width: 900px;
     height: 54px;
 
     border-bottom: 2px solid #f2f2f2;
 }
-.nav > li > a.features-nav-top
+.nav > a.features-nav-top
 {
     display: none;
     float: right;
@@ -910,13 +910,13 @@ a.features-nav:hover
     background-position: 0 -34px;
     background-size: 36px 72px;
 }
-.nav > li > a.features-nav-top:hover,
-.nav > li > a.features-nav-top.active
+.nav > a.features-nav-top:hover,
+.nav > a.features-nav-top.active
 {
     background-color: transparent;
     background-position: 0 0;
 }
-.nav > li > a.features-nav-top.features-nav-top-show
+.nav > a.features-nav-top.features-nav-top-show
 {
     display: inline-block;
 }
