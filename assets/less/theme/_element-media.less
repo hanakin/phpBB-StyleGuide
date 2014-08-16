@@ -5,6 +5,7 @@
 //--------------------------------------------------------------------------//
 
 .media-title {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 35px;
 	line-height: 42px;
 	font-weight: 200;
@@ -19,6 +20,7 @@
 }
 
 .media-copy {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	line-height: 30px;
 	font-weight: 300;
@@ -29,4 +31,42 @@
 		margin: 36px auto 0;
 		display: block;
 	}
+}
+
+.media-lg,
+.media-md,
+.media-sm {
+    vertical-align: top;
+    display: inline-block;
+    padding: 30px;
+    .box-sizing(border-box);
+}
+
+.media-lg {
+    width: 100%;
+    padding-left: 72px;
+    padding-right: 72px;
+
+	.media-title { margin-bottom: 18px; }
+
+    .media-copy {
+        font-size: 24px;
+        line-height: 44px;
+    }
+}
+
+.media-md {
+    width: 49%;
+
+    .media-title { font-size: 30px; }
+    .media-copy { font-size: 18px;}
+}
+
+.media-sm {
+    width: 33%;
+
+    .media-title {
+        font-size: 22px;
+        line-height: 30px;
+    }
 }

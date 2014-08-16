@@ -202,6 +202,7 @@ fieldset:disabled .button.active
 }
 .media-title
 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 35px;
     font-weight: 200;
     line-height: 42px;
@@ -220,6 +221,7 @@ fieldset:disabled .button.active
 }
 .media-copy
 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 14px;
     font-weight: 300;
     line-height: 30px;
@@ -233,6 +235,55 @@ fieldset:disabled .button.active
     display: block;
 
     margin: 36px auto 0;
+}
+.media-lg,
+.media-md,
+.media-sm
+{
+    display: inline-block;
+
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 30px;
+
+    vertical-align: top;
+}
+.media-lg
+{
+    width: 100%;
+    padding-right: 72px;
+    padding-left: 72px;
+}
+.media-lg .media-title
+{
+    margin-bottom: 18px;
+}
+.media-lg .media-copy
+{
+    font-size: 24px;
+    line-height: 44px;
+}
+.media-md
+{
+    width: 49%;
+}
+.media-md .media-title
+{
+    font-size: 30px;
+}
+.media-md .media-copy
+{
+    font-size: 18px;
+}
+.media-sm
+{
+    width: 33%;
+}
+.media-sm .media-title
+{
+    font-size: 22px;
+    line-height: 30px;
 }
 /*--------------------------------------------------------------------------*\
     $COMPONENTS
@@ -806,23 +857,7 @@ h1
 {
     overflow: hidden;
 
-    height: 409px;
-
     background: url('../imgs/phpbb-features1.png') no-repeat;
-}
-.features-sub-title
-{
-    font-family: 'Helvetica Neue';
-    font-size: 24px;
-    font-weight: 200;
-    line-height: 36px;
-
-    padding: 125px 163px;
-
-    text-align: center;
-
-    color: #fff;
-    text-shadow: .5px .866px 6px rgba(0, 0, 0, .5);
 }
 .features-nav
 {
@@ -909,65 +944,18 @@ a.features-nav:hover
 {
     clear: both;
 }
-.feature-full,
-.feature-half,
-.feature-third
-{
-    display: inline-block;
-
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
-    padding: 30px;
-
-    vertical-align: top;
-}
-.feature-full
-{
-    width: 100%;
-    padding-right: 72px;
-    padding-left: 72px;
-}
-.feature-full .media-copy
-{
-    font-size: 24px;
-    line-height: 44px;
-}
-.feature-half
-{
-    width: 49%;
-    height: 470px;
-}
-.feature-half .media-title
-{
-    font-size: 30px;
-}
-.feature-half .media-copy
-{
-    font-size: 18px;
-}
-.feature-third
-{
-    width: 33%;
-    height: 340px;
-}
-.feature-third .media-title
-{
-    font-size: 22px;
-    line-height: 30px;
-}
 .masthead
 {
-    padding: 80px 151px 0;
+    padding: 80px 160px 60px;
 }
 .masthead-title
 {
-    font-family: 'Helvetica Neue';
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 72px;
     font-weight: 400;
     line-height: 36px;
 
-    margin-bottom: 8px;
+    margin-bottom: 0 0 24px;
 
     text-align: center;
 
@@ -976,7 +964,7 @@ a.features-nav:hover
 }
 .masthead-sub-title
 {
-    font-family: 'Helvetica Neue';
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 24px;
     font-weight: 200;
     line-height: 36px;
