@@ -977,8 +977,6 @@ a.features-nav:hover
     line-height: 36px;
     line-height: 2.25rem;
 
-    zoom: 1\9;
-
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
@@ -986,8 +984,6 @@ a.features-nav:hover
 
     color: #fff;
     text-shadow: .5px .866px 6px rgba(0, 0, 0, .5);
-
-    filter: dropshadow(color=#808080, offx=.5, offy=.866);
 }
 .masthead-sub-title
 {
@@ -998,16 +994,12 @@ a.features-nav:hover
     line-height: 36px;
     line-height: 2.25rem;
 
-    zoom: 1\9;
-
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
 
     color: #fff;
     text-shadow: .5px .866px 6px rgba(0, 0, 0, .5);
-
-    filter: dropshadow(color=#808080, offx=.5, offy=.866);
 }
 .masthead-clear-outline
 {
@@ -1021,7 +1013,6 @@ a.features-nav:hover
     top: -7px;
 
     display: inline-block;
-    zoom: 1\9;
 
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
@@ -1035,7 +1026,6 @@ a.features-nav:hover
     text-decoration: none;
 
     color: rgba(0, 0, 0, .5);
-    color: #7f000;
     border-width: 3px;
     border-style: solid;
     border-color: #fff;
@@ -1046,7 +1036,6 @@ a.features-nav:hover
             box-shadow: .5px .866px 6px rgba(0, 0, 0, .5);
     text-shadow: none;
 
-  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=6, MakeShadow=true, ShadowOpacity=0.5);
     -webkit-appearance: none;
 }
 .masthead-clear-outline::-moz-focus-inner
