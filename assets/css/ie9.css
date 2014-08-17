@@ -4,8 +4,13 @@
     Fixes for IE 9
 /*--------------------------------------------------------------------------*/
 
-.features-header { background-image: url('../imgs/phpbb-features-ie.png'); }
+.features-header {
+    overflow: hidden;
+    background-image: url('../imgs/phpbb-features-ie.png');
+    background-repeat: no-repeat;
+}
+
 .masthead,
 .masthead-title,
 .masthead-sub-title,
-.masthead-clear-outline { display: none; }
+.masthead-clear-outline { display: none !important; }
