@@ -8,6 +8,7 @@
     overflow: hidden;
     background-image: url('../imgs/phpbb-features-ie.png');
     background-repeat: no-repeat;
+    height: 294px;
 }
 
 .masthead,
