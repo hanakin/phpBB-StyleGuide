@@ -75,9 +75,7 @@ $(function() {
         pageScrollTo($(destination));
     });
 
-    // // END CLICK EVENTS -----------------------------------------------------
-
-    // // END WAYPOINT BINDINGS ------------------------------------------------
+    // END CLICK EVENTS --------------------------------------------------------
 
     section.$admin.waypoint(function(){
         $navLinks.removeClass('active');
@@ -108,46 +106,3 @@ $(function() {
 });
 
 
-
-    // var nav         = $('.nav');
-    // var navFirst    = $('.nav a:first');
-    // var navLinks    = $('.nav a');
-    // var navTop      = $('.features-nav-top');
-    // var navOuter    = $('.features-nav');
-    // var navPosition = navOuter.offset().top;
-
-    // Set active nav link state
-    // navLinks.on('click', function() {
-    //     navItems.removeClass('active');
-    //     $(this).addClass('active');
-    // });
-
-    // navItem.home.on('click', function() {
-    //     navItems.removeClass('active');
-    //     $(this).addClass('active');
-    // });
-
-    // Fix navigation on splash page when scrolled past
-//     var fixedNav = function(){
-//         var scrollTop = $(window).scrollTop();
-//         if ( scrollTop > navPosition) {
-//             navOuter.addClass('features-nav-fixed');
-//         } else {
-//             navOuter.removeClass('features-nav-fixed');
-//         }
-//     };
-
-//     navItem.admin.click().addClass('active');
-//     fixedNav();
-
-//     $(window).on('scroll', function() {
-//         fixedNav();
-//     });
-// });
-
-
-    // $(document).ready(function ( {
-    //     var panels    = $('.feature-block'),
-    //         container = $('.feature'),
-    //         scroll    = $('.features');
-    // });
