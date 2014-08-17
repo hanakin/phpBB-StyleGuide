@@ -21,14 +21,13 @@
     padding: 10px;
     .swatch-white();
     .box-sizing(border-box);
+    z-index: 101;
+    width: 900px;
 }
 
 .features-nav-fixed {
     position: fixed;
     top: 0;
-    height: 56px;
-    width: 900px;
-    z-index: 9999;
     border-bottom: 2px solid @gray-95;
     overflow: initial;
 }
@@ -41,14 +40,15 @@
     background-image: url('../imgs/arrow-top.png');
     background-repeat: no-repeat;
     background-size: 36px 72px;
-    background-position: 0 -34px;
+    background-position: 0 -33px;
     margin-top: 1px;
     padding: 0;
     border-radius: 0;
+    z-index: 201;
 
     &:hover, &.active {
         background-color: transparent;
-        background-position: 0 0px;
+        background-position: 0 2px;
     }
 
     &.features-nav-top-show { display: inline-block; }

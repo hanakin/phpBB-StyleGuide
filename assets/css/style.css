@@ -3903,6 +3903,7 @@ fieldset:disabled .button.active
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
+    height: 36px;
 }
 .nav > a
 {
@@ -4423,9 +4424,12 @@ h1
 }
 .features-nav
 {
+    z-index: 101;
+
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
+    width: 900px;
     padding: 10px;
 
     background-color: #fff;
@@ -4437,18 +4441,16 @@ a.features-nav:hover
 .features-nav-fixed
 {
     position: fixed;
-    z-index: 9999;
     top: 0;
 
     overflow: initial;
-
-    width: 900px;
-    height: 56px;
 
     border-bottom: 2px solid #f2f2f2;
 }
 .nav > a.features-nav-top
 {
+    z-index: 201;
+
     display: none;
     float: right;
 
@@ -4460,14 +4462,14 @@ a.features-nav:hover
     border-radius: 0;
     background-image: url('../imgs/arrow-top.png');
     background-repeat: no-repeat;
-    background-position: 0 -34px;
+    background-position: 0 -33px;
     background-size: 36px 72px;
 }
 .nav > a.features-nav-top:hover,
 .nav > a.features-nav-top.active
 {
     background-color: transparent;
-    background-position: 0 0;
+    background-position: 0 2px;
 }
 .nav > a.features-nav-top.features-nav-top-show
 {
