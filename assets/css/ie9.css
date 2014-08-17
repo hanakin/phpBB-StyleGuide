@@ -4,6 +4,11 @@
     Fixes for IE 9
 /*--------------------------------------------------------------------------*/
 
+html {
+    overflow-x: auto\9;
+    overflow-y: hidden\9;
+}
+
 .features-header {
     overflow: hidden;
     background-image: url('../imgs/phpbb-features-ie.png');
@@ -17,3 +22,5 @@
 .masthead-clear-outline { display: none !important; }
 
 .nav { color: #fff; }
+
+* html .features-nav-fixed { position: absolute\9; }
