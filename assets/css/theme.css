@@ -242,6 +242,16 @@
 {
     clear: both;
 }
+.feature a
+{
+    color: #47a1eb;
+}
+.feature a:hover
+{
+    text-decoration: none;
+
+    color: #e8305e;
+}
 .feature-row
 {
     -webkit-box-sizing: border-box;
