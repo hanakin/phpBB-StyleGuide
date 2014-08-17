@@ -25,14 +25,16 @@
     width: 900px;
 }
 
-.features-nav-fixed {
+.stuck {
     position: fixed;
     top: 0;
     border-bottom: 2px solid @gray-95;
     overflow: initial;
+
+    .nav .top { display: inline-block; }
 }
 
-.nav > a.features-nav-top {
+.nav .top {
     display: none;
     float: right;
     width: 36px;
@@ -50,11 +52,9 @@
         background-color: transparent;
         background-position: 0 2px;
     }
-
-    &.features-nav-top-show { display: inline-block; }
 }
 
-.feature-block {
+.feature {
     .swatch-grad-gray-500();
     height: auto;
     padding: 72px 0 48px;
