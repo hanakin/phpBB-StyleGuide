@@ -1,0 +1,11 @@
+/*--------------------------------------------------------------------------*\
+    $IE Fixes
+/*--------------------------------------------------------------------------*\
+    Fixes for IE 8
+/*--------------------------------------------------------------------------*/
+
+.features-header { background-image: url('../imgs/phpbb-features.png'); }
+.masthead,
+.masthead-title,
+.masthead-sub-title,
+.masthead-clear-outline { display: hidden; }
