@@ -4440,7 +4440,8 @@ h1
 {
     overflow: hidden;
 
-    background: url('../imgs/phpbb-features1.png') no-repeat;
+    background-image: url('../imgs/phpbb-features1.png');
+    background-repeat: no-repeat;
 }
 .features-nav
 {
@@ -4582,8 +4583,6 @@ a.features-nav:hover
 
     color: #fff;
     text-shadow: .5px .866px 6px rgba(0, 0, 0, .5);
-
-  filter: progid:DXImageTransform.Microsoft.Shadow(direction=0, strength=3, color=808080);
 }
 .masthead-sub-title
 {
@@ -4600,8 +4599,6 @@ a.features-nav:hover
 
     color: #fff;
     text-shadow: .5px .866px 6px rgba(0, 0, 0, .5);
-
-  filter: progid:DXImageTransform.Microsoft.Shadow(direction=0, strength=1, color=808080);
 }
 .masthead-clear-outline
 {
@@ -4628,7 +4625,6 @@ a.features-nav:hover
     text-decoration: none;
 
     color: rgba(0, 0, 0, .5);
-    color: #666\9;
     border-width: 3px;
     border-style: solid;
     border-color: #fff;
