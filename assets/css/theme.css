@@ -208,14 +208,13 @@
     border-radius: 0;
     background-image: url('../imgs/arrow-top.png');
     background-repeat: no-repeat;
-    background-position: 0 -34px;
-    background-size: 34px 68px;
+    background-position: 0 -30px;
 }
 .nav .top:hover,
 .nav .top.active
 {
     background-color: transparent;
-    background-position: 0 -1.5px;
+    background-position: 0 0;
 }
 .feature
 {
