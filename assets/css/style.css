@@ -3904,28 +3904,6 @@ fieldset:disabled .button.active
        -moz-box-sizing: border-box;
             box-sizing: border-box;
 }
-.nav:before,
-.nav:after
-{
-    display: table;
-
-    content: ' ';
-}
-.nav:after
-{
-    clear: both;
-}
-.nav:before,
-.nav:after
-{
-    display: table;
-
-    content: ' ';
-}
-.nav:after
-{
-    clear: both;
-}
 .nav > a
 {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -4462,8 +4440,10 @@ a.features-nav:hover
     z-index: 9999;
     top: 0;
 
+    overflow: initial;
+
     width: 900px;
-    height: 54px;
+    height: 56px;
 
     border-bottom: 2px solid #f2f2f2;
 }
@@ -4474,7 +4454,7 @@ a.features-nav:hover
 
     width: 36px;
     height: 36px;
-    margin-top: -2px;
+    margin-top: 1px;
     padding: 0;
 
     border-radius: 0;
