@@ -14,6 +14,7 @@ var notify      = require("gulp-notify"),
     csscomb     = require('gulp-csscomb'),
     optipng     = require('gulp-optipng');
 
+
 var options     = ['-o2'];
 
 // Dir Variables
@@ -43,7 +44,7 @@ gulp.task('build', function () {
         .pipe(sourcemaps.init())
         .pipe(less())
         .pipe(notify(files[i] + " Rendered!"))
-        .pipe(csscomb('csscomb')).pipe(notify(files[i] + " Sorted!"))
+        .pipe(csscomb()).pipe(notify(files[i] + " Sorted!"))
         .pipe(sourcemaps.write('./')).pipe(notify(files[i] + " Mapped!"))
         .pipe(gulp.dest(cssDir))
         .pipe(minifyCSS({
