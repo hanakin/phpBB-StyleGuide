@@ -1,44 +1,55 @@
+//------------------------------------------------------------------------------
 // Framework grid generation
-//
+//------------------------------------------------------------------------------
 // Used only by Bootstrap to generate the correct number of grid classes given
 // any value of `@grid-columns`.
-
+//------------------------------------------------------------------------------
+// 1. Common styles for all sizes of grid columns, widths 1-12.
+// 2. initial.
+// 3. general; "=<" isn't a typo.
+// 4. terminal.
+// 5. Prevent columns from collapsing when empty.
+// 6. Inner gutter via padding.
+// 7. kickstart it.
+// 8. general.
+// 9. Basic looping in LESS.
+// 10. next iteration.
+// 11. Create grid for specific class.
+//------------------------------------------------------------------------------
 .make-grid-columns() {
-    // Common styles for all sizes of grid columns, widths 1-12
-    .col(@index) when (@index = 1) { // initial
+    // [1]
+    .col(@index) when (@index = 1) { // [2]
         @item: ~".col-xs-@{index}, .col-sm-@{index}, .col-md-@{index}, .col-lg-@{index}";
         .col((@index + 1), @item);
     }
-    .col(@index, @list) when (@index =< @grid-columns) { // general; "=<" isn't a typo
+    .col(@index, @list) when (@index =< @grid-columns) { // [3]
         @item: ~".col-xs-@{index}, .col-sm-@{index}, .col-md-@{index}, .col-lg-@{index}";
         .col((@index + 1), ~"@{list}, @{item}");
     }
-    .col(@index, @list) when (@index > @grid-columns) { // terminal
+    .col(@index, @list) when (@index > @grid-columns) { // [4]
         @{list} {
-            // Prevent columns from collapsing when empty
-            min-height: 1px;
-            // Inner gutter via padding
-            padding-left:  (@grid-gutter-width / 2);
-            padding-right: (@grid-gutter-width / 2);
+            min-height: 1px; // [5]
+            padding-left:  (@grid-gutter-size / 2); // [6]
+            padding-right: (@grid-gutter-size / 2); // [6]
             position: relative;
         }
     }
-    .col(1); // kickstart it
+    .col(1); // [7]
 }
 
 .float-grid-columns(@class) {
-    .col(@index) when (@index = 1) { // initial
+    .col(@index) when (@index = 1) { // [2]
         @item: ~".col-@{class}-@{index}";
         .col((@index + 1), @item);
     }
-    .col(@index, @list) when (@index =< @grid-columns) { // general
+    .col(@index, @list) when (@index =< @grid-columns) { // [8]
         @item: ~".col-@{class}-@{index}";
         .col((@index + 1), ~"@{list}, @{item}");
     }
-    .col(@index, @list) when (@index > @grid-columns) { // terminal
+    .col(@index, @list) when (@index > @grid-columns) { // [4]
       @{list} { float: left; }
     }
-    .col(1); // kickstart it
+    .col(1); // [7]
 }
 
 .calc-grid-column(@index, @class, @type) when (@type = width) and (@index > 0) {
@@ -64,14 +75,14 @@
   .col-@{class}-offset-@{index} { margin-left: percentage((@index / @grid-columns)); }
 }
 
-// Basic looping in LESS
+// [9]
 .loop-grid-columns(@index, @class, @type) when (@index >= 0) {
     .calc-grid-column(@index, @class, @type);
-    // next iteration
+    // [10]
     .loop-grid-columns((@index - 1), @class, @type);
 }
 
-// Create grid for specific class
+// [11]
 .make-grid(@class) {
     .float-grid-columns(@class);
     .loop-grid-columns(@grid-columns, @class, width);

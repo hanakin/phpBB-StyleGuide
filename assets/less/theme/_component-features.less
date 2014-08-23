@@ -1,8 +1,8 @@
-//--------------------------------------------------------------------------//
+//------------------------------------------------------------------------------
 //  $COMPONENT-FEATURES
-//--------------------------------------------------------------------------//
+//------------------------------------------------------------------------------
 //  feature component
-//--------------------------------------------------------------------------//
+//------------------------------------------------------------------------------
 
 .features-container {
     width: 900px;
@@ -23,36 +23,6 @@
     .box-sizing(border-box);
     z-index: 101;
     width: 900px;
-}
-
-.stuck {
-    position: fixed;
-    top: 0;
-    border-bottom: 2px solid @gray-95;
-    overflow: initial;
-
-    .nav .top { display: inline-block; }
-}
-
-.nav .top {
-    display: none;
-    position: absolute;
-    top: 11px;
-    left: 856px;
-    float: right;
-    width: 30px;
-    height: 30px;
-    background-image: url('../imgs/arrow-top.png');
-    background-repeat: no-repeat;
-    background-position: 0 -30px;
-    padding: 0;
-    border-radius: 0;
-    z-index: 201;
-
-    &:hover, &.active {
-        background-color: transparent;
-        background-position: 0 0;
-    }
 }
 
 .feature {

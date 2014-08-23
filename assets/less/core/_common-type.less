@@ -1,17 +1,25 @@
-/*--------------------------------------------------------------------------*\
+/*----------------------------------------------------------------------------*\
     $COMMON-TYPE
-/*--------------------------------------------------------------------------*\
+/*----------------------------------------------------------------------------*\
     Setup the default typefaces and baseline grid
-/*--------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
 
-/* Common margin-bottom for vertical rhythm. */
+//------------------------------------------------------------------------------
+// Common vertical rhythm.
+//------------------------------------------------------------------------------
 h1,h2,h3,h4,h5,h6,
 p,
 table,
 pre,
 hr { .rem-size(margin-bottom, @base-line-height-computed); }
 
+//------------------------------------------------------------------------------
 // Headings
+//------------------------------------------------------------------------------
+// 1. These handle massive type, for less frequently occurring bits of text.
+// 2. Define headings and their associated classes here.
+// 3. Smaller-than-body-copy sizes here.
+//------------------------------------------------------------------------------
 h1, h2, h3, h4, h5, h6 {
     // Text
     font-family: @base-font;
@@ -34,26 +42,23 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/* These handle massive type, for less frequently occurring bits of text
-(e.g. in mastheads and banners). */
-.giga{ .font-size(@giga); }
-.mega{ .font-size(@mega); }
-.kilo{ .font-size(@kilo); }
+.giga{ .font-size(@giga); }            // [1]
+.mega{ .font-size(@mega); }            // [1]
+.kilo{ .font-size(@kilo); }            // [1]
 
-/* Define headings and their associated classes here. */
-h1, .alpha { .font-size(@alpha); }
-h2, .beta { .font-size(@beta); }
-h3, .gamma { .font-size(@gamma); }
-h4, .delta { .font-size(@delta); }
-h5, .epsilon { .font-size(@epsilon); }
-h6, .zeta { .font-size(@zeta); }
+h1, .alpha { .font-size(@alpha); }     // [2]
+h2, .beta { .font-size(@beta); }       // [2]
+h3, .gamma { .font-size(@gamma); }     // [2]
+h4, .delta { .font-size(@delta); }     // [2]
+h5, .epsilon { .font-size(@epsilon); } // [2]
+h6, .zeta { .font-size(@zeta); }       // [2]
 
-/* Smaller-than-body-copy sizes here. */
-small, .milli { .font-size(@milli); }
-.micro { .font-size(@micro); }
+small, .milli { .font-size(@milli); }  // [3]
+.micro { .font-size(@micro); }         // [3]
 
-
+//------------------------------------------------------------------------------
 // Emphasis & misc
+//------------------------------------------------------------------------------
 cite { font-style: normal; } // Undo browser default styling
 mark, .mark {
     // Decoration
@@ -63,15 +68,21 @@ mark, .mark {
     .rem-size(padding, .3);
 }
 
+//------------------------------------------------------------------------------
 // Abbreviations and acronyms
+//------------------------------------------------------------------------------
+// 1. Add data-* attribute to help out our tooltip plugin.
+//    (see: https://github.com/twbs/bootstrap/issues/5257)
+//------------------------------------------------------------------------------
 abbr[title],
-// Add data-* attribute to help out our tooltip plugin, per https://github.com/twbs/bootstrap/issues/5257
-abbr[data-original-title] {
+abbr[data-original-title] { // [1]
     border-bottom: 1px dotted @ui;
     cursor: help;
 }
 
+//------------------------------------------------------------------------------
 // Blockquotes
+//------------------------------------------------------------------------------
 blockquote {
     // Text
     .font-size(@gamma);
@@ -88,8 +99,6 @@ blockquote {
     ul,
     ol { &:last-of-type { margin-bottom: 0; } }
 
-    // Note: Deprecated small and .small as of v3.1.0
-    // Context: https://github.com/twbs/bootstrap/issues/11660
     footer,
     small,
     .small {
@@ -106,11 +115,15 @@ blockquote {
     }
 }
 
+//------------------------------------------------------------------------------
 // Quotes
+//------------------------------------------------------------------------------
 blockquote:before,
 blockquote:after { content: ""; }
 
+//------------------------------------------------------------------------------
 // Addresses
+//------------------------------------------------------------------------------
 address {
     // Text
     font-style: normal;

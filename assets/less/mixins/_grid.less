@@ -1,9 +1,13 @@
+//------------------------------------------------------------------------------
 // Grid system
-//
+//------------------------------------------------------------------------------
 // Generate semantic grid columns with these mixins.
+//------------------------------------------------------------------------------
 
+//------------------------------------------------------------------------------
 // Centered container element
-.container-fixed(@gutter: @grid-gutter-width) {
+//------------------------------------------------------------------------------
+.container-fixed(@gutter: @grid-gutter-size) {
     margin-right: auto;
     margin-left: auto;
     padding-left:  (@gutter / 2);
@@ -12,16 +16,20 @@
     &:extend(.clearfix all);
 }
 
+//------------------------------------------------------------------------------
 // Creates a wrapper for a series of columns
-.make-row(@gutter: @grid-gutter-width) {
+//------------------------------------------------------------------------------
+.make-row(@gutter: @grid-gutter-size) {
     margin-left:  (@gutter / -2);
     margin-right: (@gutter / -2);
 
     &:extend(.clearfix all);
 }
 
+//------------------------------------------------------------------------------
 // Generate the extra small columns
-.make-xs-column(@columns; @gutter: @grid-gutter-width) {
+//------------------------------------------------------------------------------
+.make-xs-column(@columns; @gutter: @grid-gutter-size) {
     float: left;
     min-height: 1px;
     width: percentage((@columns / @grid-columns));
@@ -33,8 +41,10 @@
 .make-xs-column-push(@columns) { left: percentage((@columns / @grid-columns)); }
 .make-xs-column-pull(@columns) { right: percentage((@columns / @grid-columns)); }
 
+//------------------------------------------------------------------------------
 // Generate the small columns
-.make-sm-column(@columns; @gutter: @grid-gutter-width) {
+//------------------------------------------------------------------------------
+.make-sm-column(@columns; @gutter: @grid-gutter-size) {
     min-height: 1px;
     padding-left:  (@gutter / 2);
     padding-right: (@gutter / 2);
@@ -58,8 +68,10 @@
     @media (min-width: @screen-sm-min) { right: percentage((@columns / @grid-columns)); }
 }
 
+//------------------------------------------------------------------------------
 // Generate the medium columns
-.make-md-column(@columns; @gutter: @grid-gutter-width) {
+//------------------------------------------------------------------------------
+.make-md-column(@columns; @gutter: @grid-gutter-size) {
     min-height: 1px;
     padding-left:  (@gutter / 2);
     padding-right: (@gutter / 2);
@@ -83,8 +95,10 @@
   @media (min-width: @screen-md-min) { right: percentage((@columns / @grid-columns)); }
 }
 
+//------------------------------------------------------------------------------
 // Generate the large columns
-.make-lg-column(@columns; @gutter: @grid-gutter-width) {
+//------------------------------------------------------------------------------
+.make-lg-column(@columns; @gutter: @grid-gutter-size) {
     min-height: 1px;
     padding-left:  (@gutter / 2);
     padding-right: (@gutter / 2);

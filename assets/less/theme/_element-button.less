@@ -1,36 +1,37 @@
-//--------------------------------------------------------------------------//
+//------------------------------------------------------------------------------
 //  $ELEMENT-BUTTON
-//--------------------------------------------------------------------------//
+//------------------------------------------------------------------------------
 //  Button class
-//--------------------------------------------------------------------------//
-
-//**
+//------------------------------------------------------------------------------
 // 1. Inherit font styles from ancestor.
-// 2. Normalize `line-height`. For `input`, it can't be changed from `normal`
-//    in Firefox 4+.
-// 3. Make sure `input` will wrap text across multiple lines.
-// 4. Reset unusual Firefox-on-Android default style;
-//    see https://github.com/necolas/normalize.css/issues/214
-// 5. Normalize `box-sizing` across all elements that this component could be
+// 2. Make sure `input` will wrap text across multiple lines.
+// 3. Reset unusual Firefox-on-Android default style.
+//    (see: https://github.com/necolas/normalize.css/issues/214)
+// 4. Normalize `box-sizing` across all elements that this component could be
 //    applied to.
-// 6. Prevent button text from being selectable.
-// 7. Corrects inability to style clickable `input` types in iOS.
-//**
+// 5. Prevent button text from being selectable.
+// 6. Corrects inability to style clickable `input` types in iOS.
+// 7. Remove excess padding and border in Firefox 4+.
+// 8. Work around a Firefox/IE bug where the transparent `button` background
+//    results in a loss of the default `button` focus styles.
+// 9. Darken 10%.
+// 10. Future-proof disabling of clicks.
+//------------------------------------------------------------------------------
 
 .button {
     // Text
-    font: inherit; // 1
+    font: inherit; // [1]
     font-weight: @button-font-weight;
     .rem-size(font-size, @button-font-size);
     .line-height((@button-font-size * 2) - unit(@base-padding-vertical * 2) - (@button-border-size * 2));
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
-    white-space: normal; // 3
+    white-space: normal; // [2]
 
     // Decoration
     background-color: @button-bg;
-    background-image: none; // 4
+    background-image: none; // [3]
     border-width: unit(@button-border-size, px);
     border-style: solid;
     border-color: @button-border-color;
@@ -40,24 +41,21 @@
     cursor: pointer;
 
     // Layout
-    .box-sizing(border-box); // 5
+    .box-sizing(border-box); // [4]
     display: inline-block;
     padding: @base-padding-vertical @base-padding-horizontal;
     margin: 0;
-    .user-select(none); // 6
+    .user-select(none); // [5]
 
     // Other
-    -webkit-appearance: none; // 7
+    -webkit-appearance: none; // [6]
 
-    // Remove excess padding and border in Firefox 4+
-    &::-moz-focus-inner {
+    &::-moz-focus-inner { // [7]
         border: 0;
         padding: 0;
     }
 
-    // Work around a Firefox/IE bug where the transparent `button` background
-    // results in a loss of the default `button` focus styles.
-    &:focus {
+    &:focus { // [8]
         outline: 1px dotted;
         outline: 5px auto -webkit-focus-ring-color;
     }
@@ -68,9 +66,9 @@
 
 
     &:hover, &:focus {
-        background-color: @button-bg-hover; // darken(@button-bg, 10%);
+        background-color: @button-bg-hover; // [9]
         background-image: none;
-        border-color: @button-border-color-hover; // darken(@base-button-bg, 10%);
+        border-color: @button-border-color-hover; // [9]
         color: @button-color-hover;
     }
 
@@ -90,7 +88,7 @@
     fieldset[disabled] &,
     fieldset:disabled & {
         cursor: not-allowed;
-        pointer-events: none; // Future-proof disabling of clicks
+        pointer-events: none; // [10]
         .opacity(.65);
         .box-shadow(none);
         &,
@@ -105,12 +103,18 @@
     }
 }
 
+//------------------------------------------------------------------------------
+// Button with gradient
+//------------------------------------------------------------------------------
+// 1. Reset unusual Firefox-on-Android default style.
+//    (see: https://github.com/necolas/normalize.css/issues/214)
+//------------------------------------------------------------------------------
 .button when (@button-gradient = true) {
-    #gradient .vertical(@button-gradient-start, @button-gradient-end); // 4
+    #gradient .vertical(@button-gradient-start, @button-gradient-end); // [1]
     &:hover,
     &:focus,
     &:active,
     &.active {
-        #gradient .vertical(@button-gradient-start-hover, @button-gradient-end-hover); // 4
+        #gradient .vertical(@button-gradient-start-hover, @button-gradient-end-hover); // [1]
     }
 }

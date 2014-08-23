@@ -1,12 +1,12 @@
-/*--------------------------------------------------------------------------*\
+/*----------------------------------------------------------------------------*\
     $UTILITIES-RESPONSIVE
-/*--------------------------------------------------------------------------*\
+/*----------------------------------------------------------------------------*\
     Contains useful responsive related functions
-/*--------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
 
-//**
+//------------------------------------------------------------------------------
 // IE10 in Windows (Phone) 8
-//
+//------------------------------------------------------------------------------
 // Support for responsive views via media queries is kind of borked in IE10, for
 // Surface/desktop in split view and for Windows Phone 8. This particular fix
 // must be accompanied by a snippet of JavaScript to sniff the user agent and
@@ -19,11 +19,12 @@
 // Docs: http://getbootstrap.com/getting-started/#support-ie10-width
 // Source: http://timkadlec.com/2013/01/windows-phone-8-and-device-width/
 // Source: http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
-//**
-
+//------------------------------------------------------------------------------
 @-ms-viewport { width: device-width; }
 
+//------------------------------------------------------------------------------
 // Visibility utilities
+//------------------------------------------------------------------------------
 .visible-xs,
 .visible-sm,
 .visible-md,
@@ -160,11 +161,11 @@
     @media (min-width: @screen-xl-min) { .responsive-invisibility(); }
 }
 
-//**
+//------------------------------------------------------------------------------
 // Print utilities
-//
+//------------------------------------------------------------------------------
 // Media queries are placed on the inside to be mixin-friendly.
-//**
+//------------------------------------------------------------------------------
 .visible-print {
   .responsive-invisibility();
     @media print { .responsive-visibility(); }
