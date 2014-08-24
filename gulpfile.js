@@ -12,7 +12,8 @@ var notify      = require("gulp-notify"),
     sourcemaps  = require('gulp-sourcemaps'),
     minifyCSS   = require('gulp-minify-css'),
     csscomb     = require('gulp-csscomb'),
-    optipng     = require('gulp-optipng');
+    imagemin    = require('gulp-imagemin'),
+    cache       = require('gulp-cache');
 
 
 var options     = ['-o2'];
@@ -64,7 +65,10 @@ gulp.task('crush', function () {
         .pipe(plumber({
             errorHandler: onError
         }))
-        .pipe(optipng(options))
+        .pipe(cache(imagemin({
+            progressive: true,
+            interlaced: true
+        })))
         .pipe(gulp.dest(imgDir))
         .pipe(notify("Images Crushed!"));
 });
