@@ -599,10 +599,9 @@ dd {
     list-style: none;
 }
 .list-inline {
+    list-style: none;
     margin-left: -5px;
     padding: 0;
-
-    list-styl: none;
 }
 .list-inline > li {
     display: inline-block;
@@ -750,7 +749,7 @@ input[type='search'] {
 }
 input[type='date'], input[type='time'], input[type='datetime-local'], input[type='month'] {
     line-height: 2;
-    line-height: 1.5 \0;
+    line-height: 1.5 \9;
 }
 input[type='date'].input-sm, input[type='time'].input-sm, input[type='datetime-local'].input-sm, input[type='month'].input-sm {
     line-height: 28;
@@ -2258,11 +2257,6 @@ p.form-note {
     border-collapse: separate;
     display: table;
     position: relative;
-}
-.form-control-group[class*='col-'] {
-    float: none;
-    padding-right: 0;
-    padding-left: 0;
 }
 .form-control-group .form-control {
     float: left;

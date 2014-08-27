@@ -85,6 +85,7 @@
             "background-color",
             "background-image",
             "filter:progid:DXImageTransform.Microsoft.gradient",
+            "filter: progid:DXImageTransform.Microsoft.gradient",
             "-ms-filter:\\'progid:DXImageTransform.Microsoft.gradient",
             "background-repeat",
             "background-attachment",

@@ -16,8 +16,8 @@ var notify          = require("gulp-notify"),
     cache           = require('gulp-cache'),
     swig            = require('gulp-swig'),
     htmlPrettify    = require('gulp-html-prettify'),
-    clean           = require('gulp-rimraf'),
-    rename          = require("gulp-rename");
+    rename          = require("gulp-rename"),
+    csslint         = require('gulp-csslint');
 
 // Dir Variables
 var assetsDir   = 'assets/',
@@ -25,19 +25,23 @@ var assetsDir   = 'assets/',
     cssDir      = assetsDir + 'css/',
     cssminDir   = './' + cssDir,
     htmlDir     = './' + 'views/',
-    imgDir      = assetsDir + 'imgs/',
-    anyDir      = '**/';
+    imgDir      = assetsDir + 'imgs/';
 
-// File Variables
-var files       = ['style', 'core', 'theme'];
+// Functions
+var customReporter = function(file) {
+    gutil.log(gutil.colors.cyan(file.csslint.errorCount)+' errors in '+gutil.colors.magenta(file.path));
 
-// Command line option:
+    file.csslint.results.forEach(function(result) {
+        gutil.log(gutil.colors.red(result.error.message)+' on line '+gutil.colors.green(result.error.line));
+    });
+};
+
 var onError = function (err) {
     gutil.log(gutil.colors.red(err));
 };
 
 // Tasks
-gulp.task('index', function () {
+gulp.task('html:index', function () {
     return gulp.src(htmlDir + 'index.swig')
         .pipe(plumber({
             errorHandler: onError
@@ -45,10 +49,13 @@ gulp.task('index', function () {
         .pipe(swig())
         .pipe(htmlPrettify({indent_char: ' ', indent_size: 4}))
         .pipe(gulp.dest('./'))
-        .pipe(notify("index.html Generated!"));
+        .pipe(notify({
+            "message": "HTML: index.html Generated!",
+            "onLast": true
+        }));
 });
 
-gulp.task('test', function () {
+gulp.task('html:test', function () {
     return gulp.src(htmlDir + 'tests/**/*.swig')
         .pipe(plumber({
             errorHandler: onError
@@ -56,13 +63,26 @@ gulp.task('test', function () {
         .pipe(swig())
         .pipe(htmlPrettify({indent_char: ' ', indent_size: 4}))
         .pipe(gulp.dest('./tests'))
-        .pipe(notify("test suite Generated!"));
+        .pipe(notify({
+            "message": "HTML: tests Generated!",
+            "onLast": true
+        }));
 });
 
-gulp.task('minify', function () {
-    var stream = [], i;
-    for (i = 0; i < files.length; i++) {
-        stream[i] = gulp.src(cssDir + files[i] + '.css')
+gulp.task('css:build', function () {
+    return gulp.src([lessDir + 'style.less', lessDir + 'core.less', lessDir +'theme.less'])
+        .pipe(plumber({
+            errorHandler: onError
+        }))
+        .pipe(sourcemaps.init())
+        .pipe(less()).pipe(notify({"message": "LESS: Rendered!", "onLast": true}))
+        .pipe(csscomb('csscomb')).pipe(notify({"message": "CSS: Sorted!", "onLast": true}))
+        .pipe(sourcemaps.write('./')).pipe(notify({"message": "CSS: Maped!", "onLast": true}))
+        .pipe(gulp.dest(cssDir));
+});
+
+gulp.task('css:minify', function () {
+    return gulp.src([lessDir + 'style.css', cssDir + 'core.css', cssDir +'theme.css'])
         .pipe(plumber({
             errorHandler: onError
         }))
@@ -71,34 +91,24 @@ gulp.task('minify', function () {
             processImport: true,
             noAdvanced: false
         }))
-        .pipe(rename({
-            dirname: "min",
-            suffix: ".min"
-        }))
-        .pipe(gulp.dest(cssminDir)).pipe(notify(files[i] + ".css Minified!"));
-    }
-
-    return stream;
+        .pipe(rename({dirname: "min", suffix: ".min"}))
+        .pipe(gulp.dest(cssminDir))
+        .pipe(notify({"message": "CSS: Minified!", "onLast": true}));
 });
 
-gulp.task('less', function () {
-    var stream = [], i;
-    for (i = 0; i < files.length; i++) {
-        stream[i] = gulp.src(lessDir + files[i] + '.less')
-        .pipe(plumber({
-            errorHandler: onError
-        }))
-        .pipe(sourcemaps.init())
-        .pipe(less())
-        .pipe(csscomb('csscomb')).pipe(notify(files[i] + ".css Sorted!"))
-        .pipe(sourcemaps.write('./')).pipe(notify(files[i] + ".css Mapped!"))
-        .pipe(gulp.dest(cssDir)).pipe(notify(files[i] + ".css Rendered!"))
-    }
-
-    return stream;
+gulp.task('lint:core', function() {
+    gulp.src(cssDir + 'core.css')
+        .pipe(csslint('csslintrc.json'))
+        .pipe(csslint.reporter(customReporter));
 });
 
-gulp.task('crush', function () {
+gulp.task('lint:theme', function() {
+    gulp.src(cssDir + 'theme.css')
+        .pipe(csslint('csslintrc.json'))
+        .pipe(csslint.reporter(customReporter));
+});
+
+gulp.task('img:crush', function () {
     return gulp.src(imgDir + '*.png')
         .pipe(plumber({
             errorHandler: onError
@@ -108,14 +118,17 @@ gulp.task('crush', function () {
             interlaced: true
         })))
         .pipe(gulp.dest(imgDir))
-        .pipe(notify("Images Crushed!"));
+        .pipe(notify({
+            "message": "IMAGES: Crushed!",
+            "onLast": true
+        }));
 });
 
 gulp.task('watch', function () {
-    gulp.watch(htmlDir + '**/*.*', ['index', 'test']);
-    gulp.watch(lessDir + '**/*.*', ['less']);
-    gulp.watch(cssDir + '*.css', ['minify']);
-    gulp.watch(imgDir + '**/*.*', ['crush']);
+    gulp.watch(htmlDir + '**/*.*', ['html:index', 'html:test']);
+    gulp.watch(lessDir + '**/*.*', ['css:build']);
+    gulp.watch(cssDir + '**/*.*', ['css:minify']);
+    gulp.watch(imgDir + '**/*.*', ['img:crush']);
 });
 
-gulp.task('default', ['less', 'index', 'watch']);
+gulp.task('default', ['css:build', 'html:index','watch']);
