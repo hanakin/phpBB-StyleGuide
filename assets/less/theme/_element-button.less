@@ -23,7 +23,7 @@
     font: inherit; // [1]
     font-weight: @button-font-weight;
     .rem-size(font-size, @button-font-size);
-    .line-height((@button-font-size * 2) - unit(@base-padding-vertical * 2) - (@button-border-size * 2));
+    .line-height(unit(@button-font-size * 2) - unit(@base-padding-vertical * 2) - unit(@button-border-size * 2));
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
@@ -32,7 +32,7 @@
     // Decoration
     background-color: @button-bg;
     background-image: none; // [3]
-    border-width: unit(@button-border-size, px);
+    border-width: @button-border-size;
     border-style: solid;
     border-color: @button-border-color;
     border-radius: @button-radius;
