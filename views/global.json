@@ -1,6 +1,6 @@
 {
     "global": {
-        "version": "0.0.1"
+        "version": "0.1.0"
     },
 
     "sections": {
@@ -8,13 +8,13 @@
             "colors": {
                 "order": "1.1",
                 "title": "colors",
-                "version": "0.1.0",
+                "version": "1.0.0",
                 "timestamp": "new Date.now()"
             },
             "fonts": {
                 "order": "1.2",
                 "title": "fonts",
-                "version": "0.1.0",
+                "version": "1.0.0",
                 "timestamp": "new Date.now()"
             },
             "type": {
@@ -26,19 +26,19 @@
             "lists": {
                 "order": "1.4",
                 "title": "lists",
-                "version": "0.1.0",
+                "version": "1.0.0",
                 "timestamp": "new Date.now()"
             },
             "forms": {
                 "order": "1.5",
                 "title": "forms",
-                "version": "0.1.0",
+                "version": "1.0.0",
                 "timestamp": "new Date.now()"
             },
             "tables": {
                 "order": "1.6",
                 "title": "tables",
-                "version": "0.1.0",
+                "version": "1.0.0",
                 "timestamp": "new Date.now()"
             },
             "code": {
