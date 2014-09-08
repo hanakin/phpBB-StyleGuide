@@ -76,10 +76,12 @@
 // Panel Content
 //------------------------------------------------------------------------------
 .panel-content {
-    // Decroation
-    border-left-width: @panel-border-size;
-    border-left-style: solid;
-    border-left-color: @panel-border-color;
+    @media (min-width: @screen-sm-min) {
+        // Decroation
+        border-left-width: @panel-border-size;
+        border-left-style: solid;
+        border-left-color: @panel-border-color;
+    }
 }
 
 //------------------------------------------------------------------------------

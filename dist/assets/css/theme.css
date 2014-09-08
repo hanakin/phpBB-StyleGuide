@@ -11,9 +11,14 @@
 
     display: inline-block;
     height: 82px;
-    margin-bottom: -24px;
+    margin-bottom: 24px;
     position: relative;
     width: 235px;
+}
+@media (min-width: 768px) {
+    .logo {
+        margin-bottom: -24px;
+    }
 }
 .font-primary {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -251,7 +256,7 @@ a.label:hover, a.label:focus {
     margin-top: 24px;
     margin-top: 1.5rem;
 }
-@media (max-width: 479px) {
+@media (max-width: 639px) {
     .color-title-margin {
         text-align: left;
     }
@@ -261,7 +266,7 @@ a.label:hover, a.label:focus {
 
     color: #0D4573;
 }
-@media (max-width: 479px) {
+@media (max-width: 639px) {
     .color-title {
         text-align: left;
     }
@@ -605,11 +610,11 @@ a.swatch-success-dark:hover {
     margin: 7px 0 0;
 }
 .lead {
-    padding: 80px 210px 60px;
+    padding: 80px 0 60px;
 }
 .lead-title {
-    font-size: 72px;
-    font-size: 4.5rem;
+    font-size: 60px;
+    font-size: 3.75rem;
     font-weight: 400;
     line-height: 36px;
     line-height: 2.25rem;
@@ -617,6 +622,12 @@ a.swatch-success-dark:hover {
     color: #FFF;
 
     margin: 0 0 36px;
+}
+@media (min-width: 639px) {
+    .lead-title {
+        font-size: 72px;
+        font-size: 4.5rem;
+    }
 }
 .lead-sub-title {
     font-size: 24px;
@@ -629,11 +640,20 @@ a.swatch-success-dark:hover {
 
     padding: 0 25px;
 }
+.lead-sub-title a {
+    display: block;
+}
 .menu {
+    display: none;
     list-style: none;
     margin-bottom: 20px;
     padding-left: 0;
     min-width: 215px;
+}
+@media (min-width: 990px) {
+    .menu {
+        display: block;
+    }
 }
 .menu-item {
     background-color: #FFF;
@@ -734,10 +754,12 @@ a.menu-heading:hover, a.menu-heading:focus {
 .panel-row > div {
     padding: 20px;
 }
-.panel-content {
-    border-left-width: 1px;
-    border-left-style: solid;
-    border-left-color: #DEDEDE;
+@media (min-width: 768px) {
+    .panel-content {
+        border-left-width: 1px;
+        border-left-style: solid;
+        border-left-color: #DEDEDE;
+    }
 }
 .panel-description {
     background-color: #F2F2F2;

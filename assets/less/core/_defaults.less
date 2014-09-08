@@ -244,43 +244,43 @@
 @grid-gutter-size:                  30px; // [4]
 
 // Grid Units [5]
-@grid-unit-sm:                      @base-grid-unit;                       // 20px
-@grid-unit-md:                      (@grid-unit-sm + 6);                   // 26px
-@grid-unit-lg:                      (@grid-unit-md + 6);                   // 32px
-@grid-unit-xl:                      (@grid-unit-lg + 6);                   // 38px
+@grid-unit-sm:                      @base-grid-unit;                  // 20px   tablet
+@grid-unit-md:                      (@grid-unit-sm + 6);              // 26px   desktop small
+@grid-unit-lg:                      (@grid-unit-md + 6);              // 32px   desktop large
+@grid-unit-xl:                      (@grid-unit-lg + 6);              // 38px   desktop x-large
 
 // Column Sizes [6]
-@column-sm:                         (@grid-unit-sm * 3);                   // 60px
-@column-md:                         (@grid-unit-md * 3);                   // 78px
-@column-lg:                         (@grid-unit-lg * 3);                   // 96px
-@column-xl:                         (@grid-unit-xl * 3);                   // 114px
+@column-sm:                         (@grid-unit-sm * 3);              // 60px   tablet
+@column-md:                         (@grid-unit-md * 3);              // 78px   desktop small
+@column-lg:                         (@grid-unit-lg * 3);              // 96px   desktop large
+@column-xl:                         (@grid-unit-xl * 3);              // 114px  desktop x-large
 
 // Container sizes [7]
 @x-small:                           100%;
-@small:                             @base-container;                       // 720px
-@medium:                            (@column-md * @grid-columns);          // 936px
-@large:                             (@column-lg * @grid-columns);          // 1152px
-@x-large:                           (@column-xl * @grid-columns);          // 1368px
+@small:                             @base-container;                  // 720px  tablet
+@medium:                            (@column-md * @grid-columns);     // 936px  desktop small
+@large:                             (@column-lg * @grid-columns);     // 1152px desktop large
+@x-large:                           (@column-xl * @grid-columns);     // 1368px desktop x-large
 
 // Screen sizes [8]
-@container-sm:                      ((@small + @grid-gutter-size));        // 750px
-@container-md:                      ((@medium + @grid-gutter-size));       // 966px
-@container-lg:                      ((@large + @grid-gutter-size));        // 1182px
-@container-xl:                      ((@x-large + @grid-gutter-size));      // 1398px
+@container-sm:                      ((@small + @grid-gutter-size));   // 750px  tablet
+@container-md:                      ((@medium + @grid-gutter-size));  // 966px  desktop small
+@container-lg:                      ((@large + @grid-gutter-size));   // 1182px desktop large
+@container-xl:                      ((@x-large + @grid-gutter-size)); // 1398px desktop x-large
 
 // Breakpoints [9]
-@screen-xs:                         480px;  // phone
-@screen-sm:                         unit((@container-sm + @base-line-height-computed), px); // 774px tablet
-@screen-md:                         unit((@container-md + @base-line-height-computed), px); // 990px desktop small
-@screen-lg:                         unit((@container-lg + @base-line-height-computed), px); // 1206px desktop large
-@screen-xl:                         unit((@container-xl + @base-line-height-computed), px); // 1422px desktop x-large
+@screen-xs:                         640px;  // phone
+@screen-sm:                         768px;  // tablet
+@screen-md:                         990px;  // desktop small
+@screen-lg:                         1200px; // desktop large
+@screen-xl:                         1420px; // desktop x-large
 
 // Min Values [10]
-@screen-xs-min:                     @screen-xs;
-@screen-sm-min:                     @screen-sm;
-@screen-md-min:                     @screen-md;
-@screen-lg-min:                     @screen-lg;
-@screen-xl-min:                     @screen-xl;
+@screen-xs-min:                     @screen-xs; // phone
+@screen-sm-min:                     @screen-sm; // tablet
+@screen-md-min:                     @screen-md; // desktop small
+@screen-lg-min:                     @screen-lg; // desktop large
+@screen-xl-min:                     @screen-xl; // desktop x-large
 
 // Max Values [11]
 @screen-xs-max:                     (@screen-xs-min - 1);

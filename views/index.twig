@@ -35,47 +35,50 @@
     </header>
     {% endblock %}
     <div class="container">
-        <div class="wrap row">
-            <div class="main col-xs-8">
-                {% block content %}
-                <div id="core" class="core">
-                    {% include './partials/core/colors.twig' %}
-                    {% include './partials/core/fonts.twig' %}
-                    {% include './partials/core/type.twig' %}
-                    {% include './partials/core/lists.twig' %}
-                    {% include './partials/core/forms.twig' %}
-                    {% include './partials/core/tables.twig' %}
-                    {% include './partials/core/code.twig' %}
-                </div>
-
-                <div id="element" class="elements">
-                    {% include './partials/elements/icons.twig' %}
-                </div>
-
-                <div id="component" class="components">
-
-                </div>
-                {% endblock %}
-            </div>
-            <div class="sidebar col-xs-offset-1 col-xs-3">
-            {% block sidebar %}
-                <nav class="menu-container affix">
-                    <div id="menu" class="nav menu">
-                        {% for section, item in sections %}
-                        <a class="menu-item menu-heading" href="#{{ section }}">{{ loop.index }}. {{ section|title }}</a>
-                        {% for name, value in item %}
-                        <a class="menu-item" href="#{{ name }}">{{ loop.parent.loop.index }}.{{ loop.index }} {{ name|title }}</a>
-                        {% endfor %}
-                        {% endfor %}
+        <div class="wrap">
+            <div class="row">
+                <div class="main col-md-8 col-xs-12">
+                    {% block content %}
+                    <div id="core" class="core">
+                        {% include './partials/core/colors.twig' %}
+                        {% include './partials/core/fonts.twig' %}
+                        {% include './partials/core/type.twig' %}
+                        {% include './partials/core/lists.twig' %}
+                        {% include './partials/core/forms.twig' %}
+                        {% include './partials/core/tables.twig' %}
+                        {% include './partials/core/code.twig' %}
                     </div>
-                </nav>
-            {% endblock %}
+
+                    <div id="element" class="elements">
+                        {% include './partials/elements/icons.twig' %}
+                    </div>
+
+                    <div id="component" class="components">
+
+                    </div>
+                    {% endblock %}
+                </div>
+                <div class="sidebar col-md-offset-1 col-md-3 col-xs-12">
+                {% block sidebar %}
+                    <nav class="menu-container affix">
+                        <div id="menu" class="nav menu">
+                            {% for section, item in sections %}
+                            <a class="menu-item menu-heading" href="#{{ section }}">{{ loop.index }}. {{ section|title }}</a>
+                            {% for name, value in item %}
+                            <a class="menu-item" href="#{{ name }}">{{ loop.parent.loop.index }}.{{ loop.index }} {{ name|title }}</a>
+                            {% endfor %}
+                            {% endfor %}
+                        </div>
+                    </nav>
+                {% endblock %}
+                </div>
             </div>
+            <footer>
+            {% block footer %} {% endblock %}
+            </footer>
         </div>
-        <footer>
-        {% block footer %} {% endblock %}
-        </footer>
     </div>
+
     <!-- JS FOOTER -->
     {% block footer_js %}
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
