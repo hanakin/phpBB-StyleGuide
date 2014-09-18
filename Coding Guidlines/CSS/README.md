@@ -74,7 +74,7 @@ Files will should be broken up modularly by area of responsibility
     * Defaults - All the core less variables
     * Commons - Styling of the base HTML elements IE Text, Lists, Tables, Forms, ect...
     * Layout - Grid system
-    * Utilities - Universal global singletons and helpers
+    * Utilities - Universal global singletons, modifiers and helpers
 * Mixins - Houses all mixins, we maintain them separately for modularity
 * Theme - Contains all modules and specific content
     * Blocks - Content Regions/Sections
@@ -89,41 +89,41 @@ not will dictate which one
 
 ##### Rendered
 
-    /*--------------------------------------------------------------------------*\
+    /*----------------------------------------------------------------------------*\
         $TITLE
-    /*--------------------------------------------------------------------------*\
+    /*----------------------------------------------------------------------------*\
         Brief Description
-    /*--------------------------------------------------------------------------*/
+    /*----------------------------------------------------------------------------*/
 
 ##### Not Rendered
-    //--------------------------------------------------------------------------//
+    //------------------------------------------------------------------------------
     //  $TITLE
-    //--------------------------------------------------------------------------//
+    //------------------------------------------------------------------------------
     //  Brief Description
-    //--------------------------------------------------------------------------//
+    //------------------------------------------------------------------------------
 
 
 The `$` prefixing the name of the section allows us to run a find ([Cmd|Ctrl]+F)
-for `$[SECTION-NAME]` and **limit our search scope to section titles only**.
+for `$[SECTION-NAME]` **limiting our search scope to section titles only**.
 
 Each sub file type should be perpended with the type of file in the Title
 
-    /*--------------------------------------------------------------------------*\
+    /*----------------------------------------------------------------------------*\
         $UTILITIES-TEXT
-    /*--------------------------------------------------------------------------*\
+    /*----------------------------------------------------------------------------*\
         Contains useful text related functions
-    /*--------------------------------------------------------------------------*/
+    /*----------------------------------------------------------------------------*/
 
 
 Within the files themselves each section should have its own headers and
 sub headers as follows:
 
 ##### Rendered
-    /*--------------------------------------------------------------------------*\
+    /*----------------------------------------------------------------------------*\
         $HEADER
-    /*--------------------------------------------------------------------------*\
+    /*----------------------------------------------------------------------------*\
         Description
-    /*--------------------------------------------------------------------------*/
+    /*----------------------------------------------------------------------------*/
 
     /* Sub Header */
     @grid-columns:                              12;
@@ -180,13 +180,11 @@ A well ordered stylesheet will be ordered something like this:
 1. **Base** – setup.
 1. **Common** – unclassed `h1`, unclassed `ul` etc.
 1. **Layout** – grid.
+1. **Utilities/Modifiers/Helpers** – `form-inline`.
 2. **Elements** – basic singleton classes
 3. **Components** — generic, underlying design patterns.
-4. **Blocks** – full components constructed from objects and their
-   extensions.
-5. **Style trumps** – error states etc.
 
-This means that—as you go down the document—each section builds upon and
+This means that as you go down the document each section builds upon and
 inherits sensibly from the previous one(s). There should be less undoing of
 styles, less specificity problems and all-round better architected stylesheets.
 
@@ -209,11 +207,12 @@ Standards when structuring rulesets.
 * Use hyphen delimited class names
 * 4 space indented
 * Multi-line declarations when more than one
-* Multi-line selectors when more than two
-* Declarations ordered by intent Text, Decoration, Layout, Misc. Then alphabetically
+* Multi-line selectors when more than two `[selector], [selector]`.
+* Declarations ordered by intent **Text, Decoration, Layout, Misc.** Then alphabetically
 * Indent vendor prefixed declarations so that their values are aligned
 * Always include the final semi-colon in a rule
 * Full carriage return before/after multiple line rules
+* Full carriage return after end of single line rulesets
 * Opening `{` on same line as last selector with single space in between
 
 A brief example:
@@ -286,7 +285,7 @@ functionality.
 ### Internationalisation
 
 Despite being a developer from what ever corner of the world your from, weather
-you spent all your life writing <i>colour</i> instead of <i>color</i>, for the
+you spent all your life writing _colour_ instead of _color_, for the
 sake of consistency, it is better to always use US-English in CSS. CSS, as with
 most (if not all) other languages, is written in US-English, so to mix syntax
 like `color: red;` with classes like `.colour-picker {}` lacks consistency.
@@ -296,54 +295,37 @@ like `color: red;` with classes like `.colour-picker {}` lacks consistency.
 Use a docBlock-esque commenting style limited to 80 characters in length:
 
 ##### Rendered
-    /**
-     * Header
-     *
-     * Description
-     *
-     * Source: https://
-     */
+    /*----------------------------------------------------------------------------*\
+       Header
+    /*----------------------------------------------------------------------------*\
+       Description
+    /*----------------------------------------------------------------------------*\
+       1. Inline comment
+    /*----------------------------------------------------------------------------*/
 
 ##### Not Rendered
-    //**
+    //------------------------------------------------------------------------------
     // Header
-    //
+    //------------------------------------------------------------------------------
     // Description
-    //
-    // Source: https://
-    //**
+    //------------------------------------------------------------------------------
+    // 1. Inline comment
+    //------------------------------------------------------------------------------
+
+Each numbered comment refers to a commented number in the code block like so.
+
+    .form-inline {
+    @media (min-width: @screen-sm-min) { // [1]
+
+        .form-group { // [2]
 
 You should document and comment your code as much as you possibly can, what may
 seem or feel transparent and self explanatory to you may not be to another dev.
 Write a chunk of code then write about it.
 
-#### Object/extension pointers
 
-When working in an object oriented manner you will often have two chunks of CSS
-(one being the skeleton (the object) and the other being the skin (the
-extension)) that are very closely related, but that live in very different
-places. In order to establish a concrete link between the object and its
-extension with use <i>object/extension pointers</i>. These are simply comments
-which work thus:
 
-In your base stylesheet:
 
-    /**
-     * Extend `.foo` in theme.css
-     */
-     .foo {}
-
-In your theme stylesheet:
-
-    /**
-     * Extends `.foo` in base.css
-     */
-     .bar {}
-
-Here we have established a concrete relationship between two very separate
-pieces of code.
-
----
 
 ## Writing CSS
 
@@ -358,7 +340,7 @@ visually see which CSS properties are naturally inherited and thus avoid
 reapplying redundant styles.
 
 By writing markup first you can focus on data, content and semantics and then
-apply only the relevant classes and CSS _afterwards_.
+apply only the relevant classes and CSS **afterwards**.
 
 ## OOCSS
 
@@ -376,13 +358,13 @@ they all have floors, ceilings, walls and doors. We can share this information
 in an abstracted `.room {}` class. However we have specific types of room that
 are different from the others; a kitchen might have a tiled floor and a bedroom
 might have carpets, a bathroom might not have a window but a bedroom most likely
-will, each room likely has different coloured walls. OOCSS teaches us to
+will, each room likely has different colored walls. OOCSS teaches us to
 abstract the shared styles out into a base object and then _extend_ this
 information with more specific classes to add the unique treatment(s).
 
 So, instead of building dozens of unique components, try and spot repeated
 design patterns across them all and abstract them out into reusable classes;
-build these skeletons as base ‘objects’ and then peg classes onto these to
+build these skeletons as base `objects` and then peg classes onto these to
 extend their styling for more unique circumstances.
 
 If you have to build a new component split it into structure and skin; build the
@@ -420,9 +402,14 @@ The Grid systems is set in percentages. Because we use grid systems
 to govern widths of columns and pages, we can leave components totally free of
 any dimensions (as discussed above).
 
-Font sizes are set in rems with a pixel fallback. This gives the accessibility
+Font sizes are set in rems with a pixel fallback (IE 8). This gives the accessibility
 benefits of ems with the confidence of pixels. There is a handy Less mixin to
 work out a rem and pixel fallback for you :
+
+    .rem-size(@selector, @size, @base: @base-font-size) {
+        @{selector}: unit(@size, px);
+        @{selector}: unit((@size / @base), rem);
+    }
 
     .font-size(@font-size, @base: @base-font-size, @line-height: @base-line-height-computed) {
         .rem-size(font-size, @font-size);
@@ -432,6 +419,11 @@ work out a rem and pixel fallback for you :
 Pixels are only used for items whose dimensions were defined before they came into
 the site. This includes things like images and sprites whose dimensions are
 inherently set absolutely in pixels.
+
+Percentages aside from the grid system should be used to size fonts in relation
+to their direct container. The percentage is best suited for this since it only
+affects the content of the element its applied to in relation to the direct
+parent to which it falls within. (e.g. `small`, `code`, or `.label` elements).
 
 ### Font sizing
 
@@ -497,7 +489,7 @@ is far nicer than `.usr-avt`.
 
 **Remember:** classes are neither semantic or insemantic; they are sensible or
 insensible! Stop stressing about ‘semantic’ class names and pick something
-sensible and futureproof.
+sensible and future proof.
 
 ### Over-qualified selectors
 
@@ -568,7 +560,7 @@ help out here massively.
 
 A magic number is a number which is used because ‘it just works’. These are bad
 because they rarely work for any real reason and are not usually very
-futureproof or flexible/forgiving. They tend to fix symptoms and not problems.
+future proof or flexible/forgiving. They tend to fix symptoms and not problems.
 
 For example, using `.dropdown-nav li:hover ul { top: 37px; }` to move a dropdown
 to the bottom of the nav on hover is bad, as 37px is a magic number. 37px only
@@ -581,7 +573,7 @@ the top.
 
 Every time you hard code a number think twice; if you can avoid it by using
 keywords or ‘aliases’ (i.e. `top: 100%` to mean ‘all the way from the top’)
-or&mdash;even better&mdash;no measurements at all then you probably should.
+or even better no measurements at all then you probably should.
 
 Every hard-coded measurement you set is a commitment you might not necessarily
 want to keep.

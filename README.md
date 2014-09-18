@@ -43,4 +43,4 @@ Feel free to participate in all the discussions related to the project listed in
 We are using gulp as our build tool to perform all of our tasks such as rendering, sorting, formating, minifying, linting, etc.
 
 ## LICENSE
-[MIT](http://opensource.org/licenses/MIT)
+[MIT License](http://opensource.org/licenses/MIT)
